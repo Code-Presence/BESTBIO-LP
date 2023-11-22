@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
       "target": "ES2020",
       "useDefineForClassFields": true,
       "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -9,8 +10,7 @@
       "allowJs": true,
 
       /* Bundler mode */
-      "moduleResolution": "bundler",
-      "allowImportingTsExtensions": true,
+      "moduleResolution": "node",
       "resolveJsonModule": true,
       "isolatedModules": true,
       "noEmit": true,
@@ -18,7 +18,7 @@
 
       /* Linting */
       "strict": false,
-      "noUnusedLocals": true,
+      "noUnusedLocals": false,
       "noUnusedParameters": true,
       "noFallthroughCasesInSwitch": true
   },
