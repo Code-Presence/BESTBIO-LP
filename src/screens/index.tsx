@@ -5,7 +5,14 @@ import { CustomNavbar } from '../components/Navbar';
 import { CarouselCustomNavigation } from '../components/Carousel';
 import { CheckCircle } from 'lucide-react';
 
+import photo1 from '../assets/photos/photo-1.jpg';
+import photo2 from '../assets/photos/photo-2.jpg';
+import photo3 from '../assets/photos/photo-3.jpg';
+
 import photo6 from '../assets/photos/photo-6.jpg';
+import photo7 from '../assets/photos/photo-7.jpg';
+import { FeatureCard } from '../components/FeatureCard';
+import { services } from '../data/globalData';
 
 
 function Main(): JSX.Element {
@@ -16,7 +23,7 @@ function Main(): JSX.Element {
             <CustomNavbar />
 
             <div className="relative h-screen w-full bg-[url('https://bestbio.com.br/wp-content/uploads/2023/04/Foto-Maciel-Lopes110-scaled.jpg')] bg-cover bg-no-repeat">
-                <div className="absolute inset-0 h-full w-full bg-black/70 backdrop-blur-[2px] flex flex-col px-4 xl:px-40 gap-4 pt-24">
+                <div className="absolute inset-0 h-full w-full bg-black/70 backdrop-blur-[2px] flex flex-col px-8 xl:px-40 gap-4 pt-24">
                     <Typography variant="lead" className="text-white">Oportunidade de mundança</Typography>
                     <Typography 
                         variant="h1" 
@@ -42,7 +49,7 @@ function Main(): JSX.Element {
         
             </div>  
 
-            <div className='w-full h-[40rem] bg-[#fefefe] grid grid-cols-2 px-40'>
+            <div className='w-full min-h-[40rem] h-fit bg-[#fefefe] flex flex-col lg:grid lg:grid-cols-2 px-8 py-12 lg:px-40 gap-6'>
 
                 <div className='w-full justify-center flex flex-col gap-6'>
                     <div>
@@ -69,15 +76,37 @@ function Main(): JSX.Element {
                     <Button className='w-fit bg-[#7ED956]' size='lg'>Saiba mais</Button>
                 </div>
 
-                <div className='w-full justify-center flex flex-col items-end'>
+                <div className='w-full justify-center flex flex-col items-center lg:items-end'>
                     <CarouselCustomNavigation />
                 </div>
 
             </div>
 
-            <div className="w-full h-screen bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo6})` }}>
+            {/* <div className="w-full h-screen bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo6})` }}>
                 <div className="h-full w-[100%] bg-black/70 backdrop-blur-[2px]">
 
+                </div>
+            </div> */}
+
+            <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo7})` }}>
+                <div className="h-full w-[100%] bg-[#1b1b1b]/90 backdrop-blur-[4px]">
+
+
+                    <div className='flex flex-col w-full items-center justify-center lg:flex-row md:flex-col'>
+                        {
+                            services.map((item, index) => (
+                                <>
+                                    <FeatureCard 
+                                        key={index}
+                                        img={item.photo}
+                                        title={item.title}
+                                        content={item.content}
+                                    />
+                                </>
+                            ))
+                        }
+
+                    </div>
                 </div>
             </div>
             {/* </div> */}
