@@ -74,9 +74,9 @@ function CustomNavbar() {
                         className="ml-auto inline-block lg:hidden"
                     >
                         {open ? (
-                            <XMarkIcon strokeWidth={2} className="h-6 w-6" />
+                            <XMarkIcon strokeWidth={2} className="h-6 w-6" color='white'/>
                         ) : (
-                            <Bars3Icon strokeWidth={2} className="h-6 w-6" />
+                            <Bars3Icon strokeWidth={2} className="h-6 w-6" color='white'/>
                         )}
                     </IconButton>
                 </div>
