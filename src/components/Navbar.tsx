@@ -62,7 +62,7 @@ function CustomNavbar() {
                         </NavItem>
                     </ul>
                     <div className="hidden items-center gap-4 lg:flex">
-                        <Button className='flex items-center gap-2 bg-[#7ED956]'>
+                        <Button className='flex items-center gap-2 bg-[#7ED956] text-blue-gray-900'>
                             Fale conosco
                             <Phone size={20}/>
                         </Button>
@@ -94,7 +94,7 @@ function CustomNavbar() {
                             </NavItem>
                         </ul>
                         <div className="mt-6 mb-4 flex items-center gap-4">
-                            <Button color="green">Fale conosco</Button>
+                            <Button className='bg-[#7ED956] text-blue-gray-900'>Fale conosco</Button>
                         </div>
                     </div>
                 </Collapse>
