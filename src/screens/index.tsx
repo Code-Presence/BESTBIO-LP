@@ -73,7 +73,7 @@ function Main(): JSX.Element {
                         </Typography>
                     </div>
 
-                    <Button className='w-fit bg-[#7ED956]' size='lg'>Saiba mais</Button>
+                    <Button className='w-fit bg-[#7ED956] text-gray-900' size='lg'>Saiba mais</Button>
                 </div>
 
                 <div className='w-full justify-center flex flex-col items-center lg:items-end'>
@@ -89,10 +89,15 @@ function Main(): JSX.Element {
             </div> */}
 
             <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo7})` }}>
-                <div className="h-full w-[100%] bg-[#1b1b1b]/90 backdrop-blur-[4px]">
-
-
-                    <div className='flex flex-col w-full items-center justify-center lg:flex-row md:flex-col'>
+                <div className="h-full w-[100%] bg-[#1b1b1b]/90 backdrop-blur-[4px] lg:px-40 lg:py-24">
+                    <div className='w-full flex flex-col items-center justify-center px-8 '>
+                        <Typography variant="lead" style={{ fontWeight: '600', color: '#7ED956'}}>PRESENCIAL E ONLINE</Typography>
+                        <Typography variant="h1" style={{ color: '#fff'}}>Nossos Serviços</Typography>
+                        <Typography variant="lead" className='mt-6 text-center' style={{ color: '#fff'}}>Oferecemos programas e serviços que atendem públicos dos mais variados perfis, desde sedentários a atletas de alto rendimento. Temos pacotes para quem deseja apenas o acompanhamento nutricional e também oferecemos pacotes completos com nutrição e prescrição de exercícios físicos. Treino e plano alimentar são disponibilizados no nosso aplicativo que oferece várias funcionalidades e muita comodidade para o paciente.</Typography>
+                        
+                    </div>
+                    {/* <div className='flex flex-col w-full items-center justify-center lg:flex-row md:flex-col'> */}
+                    <div className='grid grid-cols-1 w-full items-center justify-center lg:grid-cols-3 lg:grid pt-12 gap-6'>
                         {
                             services.map((item, index) => (
                                 <>

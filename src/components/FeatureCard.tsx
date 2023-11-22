@@ -15,7 +15,7 @@ interface IFeatureCardProps {
   
 function FeatureCard({img, title, content}: IFeatureCardProps): JSX.Element {
     return (
-        <section className="grid h-screen place-items-center p-4">
+        <section className="grid h-fit place-items-center p-4">
             <Card className="w-auto max-w-[24rem] shadow-2xl">
                 <CardHeader color="gray" className="relative h-56">
                     <img
