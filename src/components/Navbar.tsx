@@ -13,6 +13,8 @@ import { Phone } from 'lucide-react';
 
 import Logo from '../assets/logo.png';
 
+import {useLocation, useNavigate} from 'react-router-dom';
+
 interface NavItemPropsType {
   children: React.ReactNode;
 }
@@ -37,6 +39,8 @@ function CustomNavbar() {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen((cur) => !cur);
 
+    const navigate = useNavigate();
+
     React.useEffect(() => {
         window.addEventListener(
             'resize',
@@ -46,20 +50,29 @@ function CustomNavbar() {
 
     return (
         <>
-            <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 bg-[#1b1b1b]">
+            <Navbar className={' top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 bg-[#1b1b1b]'}>
                 <div className="container mx-auto flex items-center justify-between">
                   
                     <img src={Logo}/>
                     <ul className="ml-10 hidden items-center gap-8 lg:flex">
-                        <NavItem>
+                        <Typography
+                            onClick={() => navigate('/')} 
+                            className='hover:cursor-pointer hover:scale-110 transition-all z-10 relative  hover:text-[#7ED956]'
+                        >
                             Home
-                        </NavItem>
-                        <NavItem>
+                        </Typography>
+                        <Typography 
+                            onClick={() => navigate('presencial')} 
+                            className='hover:cursor-pointer hover:scale-110 transition-all z-20 relative  hover:text-[#7ED956]'
+                        >
                           Planos presenciais
-                        </NavItem>
-                        <NavItem>
+                        </Typography>
+                        <Typography
+                            onClick={() => navigate('online')} 
+                            className='hover:cursor-pointer hover:scale-110 transition-all z-30 relative hover:text-[#7ED956]'
+                        >
                           Planos online
-                        </NavItem>
+                        </Typography>
                     </ul>
                     <div className="hidden items-center gap-4 lg:flex">
                         <Button className='flex items-center gap-2 bg-[#7ED956] text-blue-gray-900'>

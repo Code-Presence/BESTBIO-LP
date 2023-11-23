@@ -1,10 +1,13 @@
 import React from 'react';
-import { Main } from './screens';
+import { BrowserRouter } from 'react-router-dom';
+import { AppRoutes } from './routes';
 
 export default function App(): JSX.Element {
     return (
         <>
-            <Main />
+            <BrowserRouter>
+                <AppRoutes />
+            </BrowserRouter>
         </>
     );
 }

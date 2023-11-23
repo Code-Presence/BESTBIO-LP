@@ -8,6 +8,10 @@ export default withMT({
             fontFamily: {
                 'racing': ['"Racing Sans One"', 'sans-serif'] // cursive é um fallback
             },
+            backgroundImage: {
+                // 'custom-gradient': 'linear-gradient(to bottom, #1b1b1b90 90%, #fefefe 10%)',
+                'custom-gradient': 'linear-gradient(to bottom, black, black 25%, white 25%, white)',
+            },
             color: {
                 best: {
                     green: '7ED956',
