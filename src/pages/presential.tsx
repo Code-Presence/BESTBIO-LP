@@ -4,21 +4,6 @@ import { PricingCard } from '../components/PricingCardDark';
 import { PricingCardLight } from '../components/PricingCardLight';
 
 function Presential(): JSX.Element {
-    const [type, setType] = React.useState('freelancer');
-
-    const cards = [
-        {
-            color: 'gray',
-            actionColor: 'white',
-            bg: true,
-            title: type === 'startup' ? 'platinum' : 'premium',
-            price: type === 'startup' ? '$135' : '$59',
-            options:
-        type === 'startup'
-            ? ['500GB File Storage', 'Unlimited Users', 'No time Tracking']
-            : ['50GB File Storage', '100 Users', 'Premium Support'],
-        },
-    ];
 
     return (
         <>
