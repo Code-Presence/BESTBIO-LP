@@ -20,6 +20,7 @@ function Presential(): JSX.Element {
                 <div className='w-full flex items-center justify-center pb-2 gap-6'>
                     <PricingCardLight />
                     <PricingCard />
+                    <PricingCardLight />
 
                 </div>
             </div>

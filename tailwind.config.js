@@ -32,9 +32,31 @@ export default withMT({
                         transform: 'translateY(0)',
                     },
                 },
+                fadeInLeft: {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'translateX(-100px)'
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'translateX(0)'
+                    },
+                },
+                fadeInRight: {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'translateX(100px)'
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'translateX(0)'
+                    },
+                },
             },
             animation: {
                 'fade-in-down': 'fade-in-down 0.5s ease-out',
+                'fade-in-left': 'fadeInLeft 0.5s ease-out',
+                'fade-in-right': 'fadeInRight 0.5s ease-out',
             },
         },
     },
