@@ -55,6 +55,9 @@ export default withMT({
             },
             animation: {
                 'fade-in-down': 'fade-in-down 0.5s ease-out',
+                'fade-in-down0': 'fade-in-down 1s ease-out',
+                'fade-in-down1': 'fade-in-down 1.5s ease-out',
+                'fade-in-down2': 'fade-in-down 2s ease-out',
                 'fade-in-left': 'fadeInLeft 0.5s ease-out',
                 'fade-in-right': 'fadeInRight 0.5s ease-out',
             },

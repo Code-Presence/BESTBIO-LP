@@ -13,9 +13,11 @@ interface IFeatureCardProps {
     content: string;
 }
   
-function FeatureCard({img, title, content}: IFeatureCardProps): JSX.Element {
+const FeatureCard = React.memo(({ img, title, content }: IFeatureCardProps): JSX.Element => {
+    const animation = 'animate-fade-in-down2';
+    
     return (
-        <section className="grid h-fit place-items-center p-4">
+        <section className={`grid h-fit place-items-center p-4 ${animation}`}>
             <Card className="w-auto lg:max-w-[24rem] shadow-2xl">
                 <CardHeader color="gray" className="relative h-56">
                     <img
@@ -47,6 +49,8 @@ function FeatureCard({img, title, content}: IFeatureCardProps): JSX.Element {
             </Card>
         </section>
     );
-}
+});
+
+FeatureCard.displayName = 'FeatureCard';
   
 export { FeatureCard };
