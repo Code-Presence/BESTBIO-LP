@@ -25,6 +25,13 @@ function Presential(): JSX.Element {
                             <Tab
                                 value="annual"
                                 className="font-medium"
+                                onClick={() => setType('vip')}
+                            >
+                                Vip
+                            </Tab>
+                            <Tab
+                                value="pro"
+                                className="font-medium"
                                 onClick={() => setType('pro')}
                             >
                                 Pro
