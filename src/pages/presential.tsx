@@ -51,7 +51,7 @@ function Presential(): JSX.Element {
 
 
                 { type === 'basic'
-                    ? (<Typography variant='lead' className='text-blue-gray-100 lg:ext-center animate-fade-in-left text-justify'>
+                    ? (<Typography variant='lead' className='text-blue-gray-100 lg:text-center animate-fade-in-left text-justify'>
                         O atendimento presencial acontece na cidade de Natal - Rio Grande do Norte. A consulta nutricional já inclui a 
                         <br/> 
                         realização dos exames de bioimpedância e calorimetria indireta.
