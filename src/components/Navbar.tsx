@@ -15,26 +15,6 @@ import Logo from '../assets/logo.png';
 
 import { useNavigate } from 'react-router-dom';
 
-interface NavItemPropsType {
-  children: React.ReactNode;
-}
-
-function NavItem({ children }: NavItemPropsType) {
-    return (
-        <li>
-            <Typography
-                as="a"
-                href="#"
-                variant="paragraph"
-                color="gray"
-                className="flex items-center gap-2 font-medium text-ggray-100"
-            >
-                {children}
-            </Typography>
-        </li>
-    );
-}
-
 function CustomNavbar() {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen((cur) => !cur);
@@ -62,13 +42,13 @@ function CustomNavbar() {
                             Home
                         </Typography>
                         <Typography 
-                            onClick={() => navigate('presencial')} 
+                            onClick={() => navigate('/presencial')} 
                             className='hover:cursor-pointer hover:scale-110 transition-all z-20 relative  hover:text-[#7ED956]'
                         >
                           Planos presenciais
                         </Typography>
                         <Typography
-                            onClick={() => navigate('online')} 
+                            onClick={() => navigate('/online')} 
                             className='hover:cursor-pointer hover:scale-110 transition-all z-30 relative hover:text-[#7ED956]'
                         >
                           Planos online
@@ -96,15 +76,24 @@ function CustomNavbar() {
                 <Collapse open={open}>
                     <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
                         <ul className="flex flex-col gap-4">
-                            <NavItem>
+                            <Typography 
+                                onClick={() => navigate('/')} 
+                                className="flex items-center gap-2 font-medium text-gray-100"
+                            >
                             Home
-                            </NavItem>
-                            <NavItem>
+                            </Typography>
+                            <Typography
+                                onClick={() => navigate('/presencial')} 
+                                className="flex items-center gap-2 font-medium text-gray-100"
+                            >
                           Planos presenciais
-                            </NavItem>
-                            <NavItem>
+                            </Typography>
+                            <Typography
+                                onClick={() => navigate('/online')} 
+                                className="flex items-center gap-2 font-medium text-gray-100"
+                            >
                           Planos online
-                            </NavItem>
+                            </Typography>
                         </ul>
                         <div className="mt-6 mb-4 flex items-center gap-4">
                             <Button className='bg-[#7ED956] text-blue-gray-900'>Fale conosco</Button>
