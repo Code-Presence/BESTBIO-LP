@@ -74,3 +74,133 @@ export const testimonials = [
     },
     
 ];
+
+export const plans = [
+    { 
+        id: 1,
+        size: 'md',
+        colorType: 2,
+        type: 'CLASSIC',
+        period: 'Consulta Única',
+        kind: 'Nutricional',
+        price:  'R$ 400',
+        text: 'NO PIX OU EM ATÉ 12X DE R$43,00',
+        diferentials: [
+            '1 consulta presencial',
+            '30 dias de acompanhamento',
+            'Chat para dúvidas no app',
+            'Cardápio individualizado',
+            'App com receitas e lista de compras',
+            'Exame de Bioimpedância',
+            'Exame de Calorimetria Indireta',
+        ]
+    },
+    { 
+        id: 2,
+        size: 'lg',
+        colorType: 1,
+        type: 'VIP',
+        period: 'Trimestral',
+        kind: 'Nutricional',
+        price:  'R$ 1000',
+        text: 'NO PIX OU EM ATÉ12X DE R$108,00',
+        diferentials: [
+            '3 consultas presenciais',
+            '90 dias de acompanhamento',
+            'Chat para dúvidas no app',
+            'Cardápio individualizado',
+            'App com receitas e lista de compras',
+            'Exame de Bioimpedância',
+            'Exame de Calorimentria',
+            'Monitoramento e controle de resultados',
+        ]
+    },
+    { 
+        id: 3,
+        size: 'lg',
+        colorType: 2,
+        type: 'PREMIUM',
+        period: 'Semestral',
+        kind: 'Nutricional',
+        price:  'R$ 1800',
+        text: 'NO PIX OU EM ATÉ 12X DE R$194,00',
+        diferentials: [
+            '6 consultas presenciais',
+            '180 dias de acompanhamento',
+            'Chat para dúvidas no app',
+            'Cardápio individualizado',
+            'App com receiras e lista de compras',
+            'Exame de Bioimpedância e Calorimentria',
+            'Monitoramento e controle de resultaods',
+        
+        ]
+    },    
+    { 
+        id: 4,
+        size: 'md',
+        colorType: 2,
+        type: 'CLASSIC',
+        period: 'Consulta Única',
+        kind: 'Nutricional',
+        price:  'R$ 500',
+        text: 'NO PIX OU EM ATÉ 12X DE R$54,00',
+        diferentials: [
+            '1 consulta presencial',
+            '30 dias de acompanhamento',
+            'Chat para dúvidas no app',
+            'Cardápio individualizado',
+            'App com receitas e lista de compras',
+            'Exame de Bioimpedância',
+            'Exame de Calorimetria Indireta',
+            'Prescrição de Treino para 30 dias',
+            'Treino no app com vídeo explicativo',
+            'Treino individualizado para seu objetivo',
+        ]
+    },
+    { 
+        id: 5,
+        size: 'lg',
+        colorType: 1,
+        type: 'VIP',
+        period: 'Trimestral',
+        kind: 'Nutricional',
+        price:  'R$ 1300',
+        text: 'NO PIX OU EM ATÉ12X DE R$140,00',
+        diferentials: [
+            '3 consultas presenciais',
+            '90 dias de acompanhamento',
+            'Chat para dúvidas no app',
+            'Cardápio individualizado',
+            'App com receitas e lista de compras',
+            'Exame de Bioimpedância',
+            'Exame de Calorimentria',
+            'Monitoramento e controle de resultados',
+            'Prescrição de Treino para 90 dias',
+            'Treino no App com vídeo explicativo',
+            'Treino individualizado para seu objetivo',
+        ]
+    },
+    { 
+        id: 6,
+        size: 'lg',
+        colorType: 2,
+        type: 'PREMIUM',
+        period: 'Semestral',
+        kind: 'Nutricional',
+        price:  'R$ 2400',
+        text: 'NO PIX OU EM ATÉ 12X DE R$200,00',
+        diferentials: [
+            '6 consultas presenciais',
+            '180 dias de acompanhamento',
+            'Chat para dúvidas no app',
+            'Cardápio individualizado',
+            'App com receiras e lista de compras',
+            'Exame de Bioimpedância e Calorimentria',
+            'Monitoramento e controle de resultaods',
+            'Prescrição de Treinop para 180 dias',
+            'Treino no app com vídeo explicativo',
+            'Treino individualizado para seu objetivo',
+        
+        ]
+    },
+];

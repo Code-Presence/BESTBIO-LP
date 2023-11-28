@@ -11,7 +11,6 @@ import { services } from '../data/globalData';
 import {  CarouselCustomArrows } from '../components/CardCarousel';
 
 import useOnScreen from '../hooks/useOnScreen';
-import { HighlightText } from '../components/HighlightText';
 
 function Main(): JSX.Element {
   

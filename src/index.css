@@ -30,3 +30,38 @@
 .custom-hover-effect:hover::after {
     width: 100%;
 }
+
+
+.fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+  .fade-exit {
+    opacity: 1;
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+  
+
+  @keyframes blurAnimation {
+    0%, 50% {
+      filter: blur(0px);
+    }
+    50% {
+      filter: blur(2px);
+    }
+  }
+  
+  .blur-text {
+    animation: blurAnimation 1s ease-in-out;
+  }
+  
+  .card-neon:hover {
+    transition: box-shadow 0.1s ease-in-out;
+    box-shadow: 0 0 10px #7ED956, 0 0 20px #7ED956, 0 0 40px #7ED956, 0 0 80px #7ED956;
+}
