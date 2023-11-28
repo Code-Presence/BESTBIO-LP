@@ -51,10 +51,10 @@ function Online(): JSX.Element {
 
 
                 { type === 'basic'
-                    ? (<Typography variant='lead' className='text-blue-gray-100 text-center animate-fade-in-left'>
+                    ? (<Typography variant='lead' className='text-blue-gray-100 text-center animate-fade-in-left mt-2'>
                         O atendimento online acontece através do nosso app por videochamada.
                     </Typography>)
-                    : (<Typography variant='lead' className='text-blue-gray-100 text-center animate-fade-in-right'>
+                    : (<Typography variant='lead' className='text-blue-gray-100 text-center animate-fade-in-right mt-2'>
                         O atendimento online acontece através do nosso app por videochamada.
                     </Typography>)
                 }

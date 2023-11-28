@@ -8,7 +8,7 @@ const currentYear = new Date().getFullYear();
 
 function Footer() {
     return (
-        <footer className="px-8 pt-10 bg-white">
+        <footer className="px-4 pt-10 bg-white lg:px-8">
             <div className="container mx-auto">
                 <div className="flex flex-wrap items-start justify-center gap-8 md:justify-between">
                     <div className="text-center md:text-left">
@@ -49,10 +49,10 @@ function Footer() {
                     <div className="w-full sm:w-[24rem] sm:min-w-[24rem]">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.436087608727!2d-35.204531425012966!3d-5.79391349418884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b301b34d82cab1%3A0xc00b1f5ce6d3dc38!2sICTUS%20%7C%20Preven%C3%A7%C3%A3o%20e%20Performance%20em%20Cardiologia!5e0!3m2!1spt-BR!2sbr!4v1701204909400!5m2!1spt-BR!2sbr" 
-                            width="400" 
+                            width="100%" 
                             height="300" 
                             style={{border:0}} 
-                            className='rounded-xl'
+                            className='rounded-xl shadow-md border'
                             allowFullScreen={true}
                             loading="lazy" 
                             referrerPolicy="no-referrer-when-downgrade"></iframe>

@@ -12,7 +12,7 @@ function Presential(): JSX.Element {
 
     return (
         <>
-            <div className='w-full flex flex-col items-center justify-center px-8 lg:px-20 gap-4'>
+            <div className='w-full flex flex-col items-center justify-center px-6 lg:px-20 gap-4'>
                 <Typography variant='lead' className='font-bold text-[#7ED956]'>ATENDIMENTO PRESENCIAL</Typography>
 
                 <Tabs value="monthly" className="mx-auto w-72">
@@ -51,7 +51,7 @@ function Presential(): JSX.Element {
 
 
                 { type === 'basic'
-                    ? (<Typography variant='lead' className='text-blue-gray-100 text-center animate-fade-in-left'>
+                    ? (<Typography variant='lead' className='text-blue-gray-100 lg:ext-center animate-fade-in-left text-justify'>
                         O atendimento presencial acontece na cidade de Natal - Rio Grande do Norte. A consulta nutricional já inclui a 
                         <br/> 
                         realização dos exames de bioimpedância e calorimetria indireta.
@@ -64,7 +64,7 @@ function Presential(): JSX.Element {
                 }
             </div>
                 
-            <div className='w-full items-center flex flex-col lg:flex-row gap-6 mt-4 px-6 md:flex-col justify-center'>
+            <div className='w-full items-center flex flex-col lg:flex-row gap-6 mt-4 px-4 md:flex-col justify-center'>
                 { type === 'basic' ? (
                     <>
                         {plans.slice(0, 3).map((plan) => (

@@ -5,7 +5,9 @@ import {
     CardBody,
     Typography,
     Button,
+    Tooltip,
 } from '@material-tailwind/react';
+import { useNavigate } from 'react-router-dom';
 
 interface IFeatureCardProps {
     img: string;
@@ -15,6 +17,11 @@ interface IFeatureCardProps {
   
 const FeatureCard = React.memo(({ img, title, content }: IFeatureCardProps): JSX.Element => {
     const animation = 'animate-fade-in-down2';
+    const navigate = useNavigate();
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     
     return (
         <section className={`grid h-fit place-items-center p-4 ${animation}`}>
@@ -38,12 +45,14 @@ const FeatureCard = React.memo(({ img, title, content }: IFeatureCardProps): JSX
                         {content}
                     </Typography>
                     <div className='flex width-full justify-between'>
-                        <Button color="gray" variant="outlined" size="sm">
+                        <Button variant="outlined" size="sm" >
                         um botão
                         </Button>
-                        <Button color="gray" variant="filled" size="sm">
-                        oto botão
-                        </Button>
+                        <Tooltip content="saiba mais">
+                            <Button variant="filled" size="sm" onClick={() => navigate('/online')}>
+                                Online
+                            </Button>
+                        </Tooltip>
                     </div>
                 </CardBody>
             </Card>
