@@ -12,6 +12,8 @@ import {  CarouselCustomArrows } from '../components/CardCarousel';
 
 import useOnScreen from '../hooks/useOnScreen';
 
+import video from '../assets/bg/1128.mp4';
+
 function Main(): JSX.Element {
   
     const [isVisibleLeft, setIsVisibleLeft] = React.useState(false);
@@ -23,7 +25,10 @@ function Main(): JSX.Element {
     return (
         <> 
             <div className="relative h-screen w-full bg-[url('https://bestbio.com.br/wp-content/uploads/2023/04/Foto-Maciel-Lopes110-scaled.jpg')] bg-cover bg-no-repeat">
-                <div className="absolute inset-0 h-full w-full backdrop-blur-[2px] flex flex-col px-8 xl:px-40 gap-4 pt-24 bg-[#1b1b1b]/90 ">
+                <video autoPlay loop muted id="videoBackground" className='absolute object-cover min-h-full min-w-full right-0 bottom-0 hidden lg:flex '>
+                    <source src={video} type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 h-full w-full backdrop-blur-[1px] flex flex-col px-8 xl:px-40 gap-4 pt-24 bg-[#000]/75 ">
                     <Typography 
                         variant="lead" 
                         className="text-white animate-fade-in-down"
