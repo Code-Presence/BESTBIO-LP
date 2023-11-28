@@ -3,13 +3,16 @@ import React from 'react';
 import { PricingCard } from '../components/PricingCardDark';
 
 import { plans } from '../data/globalData';
+import { ExternalLink } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 function Presential(): JSX.Element {
     const [type, setType] = React.useState('basic');
+    const navigate = useNavigate();
 
     return (
         <>
-            <div className='w-screen h-fit bg-[#ffffff] flex flex-col items-center justify-around py-6'>
+            <div className='w-screen h-fit bg-[#eeeeee] flex flex-col items-center justify-around py-12'>
                 <div className='w-full flex flex-col items-center justify-center px-8 lg:px-20 gap-2'>
                     <Typography variant='lead' className='font-bold text-[#7ED956]'>ATENDIMENTO PRESENCIAL</Typography>
 
@@ -31,10 +34,13 @@ function Presential(): JSX.Element {
                             </Tab>
                             <Tab
                                 value="pro"
-                                className="font-medium"
-                                onClick={() => setType('pro')}
+                                className="font-medium rounded-md"
+                                onClick={() => navigate('/pro')}
                             >
+                                <span className='flex items-center gap-2'>
                                 Pro
+                                    <ExternalLink size={20}/>
+                                </span>
                             </Tab>
                         </TabsHeader>
                     </Tabs>

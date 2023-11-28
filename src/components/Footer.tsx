@@ -1,79 +1,87 @@
 import React from 'react';
 import { Typography, IconButton } from '@material-tailwind/react';
-import { Instagram, MapPin, Youtube } from 'lucide-react';
-const links = ['Company', 'About Us', 'Team', 'Products', 'Blog', 'Pricing'];
+import { Instagram, Mail, MessageCircle, Youtube } from 'lucide-react';
+
+const links = ['Quem somos', 'Depoimentos', 'Serviços', 'Presencial', 'Online'];
+const links2 = ['Claim', 'Privacy', 'Terms'];
 const currentYear = new Date().getFullYear();
 
 function Footer() {
     return (
-        <footer className="p-10 pb-16 md:px-28 md:pt-20 bg-white border-t-2">
-            <div className="container mx-auto flex flex-col items-center">
+        <footer className="px-8 pt-10 bg-white">
+            <div className="container mx-auto">
+                <div className="flex flex-wrap items-start justify-center gap-8 md:justify-between">
+                    <div className="text-center md:text-left">
+                        <Typography variant="h4" className="mb-6">
+                            BestBio
+                        </Typography>
+                        <ul className="flex flex-wrap items-center justify-center md:justify-start">
+                            {links.map((link, idx) => (
+                                <li key={link}>
+                                    <Typography
+                                        as="a"
+                                        href="#"
+                                        className={`py-1 font-medium !text-gray-700 transition-colors hover:!text-gray-900 ${
+                                            idx === 0 ? 'pr-3' : 'px-3'
+                                        }`}
+                                    >
+                                        {link}
+                                    </Typography>
+                                </li>
+                            ))}
+                        </ul>
 
-                <div className='flex w-full items-center gap-6 justify-center flex-col mb-4'>
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.424988950068!2d-35.2037384241414!3d-5.795492094187338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b300105f47fcc9%3A0x5f7fcaeb7bbc3105!2sAv.%20Rodrigues%20Alves%2C%201069%20-%20Tirol%2C%20Natal%20-%20RN%2C%2059020-255!5e0!3m2!1spt-BR!2sbr!4v1701198180106!5m2!1spt-BR!2sbr" 
-                        width="400" 
-                        height="250" 
-                        className='rounded-md shadow-md'
-                        style={{border:0}} 
-                        allowFullScreen={true} 
-                        loading="lazy" 
-                        referrerPolicy="no-referrer-when-downgrade"></iframe>
-                    <div className='flex items-center gap-2'>
-                        <MapPin />
-                Av. Rodrigues Alves, 1069, Sala 113, Tirol, Natal/RN - 59020-255
+                        <div className="flex w-full gap-2 sm:w-fit mt-6">
+                            <IconButton variant="text" size="sm" color="gray">
+                                <MessageCircle />
+                            </IconButton>
+                            <IconButton variant="text" size="sm" color="gray">
+                                <Youtube />
+                            </IconButton>
+                            <IconButton variant="text" size="sm" color="gray">
+                                <Instagram />
+                            </IconButton>
+                            <IconButton variant="text" size="sm" color="gray">
+                                <Mail/>
+                            </IconButton>
+                        </div>
+                    </div>
+                    <div className="w-full sm:w-[24rem] sm:min-w-[24rem]">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.436087608727!2d-35.204531425012966!3d-5.79391349418884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b301b34d82cab1%3A0xc00b1f5ce6d3dc38!2sICTUS%20%7C%20Preven%C3%A7%C3%A3o%20e%20Performance%20em%20Cardiologia!5e0!3m2!1spt-BR!2sbr!4v1701204909400!5m2!1spt-BR!2sbr" 
+                            width="400" 
+                            height="300" 
+                            style={{border:0}} 
+                            className='rounded-xl'
+                            allowFullScreen={true}
+                            loading="lazy" 
+                            referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-blue-gray-50 py-6 md:justify-between">
+                    <Typography className="text-center font-normal !text-gray-700">
+            &copy; {currentYear} Code Presence™. Todos os direitos reservados.
+                    </Typography>
 
-                <div className="grid w-full grid-cols-3 place-items-center items-center justify-center gap-4 pb-8 md:flex ">
-                    {links.map((link, index) => (
-                        <ul key={index} className="">
-                            <li>
+                    <ul className="flex items-center">
+                        {links2.map((link, idx) => (
+                            <li key={link}>
                                 <Typography
                                     as="a"
                                     href="#"
-                                    color="white"
-                                    className="font-normal !text-gray-700 transition-colors hover:!text-gray-700 "
+                                    className={`py-1 font-normal !text-gray-700 transition-colors hover:!text-gray-900 ${
+                                        idx === links2.length - 1 ? 'pl-2' : 'px-2'
+                                    }`}
                                 >
                                     {link}
                                 </Typography>
                             </li>
-                        </ul>
-                    ))}
+                        ))}
+                    </ul>
                 </div>
-
-                <div className="flex w-full gap-2 sm:w-fit">
-                    <IconButton variant="text" size="sm" color="gray">
-                        <i className="fa-brands fa-twitter text-lg" />
-                    </IconButton>
-                    <IconButton variant="text" size="sm" color="gray">
-                        <Youtube />
-                    </IconButton>
-                    <IconButton variant="text" size="sm" color="gray">
-                        <Instagram />
-                    </IconButton>
-                    <IconButton variant="text" size="sm" color="gray">
-                        <i className="fa-brands fa-github text-lg" />
-                    </IconButton>
-                </div>
-                
-                <Typography
-                    color="blue-gray"
-                    className="mt-8 text-center !text-sm font-normal text-gray-700"
-                >
-                    Todos os direitos reservados. &copy; {currentYear} BestBio
-                </Typography>
-                <Typography
-                    color="blue-gray"
-                    className="mt-2 text-center !text-sm font-normal text-gray-700"
-                >
-                    Desenvolvido por 
-                    <strong>
-                        {' '}Code Presence
-                    </strong>
-                </Typography>
             </div>
         </footer>
     );
 }
-export {Footer};
+
+export { Footer };
