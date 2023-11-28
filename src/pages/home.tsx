@@ -13,6 +13,7 @@ import {  CarouselCustomArrows } from '../components/CardCarousel';
 import useOnScreen from '../hooks/useOnScreen';
 
 import video from '../assets/bg/1128.mp4';
+import MainBg from '../assets/bg/main_bg.webp';
 
 function Main(): JSX.Element {
   
@@ -24,7 +25,7 @@ function Main(): JSX.Element {
 
     return (
         <> 
-            <div className="relative h-screen w-full bg-[url('https://bestbio.com.br/wp-content/uploads/2023/04/Foto-Maciel-Lopes110-scaled.jpg')] bg-cover bg-no-repeat">
+            <div className="relative h-screen w-full bg-cover bg-no-repeat" style={{ backgroundImage: `url(${MainBg})` }}>
                 <video autoPlay loop muted id="videoBackground" className='absolute object-cover min-h-full min-w-full right-0 bottom-0 hidden lg:flex '>
                     <source src={video} type="video/mp4" />
                 </video>

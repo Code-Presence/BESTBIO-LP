@@ -1,5 +1,5 @@
 import React from 'react';
-import BG from '../assets/bg/greene.png';
+import BG from '../assets/bg/greene.webp';
 
 interface IPlansWrapperProps {
     children: React.ReactNode
