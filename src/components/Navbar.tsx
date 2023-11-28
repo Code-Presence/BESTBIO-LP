@@ -13,7 +13,7 @@ import { Phone } from 'lucide-react';
 
 import Logo from '../assets/logo.png';
 
-import {useLocation, useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface NavItemPropsType {
   children: React.ReactNode;

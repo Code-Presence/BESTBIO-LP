@@ -7,15 +7,6 @@ import { plans } from '../data/globalData';
 function Presential(): JSX.Element {
     const [type, setType] = React.useState('basic');
 
-    const [applyBlur, setApplyBlur] = React.useState(false);
-
-    React.useEffect(() => {
-        setApplyBlur(true);
-        // Remova a classe de animação após a animação ser concluída
-        const timer = setTimeout(() => setApplyBlur(false), 2000); // 2000 ms = duração da animação
-        return () => clearTimeout(timer);
-    }, [type]);
-
     return (
         <>
             <div className='w-screen h-fit bg-[#ffffff] flex flex-col items-center justify-around py-6'>
@@ -43,7 +34,7 @@ function Presential(): JSX.Element {
 
                     { type === 'basic'
                         ? (<Typography variant='h2' className='animate-fade-in-right'>NUTRICIONAL</Typography>)
-                        : (<Typography variant='h2' className='animate-fade-in-left'>NUTRICIONAL + PRESCRIÇÃO DE TREINO</Typography>)   
+                        : (<Typography variant='h2' className='animate-fade-in-left text-center'>NUTRICIONAL + PRESCRIÇÃO DE TREINO</Typography>)   
                     }
 
 
@@ -60,11 +51,11 @@ function Presential(): JSX.Element {
                         </Typography>)
                     }
                 </div>
-
-                <div className='w-full flex items-center justify-center pb-2 gap-6 mt-8'>
+                
+                <div className='w-full items-center flex flex-col lg:flex-row gap-6 mt-4 px-6 md:flex-col justify-center'>
                     { type === 'basic' ? (
                         <>
-                            {plans.slice(0, 3).map(plan => (
+                            {plans.slice(0, 3).map((plan) => (
                                 <PricingCard 
                                     key={plan.id}
                                     colorType={plan.colorType}
@@ -79,7 +70,7 @@ function Presential(): JSX.Element {
                         </>
                     ):(
                         <>
-                            {plans.slice(3, 6).map(plan => (
+                            {plans.slice(3, 6).map((plan) => (
                                 <PricingCard 
                                     key={plan.id}
                                     colorType={plan.colorType}

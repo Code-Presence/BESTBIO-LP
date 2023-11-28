@@ -92,7 +92,7 @@ function Main(): JSX.Element {
             </div>
 
             <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo7})` }}>
-                <div className="h-full w-[100%] bg-[#1b1b1b]/90 backdrop-blur-[4px] lg:px-40 lg:py-24 py-12">
+                <div className="h-full w-[100%] bg-[#1b1b1b]/90 backdrop-blur-[4px] lg:px-40 lg:py-12 py-12">
                     <div className='w-full flex flex-col items-center justify-center px-8'>
                         <Typography variant="lead" style={{ fontWeight: '600', color: '#7ED956'}}
                             className='animate-fade-in-down'
