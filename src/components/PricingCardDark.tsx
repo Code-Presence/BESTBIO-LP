@@ -10,8 +10,8 @@ import {
 } from '@material-tailwind/react';
 import { Check } from 'lucide-react';
 
-import patterns from '../assets/bg/pattern.svg';
-import patternsDark from '../assets/bg/pattern_dark.svg';
+import patterns from '../assets/bg/pattern.webp';
+import patternsDark from '../assets/bg/pattern_dark.webp';
 
 interface IPricingCardProps {
     id?: string,
@@ -114,30 +114,30 @@ export function PricingCard({
                     </ul>
                 </div>
 
-                <>
-                    <Accordion open={open === 1} className='my-6 lg:hidden w-full' icon={<Icon id={1} open={open} />}>
-                        <AccordionHeader onClick={() => handleOpen(1)} className={`text-center flex items-center justify-center ${colorType == 1  ? 'text-white' : 'text-gray-900'}`}>
+                
+                <Accordion open={open === 1} className='my-6 lg:hidden w-full' icon={<Icon id={1} open={open} />}>
+                    <AccordionHeader onClick={() => handleOpen(1)} className={`text-center flex items-center justify-center ${colorType == 1  ? 'text-white' : 'text-gray-900'}`}>
                             Veja os benefícios
-                        </AccordionHeader>
-                        <AccordionBody>
-                            <ul className="flex flex-col gap-2">
-                                {diferentials.map((option, key) => (
-                                    <Typography
-                                        as="li"
-                                        key={key}
-                                        color={colorType == 1 ? 'white' : 'black'}
-                                        className="flex gap-2 font-normal"
-                                    >
-                                        <Check  size={20}/>
-                                        {option}
-                                    </Typography>
-                                ))}
-                            </ul>
-                        </AccordionBody>
-                    </Accordion>
+                    </AccordionHeader>
+                    <AccordionBody>
+                        <ul className="flex flex-col gap-2">
+                            {diferentials.map((option, key) => (
+                                <Typography
+                                    as="li"
+                                    key={key}
+                                    color={colorType == 1 ? 'white' : 'black'}
+                                    className="flex gap-2 font-normal"
+                                >
+                                    <Check  size={20}/>
+                                    {option}
+                                </Typography>
+                            ))}
+                        </ul>
+                    </AccordionBody>
+                </Accordion>
                   
           
-                </>
+
                 <Button variant="filled" className='bg-[#7ED956] text-black' >
                     Contrate agora
                 </Button>
