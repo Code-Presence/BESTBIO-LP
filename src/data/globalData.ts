@@ -75,6 +75,119 @@ export const testimonials = [
     
 ];
 
+export const onlinePlans = [
+    { 
+        id: 1,
+        size: 'md',
+        colorType: 2,
+        type: 'CLASSIC',
+        period: 'Consulta Única',
+        kind: 'Nutricional',
+        price:  'R$ 350',
+        text: 'NO PIX OU EM ATÉ 12X DE R$ 38,00',
+        diferentials: [
+            '1 video-call para consulta nutricional',
+            '30 dias de acompanhamento',
+            '1 check-in semanal para dúvidas',
+            'Cardápio individualizado',
+            'App com receitas e lista de compras',
+        ]
+    },
+    { 
+        id: 2,
+        size: 'lg',
+        colorType: 1,
+        type: 'VIP',
+        period: 'Trimestral',
+        kind: 'Nutricional',
+        price:  'R$ 850',
+        text: 'NO PIX OU EM ATÉ12X DE R$ 92,00',
+        diferentials: [
+            '3 video-calls para consulta nutricional',
+            '90 dias de acompanhamento',
+            '1 check-in semanal para dúvidas',
+            'Cardápio individualizado',
+            'App com receitas e lista de compras',
+        ]
+    },
+    { 
+        id: 3,
+        size: 'lg',
+        colorType: 2,
+        type: 'PREMIUM',
+        period: 'Semestral',
+        kind: 'Nutricional',
+        price:  'R$ 1500',
+        text: 'NO PIX OU EM ATÉ 12X DE R$ 162,00',
+        diferentials: [
+            '6 video-calls para consulta nutricional',
+            '180 dias de acompanhamento',
+            '1 check-in semanal para dúvidas',
+            'Cardápio individualizado',
+            'App com receiras e lista de compras',
+        ]
+    },    
+    { 
+        id: 4,
+        size: 'md',
+        colorType: 2,
+        type: 'CLASSIC',
+        period: 'Consulta Única',
+        kind: 'Nutricional',
+        price:  'R$ 450',
+        text: 'NO PIX OU EM ATÉ 12X DE R$ 49,00',
+        diferentials: [
+            '1 video-call para consulta nutricional',
+            '30 dias de acompanhamento',
+            '1 check-in semanal para dúvidas',
+            'Cardápio individualizado',
+            'App com receitas e lista de compras',
+            'Prescrição de Treino para 30 dias',
+            'Treino no app com vídeo explicativo',
+            'Treino individualizado para seu objetivo',
+        ]
+    },
+    { 
+        id: 5,
+        size: 'lg',
+        colorType: 1,
+        type: 'VIP',
+        period: 'Trimestral',
+        kind: 'Nutricional',
+        price:  'R$ 1150',
+        text: 'NO PIX OU EM ATÉ12X DE R$ 124,00',
+        diferentials: [
+            '3 video-calls para consulta nutricional',
+            '90 dias de acompanhamento',
+            '1 check-in semanal para dúvidas',
+            'Cardápio individualizado',
+            'App com receitas e lista de compras',
+            'Prescrição de Treino para 90 dias',
+            'Treino no app com vídeo explicativo',
+            'Treino individualizado para seu objetivo',
+        ]
+    },
+    { 
+        id: 6,
+        size: 'lg',
+        colorType: 2,
+        type: 'PREMIUM',
+        period: 'Semestral',
+        kind: 'Nutricional',
+        price:  'R$ 2100',
+        text: 'NO PIX OU EM ATÉ 12X DE R$225,50',
+        diferentials: [
+            '6 video-calls para consulta nutricional',
+            '180 dias de acompanhamento',
+            '1 check-in semanal para dúvidas',
+            'Cardápio individualizado',
+            'App com receiras e lista de compras',
+            'Prescrição de Treino para 180 dias',
+            'Treino no app com vídeo explicativo',
+            'Treino individualizado para seu objetivo',
+        ]
+    },
+];
 export const plans = [
     { 
         id: 1,

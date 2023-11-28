@@ -98,7 +98,7 @@ export function PricingCard({
                         {text}
                     </strong>
                 </Typography>
-                <div className="lg:flex justify-center pt-6 pb-12 hidden">
+                <div className="lg:flex justify-center pt-6 pb-6 hidden">
                     <ul className="flex flex-col gap-2">
                         {diferentials.map((option, key) => (
                             <Typography

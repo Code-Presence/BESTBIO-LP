@@ -9,11 +9,11 @@ import {
 
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
-import { Phone } from 'lucide-react';
-
 import Logo from '../assets/logo.png';
 
 import { useNavigate } from 'react-router-dom';
+
+import Whats from '../assets/icons/whatsapp.svg';
 
 function CustomNavbar() {
     const [open, setOpen] = React.useState(false);
@@ -57,7 +57,8 @@ function CustomNavbar() {
                     <div className="hidden items-center gap-4 lg:flex">
                         <Button className='flex items-center gap-2 bg-[#7ED956] text-blue-gray-900'>
                             Fale conosco
-                            <Phone size={20}/>
+                            {/* <Phone size={20}/> */}
+                            <img src={Whats} className='w-4'/>
                         </Button>
                     </div>
                     <IconButton

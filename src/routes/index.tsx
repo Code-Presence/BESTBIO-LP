@@ -6,6 +6,8 @@ import { Presential } from '../pages/presential';
 
 import Aos from 'aos';
 import { Footer } from '../components/Footer';
+import { Online } from '../pages/online';
+import { PlansWrapper } from '../components/PlansWrapper';
 
 function AppRoutes(): JSX.Element {
     Aos.init({
@@ -17,7 +19,17 @@ function AppRoutes(): JSX.Element {
             <CustomNavbar/>
             <Routes>
                 <Route path='/' element={ <Main /> }/>
-                <Route path='/presencial' element={ <Presential /> }/>
+                <Route path='/presencial' element={ 
+                    <PlansWrapper>
+                        <Presential /> 
+                    </PlansWrapper>
+                }/>
+                <Route path='/online' element={
+                    <PlansWrapper>
+                        <Online />
+                    </PlansWrapper>
+                     
+                }/>
             </Routes>
             <Footer />
         </>

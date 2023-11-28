@@ -2,18 +2,18 @@ import { Tab, Tabs, TabsHeader, Typography } from '@material-tailwind/react';
 import React from 'react';
 import { PricingCard } from '../components/PricingCardDark';
 
-import { plans } from '../data/globalData';
+import { onlinePlans } from '../data/globalData';
 import { ExternalLink } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-function Presential(): JSX.Element {
+function Online(): JSX.Element {
     const [type, setType] = React.useState('basic');
     const navigate = useNavigate();
 
     return (
         <>
-            <div className='w-full flex flex-col items-center justify-center px-8 lg:px-20 gap-4'>
-                <Typography variant='lead' className='font-bold text-[#7ED956]'>ATENDIMENTO PRESENCIAL</Typography>
+            <div className='w-full flex flex-col gap-4 items-center justify-center px-8 lg:px-20'>
+                <Typography variant='lead' className='font-bold text-[#7ED956]'>ATENDIMENTO ONLINE</Typography>
 
                 <Tabs value="monthly" className="mx-auto w-72">
                     <TabsHeader className="h-12 border border-white/25 bg-opacity-90">
@@ -52,14 +52,10 @@ function Presential(): JSX.Element {
 
                 { type === 'basic'
                     ? (<Typography variant='lead' className='text-blue-gray-100 text-center animate-fade-in-left'>
-                        O atendimento presencial acontece na cidade de Natal - Rio Grande do Norte. A consulta nutricional já inclui a 
-                        <br/> 
-                        realização dos exames de bioimpedância e calorimetria indireta.
+                        O atendimento online acontece através do nosso app por videochamada.
                     </Typography>)
                     : (<Typography variant='lead' className='text-blue-gray-100 text-center animate-fade-in-right'>
-                        O atendimento presencial acontece na cidade de Natal - Rio Grande do Norte. A consulta inclui a prescrição 
-                        <br/ >
-                        nutricional e de treino, além dos exames de bioimpedância e calorimetria indireta.
+                        O atendimento online acontece através do nosso app por videochamada.
                     </Typography>)
                 }
             </div>
@@ -67,7 +63,7 @@ function Presential(): JSX.Element {
             <div className='w-full items-center flex flex-col lg:flex-row gap-6 mt-4 px-6 md:flex-col justify-center'>
                 { type === 'basic' ? (
                     <>
-                        {plans.slice(0, 3).map((plan) => (
+                        {onlinePlans.slice(0, 3).map((plan) => (
                             <PricingCard 
                                 key={plan.id}
                                 colorType={plan.colorType}
@@ -82,7 +78,7 @@ function Presential(): JSX.Element {
                     </>
                 ):(
                     <>
-                        {plans.slice(3, 6).map((plan) => (
+                        {onlinePlans.slice(3, 6).map((plan) => (
                             <PricingCard 
                                 key={plan.id}
                                 colorType={plan.colorType}
@@ -102,4 +98,4 @@ function Presential(): JSX.Element {
     );
 }
 
-export { Presential };
+export { Online };
