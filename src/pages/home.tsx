@@ -10,18 +10,27 @@ import { FeatureCard } from '../components/FeatureCard';
 import { services } from '../data/globalData';
 import {  CarouselCustomArrows } from '../components/CardCarousel';
 
-import useOnScreen from '../hooks/useOnScreen';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 import video from '../assets/bg/1128.mp4';
 import MainBg from '../assets/bg/main_bg.webp';
 
 function Main(): JSX.Element {
-  
-    const [isVisibleLeft, setIsVisibleLeft] = React.useState(false);
-    const [isVisibleRight, setIsVisibleRight] = React.useState(false);
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
-    const refLeft = useOnScreen(setIsVisibleLeft, { threshold: 0.5 });
-    const refRight = useOnScreen(setIsVisibleRight, { threshold: 0.5 });
+    React.useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
+
+    const isMobileDevice = () => {
+        return (
+            typeof window.orientation !== 'undefined' ||
+          navigator.userAgent.indexOf('IEMobile') !== -1
+        );
+    };
 
     return (
         <> 
@@ -30,40 +39,39 @@ function Main(): JSX.Element {
                     <source src={video} type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 h-full w-full backdrop-blur-[1px] flex flex-col px-6 xl:px-40 gap-4 pt-24 bg-[#000]/75 ">
-                    <Typography 
-                        variant="lead" 
-                        className="text-white animate-fade-in-down"
-                    >Oportunidade de mundança</Typography>
-                    <Typography 
-                        variant="h1" 
-                        className=" animate-fade-in-down font-racing text-customMedium xl:text-customBig leading-none" 
-                        style={{ fontWeight: '400', color: '#7ED956'}}>
+                    <div data-aos="fade-up">
+                        <Typography 
+                            variant="lead" 
+                            className="text-white "
+                        >Oportunidade de mundança</Typography>
+                        {isMobileDevice ? (
+                            <Typography 
+                                variant="h1" 
+                                className="  font-racing text-customMedium xl:text-customBig leading-none" 
+                                style={{ fontWeight: '400', color: '#7ED956'}}>
                         Consultoria <br/> Fitness
-                    </Typography>
+                            </Typography>
+                        ) : (<>huee</>)}
 
 
 
-                    <Typography variant="lead" className="text-white animate-fade-in-down">
-                        <hr  className='w-[20%] border-[#7ED956] mb-2 mt-5'/>
+                        <Typography variant="lead" className="text-white ">
+                            <hr  className='w-[20%] border-[#7ED956] mb-2 mt-5'/>
                         Alcance a boa forma com saúde, de maneira sustentável e definitiva 
-                        <br/> 
+                            <br/> 
                         com a orientação de um dos maiores especialistas do país em 
-                        <br />
+                            <br />
                         emagrecimento e performance.
-                        <hr  className='w-[20%] border-[#7ED956] mt-4'/>
-                    </Typography>
-
-                    <Button className='animate-fade-in-down w-fit bg-[#7ED956] text-blue-gray-900 mt-10 text-[16px]'>Comece hoje a sua mudança</Button>
+                            <hr  className='w-[20%] border-[#7ED956] mt-4'/>
+                        </Typography>
+                    </div>
+                    <Button className=' w-fit bg-[#7ED956] text-blue-gray-900 mt-10 text-[16px]' data-aos="fade-up" data-aos-delay={500}>Comece hoje a sua mudança</Button>
                 </div>
         
             </div>  
 
             <div className='w-full min-h-[40rem] h-fit bg-[#fefefe] flex flex-col lg:grid lg:grid-cols-2 px-6 py-12 lg:px-40 gap-6'>
-
-                <div 
-                    ref={refLeft}
-                    className={`transition-all duration-500 ease-out ${isVisibleLeft ? 'animate-fade-in-left' : 'opacity-0'} w-full justify-center flex flex-col gap-6`}
-                >
+                <div className={'w-full justify-center flex flex-col gap-6'} data-aos={'fade-right'}>
                     <div>
                         <Typography variant='h4'>O que você encontra por aqui</Typography>
                         <Typography variant='h1'>Saúde & Performance</Typography>
@@ -88,10 +96,7 @@ function Main(): JSX.Element {
                     <Button className='w-fit bg-[#7ED956] text-gray-900' size='lg'>Saiba mais</Button>
                 </div>
 
-                <div 
-                    ref={refRight}
-                    className={`transition-all duration-500 ease-out ${isVisibleRight ? 'animate-fade-in-right' : 'opacity-0'} w-full justify-center flex flex-col items-center lg:items-end`}
-                >
+                <div className={' w-full justify-center flex flex-col items-center lg:items-end'} data-aos={'fade-left'}>
                     <CarouselCustomNavigation />
                 </div>
 
@@ -100,11 +105,9 @@ function Main(): JSX.Element {
             <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo7})` }}>
                 <div className="h-full w-[100%] bg-[#1b1b1b]/90 backdrop-blur-[4px] lg:px-40 lg:py-12 py-12">
                     <div className='w-full flex flex-col items-center justify-center px-6'>
-                        <Typography variant="lead" style={{ fontWeight: '600', color: '#7ED956'}}
-                            className='animate-fade-in-down'
-                        >PRESENCIAL E ONLINE</Typography>
-                        <Typography variant="h1"  className="text-4xl animate-fade-in-down0" style={{ color: '#fff'}}>Nossos Serviços</Typography>
-                        <Typography variant="lead" className='mt-6 lg:text-center text-justify animate-fade-in-down1' style={{ color: '#fff'}}>Oferecemos programas e serviços que atendem públicos dos mais variados perfis, desde sedentários a atletas de alto rendimento. Temos pacotes para quem deseja apenas o acompanhamento nutricional e também oferecemos pacotes completos com nutrição e prescrição de exercícios físicos. Treino e plano alimentar são disponibilizados no nosso aplicativo que oferece várias funcionalidades e muita comodidade para o paciente.</Typography>
+                        <Typography variant="lead" style={{ fontWeight: '600', color: '#7ED956'}}>PRESENCIAL E ONLINE</Typography>
+                        <Typography variant="h1"  className="text-4xl" style={{ color: '#fff'}}>Nossos Serviços</Typography>
+                        <Typography variant="lead" className='mt-6 lg:text-center text-justify' style={{ color: '#fff'}}>Oferecemos programas e serviços que atendem públicos dos mais variados perfis, desde sedentários a atletas de alto rendimento. Temos pacotes para quem deseja apenas o acompanhamento nutricional e também oferecemos pacotes completos com nutrição e prescrição de exercícios físicos. Treino e plano alimentar são disponibilizados no nosso aplicativo que oferece várias funcionalidades e muita comodidade para o paciente.</Typography>
                         
                     </div>
 
@@ -112,12 +115,14 @@ function Main(): JSX.Element {
                         {
                             services.map((item, index) => (
                                 <>
-                                    <FeatureCard 
-                                        key={index}
-                                        img={item.photo}
-                                        title={item.title}
-                                        content={item.content}
-                                    />
+                                    <div key={index} data-aos={'fade-up'} data-aos-delay={200 * index}>
+                                        <FeatureCard 
+                                            key={index}
+                                            img={item.photo}
+                                            title={item.title}
+                                            content={item.content}
+                                        />
+                                    </div>
                                 </>
                             ))
                         }
@@ -136,7 +141,7 @@ function Main(): JSX.Element {
                         </Typography>
                         <hr className='border-[#7ED956] w-[40%] mt-5'/>
                     </div>
-                    <div className='w-full mt-6' id='custom-arrows'>
+                    <div className='w-full mt-6' id='custom-arrows' data-aos={'fade-up'}>
                         <CarouselCustomArrows />
                     </div>
 
@@ -145,7 +150,7 @@ function Main(): JSX.Element {
             </div>
             <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo5})` }}>
                 <div className="h-full w-[100%] bg-[#1b1b1b]/95 backdrop-blur-[4px] lg:px-40 lg:py-24 py-12 grid grid-cols-1 lg:grid-cols-2 p-6 sm:gap-8">
-                    <div className='pr-4'>
+                    <div className='pr-4' data-aos={'fade-right'}>
                         <Typography variant='h1' color="white" className='mt-6'>Quem Somos</Typography>
 
                         <Typography variant='lead' color='white'>
@@ -185,7 +190,7 @@ function Main(): JSX.Element {
                     </div>
 
 
-                    <div className='flex flex-col items-center justify-center mt-6'>
+                    <div className='flex flex-col items-center justify-center mt-6 overflow-hidden' data-aos={'fade-left'}>
                         <img src={homiLindo} className='rounded-md shadow-lg'/>
                     </div>
                 </div>

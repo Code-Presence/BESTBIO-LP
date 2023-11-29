@@ -5,7 +5,6 @@ import {
     CardBody,
     Typography,
     Button,
-    Tooltip,
 } from '@material-tailwind/react';
 import { useNavigate } from 'react-router-dom';
 
@@ -16,15 +15,10 @@ interface IFeatureCardProps {
 }
   
 const FeatureCard = React.memo(({ img, title, content }: IFeatureCardProps): JSX.Element => {
-    const animation = 'animate-fade-in-down2';
     const navigate = useNavigate();
-
-    React.useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
     
     return (
-        <section className={`grid h-fit place-items-center p-4 ${animation}`}>
+        <section className={'grid h-fit place-items-center p-4'}>
             <Card className="w-auto lg:max-w-[24rem] shadow-2xl">
                 <CardHeader color="gray" className="relative h-56">
                     <img
@@ -41,18 +35,29 @@ const FeatureCard = React.memo(({ img, title, content }: IFeatureCardProps): JSX
                     >
                         {title}
                     </Typography>
-                    <Typography color="gray" className="mb-6 font-normal min-h-[15rem]">
+                    <Typography color="gray" className="mb-5 font-normal min-h-[15rem]">
                         {content}
                     </Typography>
-                    <div className='flex width-full justify-between'>
-                        <Button variant="outlined" size="sm" >
-                        um botão
-                        </Button>
-                        <Tooltip content="saiba mais">
-                            <Button variant="filled" size="sm" onClick={() => navigate('/online')}>
+                    <div className='flex flex-col justify-between'>
+                        <Typography variant='small'>Saiba mais</Typography>
+                        <hr className='w-full border-gray-300 mt-1 mb-2'/>
+                        <div className='w-full flex justify-between'>
+
+                            <Button 
+                                variant="outlined" 
+                                size="sm"
+                                onClick={() => navigate('/presencial')} 
+                            >
+                            Presencial
+                            </Button>
+                            <Button 
+                                variant="filled" 
+                                size="sm" 
+                                onClick={() => navigate('/online')}
+                            >
                                 Online
                             </Button>
-                        </Tooltip>
+                        </div>
                     </div>
                 </CardBody>
             </Card>

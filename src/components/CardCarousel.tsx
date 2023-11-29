@@ -2,6 +2,8 @@ import React from 'react';
 import { Avatar, Card, CardBody, CardHeader, Carousel, IconButton, Typography } from '@material-tailwind/react';
 import { testimonials } from '../data/globalData';
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 interface TestimonialCardPropsType {
     img: string;
     feedback: string;
@@ -15,6 +17,11 @@ export function TestimonialCard({
     client,
     title,
 }: TestimonialCardPropsType) {
+    
+    React.useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
+
     return (
         <Card className="items-center text-center h-full">
             <CardHeader
@@ -99,12 +106,12 @@ export function CarouselCustomArrows() {
                 </IconButton>
             )}
         >
-            <div className="mt-16 grid gap-28 gap-x-10 md:grid-cols-2 lg:grid-cols-3 pb-4">
+            <div className="mt-16 grid gap-28 gap-x-10 md:grid-cols-2 lg:grid-cols-3 pb-4" >
                 {testimonials.slice(0, 3).map((props, key) => (
                     <TestimonialCard key={key} {...props} />
                 ))}
             </div>
-            <div className="mt-16 grid gap-28 gap-x-10 md:grid-cols-2 lg:grid-cols-3 pb-4">
+            <div className="mt-16 grid gap-28 gap-x-10 md:grid-cols-2 lg:grid-cols-3 pb-4" >
                 {testimonials.slice(3, 6).map((props, key) => (
                     <TestimonialCard key={key} {...props} />
                 ))}

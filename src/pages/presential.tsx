@@ -6,9 +6,20 @@ import { plans } from '../data/globalData';
 import { ExternalLink } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 function Presential(): JSX.Element {
     const [type, setType] = React.useState('basic');
     const navigate = useNavigate();
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    React.useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
 
     return (
         <>
@@ -67,32 +78,40 @@ function Presential(): JSX.Element {
             <div className='w-full items-center flex flex-col lg:flex-row gap-6 mt-4 px-4 md:flex-col justify-center'>
                 { type === 'basic' ? (
                     <>
-                        {plans.slice(0, 3).map((plan) => (
-                            <PricingCard 
-                                key={plan.id}
-                                colorType={plan.colorType}
-                                type={plan.type}
-                                period={plan.period}
-                                kind={plan.kind}
-                                price={plan.price}
-                                text={plan.text}
-                                diferentials={plan.diferentials}
-                            />
+                        {plans.slice(0, 3).map((plan, index) => (
+                            <>
+                                <div data-aos={'fade-up'} data-aos-delay={200 * index}>
+                                    <PricingCard 
+                                        key={plan.id}
+                                        colorType={plan.colorType}
+                                        type={plan.type}
+                                        period={plan.period}
+                                        kind={plan.kind}
+                                        price={plan.price}
+                                        text={plan.text}
+                                        diferentials={plan.diferentials}
+                                    />
+                                </div>
+                            </>
                         ))}
                     </>
                 ):(
                     <>
-                        {plans.slice(3, 6).map((plan) => (
-                            <PricingCard 
-                                key={plan.id}
-                                colorType={plan.colorType}
-                                type={plan.type}
-                                period={plan.period}
-                                kind={plan.kind}
-                                price={plan.price}
-                                text={plan.text}
-                                diferentials={plan.diferentials}
-                            />
+                        {plans.slice(3, 6).map((plan, index) => (
+                            <>
+                                <div data-aos={'fade-up'} data-aos-delay={200 * index}>
+                                    <PricingCard 
+                                        key={plan.id}
+                                        colorType={plan.colorType}
+                                        type={plan.type}
+                                        period={plan.period}
+                                        kind={plan.kind}
+                                        price={plan.price}
+                                        text={plan.text}
+                                        diferentials={plan.diferentials}
+                                    />
+                                </div>
+                            </>
                         ))}
                     </>
                 )}
