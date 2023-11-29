@@ -61,6 +61,7 @@ export function CarouselCustomArrows() {
             autoplayDelay={4000}
             prevArrow={({ handlePrev }) => (
                 <IconButton
+                    id='voltar'
                     variant="text"
                     size="lg"
                     onClick={handlePrev}
@@ -84,6 +85,7 @@ export function CarouselCustomArrows() {
             )}
             nextArrow={({ handleNext }) => (
                 <IconButton
+                    id='avançar'
                     variant="text"
                     size="lg"
                     onClick={handleNext}

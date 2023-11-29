@@ -58,9 +58,8 @@ function CustomNavbar() {
                         </Typography>
                     </ul>
                     <div className="hidden items-center gap-4 lg:flex">
-                        <Button className='flex items-center gap-2 bg-[#7ED956] text-blue-gray-900'>
+                        <Button className='flex items-center gap-2 bg-[#7ED956] text-blue-gray-900' id='fale conosco'>
                             Fale conosco
-                            {/* <Phone size={20}/> */}
                             <img src={Whats} className='w-4' alt='ínoce do whatsapp'/>
                         </Button>
                     </div>
@@ -69,6 +68,7 @@ function CustomNavbar() {
                         color="gray"
                         onClick={handleOpen}
                         className="ml-auto inline-block lg:hidden"
+                        id='expandir menu'
                     >
                         {open ? (
                             <XMarkIcon strokeWidth={2} className="h-6 w-6" color='white'/>
@@ -100,7 +100,7 @@ function CustomNavbar() {
                             </Typography>
                         </ul>
                         <div className="mt-6 mb-4 flex items-center gap-4">
-                            <Button className='bg-[#7ED956] text-blue-gray-900'>Fale conosco</Button>
+                            <Button className='bg-[#7ED956] text-blue-gray-900' id='fale conosco'>Fale conosco</Button>
                         </div>
                     </div>
                 </Collapse>

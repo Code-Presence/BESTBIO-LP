@@ -55,13 +55,13 @@ function CustomNavbar() {
                         </Typography>
                     </ul>
                     <div className="hidden items-center gap-4 lg:flex">
-                        <Button className='flex items-center gap-2 bg-[#7ED956] text-blue-gray-900'>
+                        <Button id='fale conosco' className='flex items-center gap-2 bg-[#7ED956] text-blue-gray-900'>
                             Fale conosco
-                            {/* <Phone size={20}/> */}
                             <img src={Whats} className='w-4' alt='ícone do whats'/>
                         </Button>
                     </div>
                     <IconButton
+                        id='expandir menu'
                         variant="text"
                         color="gray"
                         onClick={handleOpen}
@@ -97,7 +97,7 @@ function CustomNavbar() {
                             </Typography>
                         </ul>
                         <div className="mt-6 mb-4 flex items-center gap-4">
-                            <Button className='bg-[#7ED956] text-blue-gray-900'>Fale conosco</Button>
+                            <Button id='fale conosco' className='bg-[#7ED956] text-blue-gray-900'>Fale conosco</Button>
                         </div>
                     </div>
                 </Collapse>

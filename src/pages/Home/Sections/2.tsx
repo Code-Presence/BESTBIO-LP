@@ -28,7 +28,7 @@ function SecondSection() {
                     </Typography>
                 </div>
 
-                <Button className='w-fit bg-[#7ED956] text-gray-900' size='lg'>Saiba mais</Button>
+                <Button id='saiba mais' className='w-fit bg-[#7ED956] text-gray-900' size='lg'>Saiba mais</Button>
             </div>
 
             <div className={' w-full justify-center flex flex-col items-center lg:items-end'} data-aos={'fade-left'}>

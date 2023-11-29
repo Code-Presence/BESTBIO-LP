@@ -43,7 +43,8 @@ const FeatureCard = React.memo(({ img, title, content }: IFeatureCardProps): JSX
                         <hr className='w-full border-gray-300 mt-1 mb-2'/>
                         <div className='w-full flex justify-between'>
 
-                            <Button 
+                            <Button  
+                                id='plano presencial'
                                 variant="outlined" 
                                 size="sm"
                                 onClick={() => navigate('/presencial')} 
@@ -51,6 +52,7 @@ const FeatureCard = React.memo(({ img, title, content }: IFeatureCardProps): JSX
                             Presencial
                             </Button>
                             <Button 
+                                id='plano presencial'
                                 variant="filled" 
                                 size="sm" 
                                 onClick={() => navigate('/online')}

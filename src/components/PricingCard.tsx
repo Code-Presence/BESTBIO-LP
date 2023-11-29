@@ -138,7 +138,7 @@ export function PricingCard({
                   
           
 
-                <Button variant="filled" className='bg-[#7ED956] text-black' >
+                <Button variant="filled" className='bg-[#7ED956] text-black' id='fale conosco'>
                     Contrate agora
                 </Button>
             </CardBody>
