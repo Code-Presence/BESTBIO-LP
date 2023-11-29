@@ -61,7 +61,7 @@ function CustomNavbar() {
                         <Button className='flex items-center gap-2 bg-[#7ED956] text-blue-gray-900'>
                             Fale conosco
                             {/* <Phone size={20}/> */}
-                            <img src={Whats} className='w-4'/>
+                            <img src={Whats} className='w-4' alt='ínoce do whatsapp'/>
                         </Button>
                     </div>
                     <IconButton

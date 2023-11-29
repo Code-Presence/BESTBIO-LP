@@ -33,7 +33,7 @@ function CustomNavbar() {
             <Navbar className={' top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 bg-[#1b1b1b]'}>
                 <div className="container mx-auto flex items-center justify-between">
                   
-                    <img src={Logo}/>
+                    <img src={Logo} alt='logo'/>
                     <ul className="ml-10 hidden items-center gap-8 lg:flex">
                         <Typography
                             onClick={() => navigate('/')} 
@@ -58,7 +58,7 @@ function CustomNavbar() {
                         <Button className='flex items-center gap-2 bg-[#7ED956] text-blue-gray-900'>
                             Fale conosco
                             {/* <Phone size={20}/> */}
-                            <img src={Whats} className='w-4'/>
+                            <img src={Whats} className='w-4' alt='ícone do whats'/>
                         </Button>
                     </div>
                     <IconButton
