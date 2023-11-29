@@ -2,8 +2,8 @@ import React from 'react';
 import { Typography } from '@material-tailwind/react';
 import '../index.css';
 
-import photo5 from '../assets/photos/photo-5.png';
-import homiLindo from '../assets/photos/homilindo.jpg';
+import photo5 from '../assets/photos/photo-5.webp';
+import homiLindo from '../assets/photos/homilindo.webp';
 import {  CarouselCustomArrows } from '../components/CardCarousel';
 
 import Aos from 'aos';

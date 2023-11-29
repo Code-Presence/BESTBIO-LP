@@ -1,6 +1,6 @@
-import photo1 from '../assets/photos/photo-1.jpg';
-import photo2 from '../assets/photos/photo-2.jpg';
-import photo3 from '../assets/photos/photo-3.jpg';
+import photo1 from '../assets/photos/photo-1.webp';
+import photo2 from '../assets/photos/photo-2.webp';
+import photo3 from '../assets/photos/photo-3.webp';
 
 import enzo from '../assets/photos/patients/enzo.jpg';
 import diogo from '../assets/photos/patients/diogo.jpg';

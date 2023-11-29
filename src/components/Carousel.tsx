@@ -1,12 +1,12 @@
 import React from 'react';
 import { Carousel } from '@material-tailwind/react';
 
-import photo1 from '../assets/photos/photo-1.jpg';
-import photo2 from '../assets/photos/photo-2.jpg';
-import photo3 from '../assets/photos/photo-3.jpg';
-import photo4 from '../assets/photos/photo-4.jpg';
-import photo5 from '../assets/photos/photo-5.png';
-import photo6 from '../assets/photos/photo-6.png';
+import photo1 from '../assets/photos/photo-1.webp';
+import photo2 from '../assets/photos/photo-2.webp';
+import photo3 from '../assets/photos/photo-3.webp';
+import photo4 from '../assets/photos/photo-4.webp';
+import photo5 from '../assets/photos/photo-5.webp';
+import photo6 from '../assets/photos/photo-6.webp';
 import photo7 from '../assets/photos/photo-7.webp';
 import photo8 from '../assets/photos/photo-8.webp';
  
