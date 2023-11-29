@@ -34,7 +34,7 @@ function Main(): JSX.Element {
 
     return (
         <> 
-            <div className="relative h-screen w-full bg-cover bg-no-repeat" style={{ backgroundImage: `url(${MainBg})` }}>
+            <div className="relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden" style={{ backgroundImage: `url(${MainBg})` }}>
                 <video autoPlay loop muted id="videoBackground" className='absolute object-cover min-h-full min-w-full right-0 bottom-0 hidden lg:flex '>
                     <source src={video} type="video/mp4" />
                 </video>
@@ -70,7 +70,7 @@ function Main(): JSX.Element {
         
             </div>  
 
-            <div className='w-full min-h-[40rem] h-fit bg-[#fefefe] flex flex-col lg:grid lg:grid-cols-2 px-6 py-12 lg:px-40 gap-6'>
+            <div className='w-full min-h-[40rem] h-fit bg-[#fefefe] flex flex-col lg:grid lg:grid-cols-2 px-6 py-12 lg:px-40 gap-6 overflow-x-hidden'>
                 <div className={'w-full justify-center flex flex-col gap-6'} data-aos={'fade-right'}>
                     <div>
                         <Typography variant='h4'>O que você encontra por aqui</Typography>
@@ -102,7 +102,7 @@ function Main(): JSX.Element {
 
             </div>
 
-            <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo7})` }}>
+            <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat overflow-x-hidden" style={{ backgroundImage: `url(${photo7})` }}>
                 <div className="h-full w-[100%] bg-[#1b1b1b]/90 backdrop-blur-[4px] lg:px-40 lg:py-12 py-12">
                     <div className='w-full flex flex-col items-center justify-center px-6'>
                         <Typography variant="lead" style={{ fontWeight: '600', color: '#7ED956'}}>PRESENCIAL E ONLINE</Typography>
@@ -131,7 +131,7 @@ function Main(): JSX.Element {
                 </div>
             </div>
 
-            <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo5})` }}>
+            <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat overflow-x-hidden" style={{ backgroundImage: `url(${photo5})` }}>
                 <div className="h-full w-[100%] bg-[#ffffff]/95 backdrop-blur-[4px] lg:px-40 lg:py-24 py-12 px-6">
                     <div className='w-full flex flex-col items-center justify-center'>
                         <Typography variant="lead" className="text-blue-gray-800" style={{ fontWeight: '600'}}>NOSSOS CLIENTES</Typography>
@@ -148,7 +148,7 @@ function Main(): JSX.Element {
 
                 </div>
             </div>
-            <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo5})` }}>
+            <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat overflow-x-hidden" style={{ backgroundImage: `url(${photo5})` }}>
                 <div className="h-full w-[100%] bg-[#1b1b1b]/95 backdrop-blur-[4px] lg:px-40 lg:py-24 py-12 grid grid-cols-1 lg:grid-cols-2 p-6 sm:gap-8">
                     <div className='pr-4' data-aos={'fade-right'}>
                         <Typography variant='h1' color="white" className='mt-6'>Quem Somos</Typography>
