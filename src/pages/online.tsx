@@ -1,6 +1,6 @@
 import { Tab, Tabs, TabsHeader, Typography } from '@material-tailwind/react';
 import React from 'react';
-import { PricingCard } from '../components/PricingCardDark';
+import { PricingCard } from '../components/PricingCard';
 
 import { onlinePlans } from '../data/globalData';
 import { ExternalLink } from 'lucide-react';
@@ -9,6 +9,12 @@ import { useNavigate } from 'react-router-dom';
 function Online(): JSX.Element {
     const [type, setType] = React.useState('basic');
     const navigate = useNavigate();
+
+    React.useEffect(() => {
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+    }, []);
 
     return (
         <>

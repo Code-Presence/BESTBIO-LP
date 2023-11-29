@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Main } from '../pages/home';
 import { CustomNavbar } from '../components/Navbar';
+import { CustomNavbar as Nosticky } from '../components/Navbar_nostick';
 import { Presential } from '../pages/presential';
 
 import Aos from 'aos';
@@ -16,18 +17,29 @@ function AppRoutes(): JSX.Element {
     });
     return (
         <>
-            <CustomNavbar/>
+           
             <Routes>
-                <Route path='/' element={ <Main /> }/>
+                <Route path='/' element={ 
+                    <>
+                        <CustomNavbar/>
+                        <Main /> 
+                    </>
+                }/>
                 <Route path='/presencial' element={ 
-                    <PlansWrapper>
-                        <Presential /> 
-                    </PlansWrapper>
+                    <>
+                        <Nosticky />
+                        <PlansWrapper>
+                            <Presential /> 
+                        </PlansWrapper>
+                    </>
                 }/>
                 <Route path='/online' element={
-                    <PlansWrapper>
-                        <Online />
-                    </PlansWrapper>
+                    <>
+                        <Nosticky />
+                        <PlansWrapper>
+                            <Online />
+                        </PlansWrapper>
+                    </>
                      
                 }/>
             </Routes>

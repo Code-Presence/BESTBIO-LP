@@ -59,7 +59,7 @@ export function PricingCard({
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
     return (
-        <Card variant="gradient" className={`lg:w-[25rem] w-full h-fit ${colorType == 1 ? 'bg-gray-900' : 'white'} border`}>
+        <Card variant="gradient" className={`lg:w-[25rem] w-full h-fit ${colorType == 1 ? 'bg-gray-900' : 'white'} border border-[#c4c4c4]/40`}>
 
             <div className="absolute inset-0 bg-cover bg-no-repeat opacity-20" style={{ backgroundImage: `url(${colorType == 1 ? patterns : patternsDark})` }}/>
 

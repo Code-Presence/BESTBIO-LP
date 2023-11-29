@@ -1,6 +1,6 @@
 import { Tab, Tabs, TabsHeader, Typography } from '@material-tailwind/react';
 import React from 'react';
-import { PricingCard } from '../components/PricingCardDark';
+import { PricingCard } from '../components/PricingCard';
 
 import { plans } from '../data/globalData';
 import { ExternalLink } from 'lucide-react';

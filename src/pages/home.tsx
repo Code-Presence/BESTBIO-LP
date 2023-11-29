@@ -29,7 +29,7 @@ function Main(): JSX.Element {
                 <video autoPlay loop muted id="videoBackground" className='absolute object-cover min-h-full min-w-full right-0 bottom-0 hidden lg:flex '>
                     <source src={video} type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 h-full w-full backdrop-blur-[1px] flex flex-col px-8 xl:px-40 gap-4 pt-24 bg-[#000]/75 ">
+                <div className="absolute inset-0 h-full w-full backdrop-blur-[1px] flex flex-col px-6 xl:px-40 gap-4 pt-24 bg-[#000]/75 ">
                     <Typography 
                         variant="lead" 
                         className="text-white animate-fade-in-down"
@@ -58,7 +58,7 @@ function Main(): JSX.Element {
         
             </div>  
 
-            <div className='w-full min-h-[40rem] h-fit bg-[#fefefe] flex flex-col lg:grid lg:grid-cols-2 px-8 py-12 lg:px-40 gap-6'>
+            <div className='w-full min-h-[40rem] h-fit bg-[#fefefe] flex flex-col lg:grid lg:grid-cols-2 px-6 py-12 lg:px-40 gap-6'>
 
                 <div 
                     ref={refLeft}
@@ -99,7 +99,7 @@ function Main(): JSX.Element {
 
             <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo7})` }}>
                 <div className="h-full w-[100%] bg-[#1b1b1b]/90 backdrop-blur-[4px] lg:px-40 lg:py-12 py-12">
-                    <div className='w-full flex flex-col items-center justify-center px-8'>
+                    <div className='w-full flex flex-col items-center justify-center px-6'>
                         <Typography variant="lead" style={{ fontWeight: '600', color: '#7ED956'}}
                             className='animate-fade-in-down'
                         >PRESENCIAL E ONLINE</Typography>
@@ -127,8 +127,8 @@ function Main(): JSX.Element {
             </div>
 
             <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo5})` }}>
-                <div className="h-full w-[100%] bg-[#ffffff]/95 backdrop-blur-[4px] lg:px-40 lg:py-24 py-12">
-                    <div className='w-full flex flex-col items-center justify-center px-8'>
+                <div className="h-full w-[100%] bg-[#ffffff]/95 backdrop-blur-[4px] lg:px-40 lg:py-24 py-12 px-6">
+                    <div className='w-full flex flex-col items-center justify-center'>
                         <Typography variant="lead" className="text-blue-gray-800" style={{ fontWeight: '600'}}>NOSSOS CLIENTES</Typography>
                         <Typography variant="h1"  className="text-4xl text-gray-900">Depoimentos</Typography>
                         <Typography variant="lead" className='mt-6 lg:text-center text-justify text-blue-gray-800'>
@@ -136,7 +136,7 @@ function Main(): JSX.Element {
                         </Typography>
                         <hr className='border-[#7ED956] w-[40%] mt-5'/>
                     </div>
-                    <div className='w-full mt-6 px-8' id='custom-arrows'>
+                    <div className='w-full mt-6' id='custom-arrows'>
                         <CarouselCustomArrows />
                     </div>
 
@@ -144,7 +144,7 @@ function Main(): JSX.Element {
                 </div>
             </div>
             <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${photo5})` }}>
-                <div className="h-full w-[100%] bg-[#1b1b1b]/95 backdrop-blur-[4px] lg:px-40 lg:py-24 py-12 grid grid-cols-1 lg:grid-cols-2 p-8 sm:gap-8">
+                <div className="h-full w-[100%] bg-[#1b1b1b]/95 backdrop-blur-[4px] lg:px-40 lg:py-24 py-12 grid grid-cols-1 lg:grid-cols-2 p-6 sm:gap-8">
                     <div className='pr-4'>
                         <Typography variant='h1' color="white" className='mt-6'>Quem Somos</Typography>
 
@@ -185,7 +185,7 @@ function Main(): JSX.Element {
                     </div>
 
 
-                    <div className='pl-4 flex flex-col items-center justify-center'>
+                    <div className='flex flex-col items-center justify-center mt-6'>
                         <img src={homiLindo} className='rounded-md shadow-lg'/>
                     </div>
                 </div>

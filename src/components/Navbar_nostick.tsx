@@ -30,7 +30,7 @@ function CustomNavbar() {
 
     return (
         <>
-            <Navbar className={' sticky top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 bg-[#1b1b1b]'}>
+            <Navbar className={' top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 bg-[#1b1b1b]'}>
                 <div className="container mx-auto flex items-center justify-between">
                   
                     <img src={Logo}/>
@@ -42,16 +42,13 @@ function CustomNavbar() {
                             Home
                         </Typography>
                         <Typography 
-                            onClick={() =>  {
-                                navigate('/presencial'),
-                                window.scrollTo(0, 0);
-                            }} 
+                            onClick={() => navigate('/presencial')} 
                             className='hover:cursor-pointer hover:scale-110 transition-all z-20 relative  hover:text-[#7ED956]'
                         >
                           Planos presenciais
                         </Typography>
                         <Typography
-                            onClick={() => {navigate('/online'), window.scrollTo(0, 0);}} 
+                            onClick={() => navigate('/online')} 
                             className='hover:cursor-pointer hover:scale-110 transition-all z-30 relative hover:text-[#7ED956]'
                         >
                           Planos online
@@ -87,13 +84,13 @@ function CustomNavbar() {
                             Home
                             </Typography>
                             <Typography
-                                onClick={() => {navigate('/presencial'), window.scrollTo(0, 0);}} 
+                                onClick={() => navigate('/presencial')} 
                                 className="flex items-center gap-2 font-medium text-gray-100"
                             >
                           Planos presenciais
                             </Typography>
                             <Typography
-                                onClick={() => {navigate('/online'), window.scrollTo(0, 0);}} 
+                                onClick={() => navigate('/online')} 
                                 className="flex items-center gap-2 font-medium text-gray-100"
                             >
                           Planos online
