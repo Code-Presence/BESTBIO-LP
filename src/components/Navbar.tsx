@@ -33,7 +33,7 @@ function CustomNavbar() {
             <Navbar className={' sticky top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 bg-[#1b1b1b]'}>
                 <div className="container mx-auto flex items-center justify-between">
                   
-                    <img src={Logo} alt='logo-marca' className='w-28 lg:w-32'/>
+                    <img src={Logo} alt='logo-marca' className='w-20 lg:w-20'/>
                     <ul className="ml-10 hidden items-center gap-8 lg:flex">
                         <Typography
                             onClick={() => navigate('/')} 

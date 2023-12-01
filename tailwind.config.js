@@ -22,6 +22,10 @@ export default withMT({
                 customMedium: '62px'
             },
             keyframes: {
+                fadeOut: {
+                    '0%': { opacity: 1 },
+                    '100%': { opacity: 0 },
+                },
                 'fade-in-down': {
                     '0%': {
                         opacity: '0',
@@ -60,6 +64,7 @@ export default withMT({
                 'fade-in-down2': 'fade-in-down 2s ease-out',
                 'fade-in-left': 'fadeInLeft 0.5s ease-out',
                 'fade-in-right': 'fadeInRight 0.5s ease-out',
+                'fadeOut': 'fadeOut 0.5s ease-in-out 3s',
             },
         },
     },

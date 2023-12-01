@@ -25,7 +25,7 @@ function AppRoutes(): JSX.Element {
             <Routes>
                 <Route path='/' element={ 
                     <>
-                        <PreLoader />
+                        {/* <PreLoader /> */}
                         <CustomNavbar/>
                         <Main /> 
                     </>

@@ -1,10 +1,7 @@
 import gsap from 'gsap';
 
-// Declare a general timeline to use in all the animation functions.
-
 const tl = gsap.timeline();
 
-// Preloader Animation
 export const preLoaderAnim = () => {
     tl.to('preloader', {
         duration: 0.1,
@@ -57,7 +54,7 @@ export const preLoaderAnim = () => {
                 duration: 1.5,
                 height: '0vh',
                 ease: 'Power3.easeOut',
-                onComplete: mobileLanding(),
+                onComplete: mobileLanding, // Corrigido: Passando a função como referência
             },
             '-=2'
         )
@@ -80,13 +77,13 @@ export const preLoaderAnim = () => {
                 amount: 0.5,
             },
             ease: 'expo.easeOut',
-            onComplete: animateMainShape(),
+            onComplete: animateMainShape, // Corrigido: Passando a função como referência
         })
         .from('.main-circle', {
             duration: 1,
             opacity: 0,
             ease: 'power3.easeInOut',
-            onComplete: animateShapes(),
+            onComplete: animateShapes, // Corrigido: Passando a função como referência
         })
         .from('.shapes .shape', {
             duration: 1,
@@ -202,20 +199,20 @@ export const fadeUp = (el, delay = 0) => {
 };
 
 export const mobileLanding = () => {
-    window.innerWidth < 763 &&
-    tl.from('.landing__main2', {
-        duration: 1,
-        delay: 0,
-        opacity: 0,
-        y: 80,
-        ease: 'expo.easeOut',
-    });
+    const tl = gsap.timeline();
+    if (window.innerWidth < 763) {
+        tl.from('.landing__main2', {
+            duration: 1,
+            opacity: 0,
+            y: 80,
+            ease: 'expo.easeOut',
+        });
+    }
+    return tl; // Retorna a timeline criada
 };
 
 const animateShapes = () => {
-    const infiniteTl = gsap.timeline({
-        repeat: -1,
-    });
+    const infiniteTl = gsap.timeline({ repeat: -1 });
     infiniteTl
         .to('.shapes .shape', {
             duration: 4,
@@ -249,12 +246,11 @@ const animateShapes = () => {
             ease: 'power3.easeInOut',
             stagger: 1,
         });
+    return infiniteTl;
 };
 
 const animateMainShape = () => {
-    const infiniteTl = gsap.timeline({
-        repeat: -1,
-    });
+    const infiniteTl = gsap.timeline({ repeat: -1 });
     infiniteTl
         .to('.shapes .main-circle', {
             duration: 6,
@@ -274,6 +270,7 @@ const animateMainShape = () => {
             y: 0,
             ease: 'expo.easeOut',
         });
+    return infiniteTl;
 };
 
 export const boxHover = (e) => {
