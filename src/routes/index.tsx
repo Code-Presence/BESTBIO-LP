@@ -9,13 +9,23 @@ import { Footer } from '../components/Footer';
 import { Online } from '../pages/online';
 import { PlansWrapper } from '../components/PlansWrapper';
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { PreLoader } from '../components/PreLoader';
+
 function AppRoutes(): JSX.Element {
+
+    React.useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
+
     return (
         <>
            
             <Routes>
                 <Route path='/' element={ 
                     <>
+                        <PreLoader />
                         <CustomNavbar/>
                         <Main /> 
                     </>

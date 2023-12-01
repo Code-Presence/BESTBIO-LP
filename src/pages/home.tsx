@@ -22,6 +22,7 @@ function Main(): JSX.Element {
 
     return (
         <> 
+
             <FirstSec />
 
             <SecondSec />
@@ -29,7 +30,7 @@ function Main(): JSX.Element {
             <ThirdSec />
 
             <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat overflow-x-hidden" style={{ backgroundImage: `url(${photo5})` }}>
-                <div className="h-full w-[100%] bg-[#ffffff]/95 backdrop-blur-[4px] lg:px-40 lg:py-24 py-12 px-6">
+                <div className="h-full w-[100%] bg-[#ffffff]/95 backdrop-blur-[4px] lg:px-40 lg:py-24 py-12 px-6 overflow-hidden">
                     <div className='w-full flex flex-col items-center justify-center'>
                         <Typography variant="lead" className="text-blue-gray-800" style={{ fontWeight: '600'}}>NOSSOS CLIENTES</Typography>
                         <Typography variant="h1"  className="text-4xl text-gray-900">Depoimentos</Typography>

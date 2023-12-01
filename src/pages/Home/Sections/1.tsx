@@ -8,7 +8,7 @@ function FirstSection() {
 
     return (
         <>
-            <div className="relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden" style={{ backgroundImage: `url(${MainBg})` }}>
+            <div className="relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden overflow-hidden" style={{ backgroundImage: `url(${MainBg})` }}>
                 <video autoPlay loop muted id="videoBackground" className='absolute object-cover min-h-full min-w-full right-0 bottom-0 hidden lg:flex '>
                     <source src={video} type="video/mp4" className='hidden lg:flex'/>
                 </video>
