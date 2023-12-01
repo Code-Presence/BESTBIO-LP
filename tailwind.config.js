@@ -64,7 +64,7 @@ export default withMT({
                 'fade-in-down2': 'fade-in-down 2s ease-out',
                 'fade-in-left': 'fadeInLeft 0.5s ease-out',
                 'fade-in-right': 'fadeInRight 0.5s ease-out',
-                'fadeOut': 'fadeOut 0.5s ease-in-out 3s',
+                'fadeOut': 'fadeOut 0.5s ease-in-out 3.2s',
             },
         },
     },
