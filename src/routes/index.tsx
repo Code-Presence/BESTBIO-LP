@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Main } from '../pages/home';
 import { CustomNavbar } from '../components/Navbar';
@@ -21,39 +21,44 @@ function AppRoutes(): JSX.Element {
 
     return (
         <>
-           
-            <Routes>
-                <Route path='/' element={ 
-                    <>
-                        <CustomNavbar />
-                        <Main /> 
-                    </>
-                }/>
-                <Route path='/presencial' element={ 
-                    <>
-                        <Nosticky />
-                        <PlansWrapper>
-                            <Presential /> 
-                        </PlansWrapper>
-                    </>
-                }/>
-                <Route path='/online' element={
-                    <>
-                        <Nosticky />
-                        <PlansWrapper>
-                            <Online />
-                        </PlansWrapper>
-                    </>
+            <Suspense fallback={
+                <div className='w-screen h-screen bg-[#1b1b1b]'>
+                    <h1>Carregando...</h1>
+                </div>
+            }> 
+                <Routes>
+                    <Route path='/' element={ 
+                        <>
+                            <CustomNavbar />
+                            <Main /> 
+                        </>
+                    }/>
+                    <Route path='/presencial' element={ 
+                        <>
+                            <Nosticky />
+                            <PlansWrapper>
+                                <Presential /> 
+                            </PlansWrapper>
+                        </>
+                    }/>
+                    <Route path='/online' element={
+                        <>
+                            <Nosticky />
+                            <PlansWrapper>
+                                <Online />
+                            </PlansWrapper>
+                        </>
                      
-                }/>
-                <Route path='/pro' element={
-                    <>
-                        <Pro />
-                    </>
+                    }/>
+                    <Route path='/pro' element={
+                        <>
+                            <Pro />
+                        </>
                      
-                }/>
-            </Routes>
-            <Footer />
+                    }/>
+                </Routes>
+                <Footer />
+            </Suspense>
         </>
     );
 }
