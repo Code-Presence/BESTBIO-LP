@@ -70,11 +70,11 @@ function CustomNavbar() {
                         </Button>
                     </div>
                     <IconButton
+                        id='expandir menu'
                         variant="text"
                         color="gray"
                         onClick={handleOpen}
                         className="ml-auto inline-block lg:hidden"
-                        id='expandir menu'
                     >
                         {open ? (
                             <XMarkIcon strokeWidth={2} className="h-6 w-6" color='white'/>
