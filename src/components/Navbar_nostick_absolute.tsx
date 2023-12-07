@@ -30,7 +30,7 @@ function CustomNavbar() {
 
     return (
         <>
-            <Navbar className={' top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 bg-[#1b1b1b] animate-fade-in-down '}>
+            <Navbar className={' top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 bg-[#1b1b1b] animate-fade-in-down absolute'}>
                 <div className="container mx-auto flex items-center justify-between">
                   
                     <img src={Logo} alt='logo' className='w-20 lg:w-20 cursor-pointer hover:scale-110 transition-all' onClick={() => navigate('/')}/>

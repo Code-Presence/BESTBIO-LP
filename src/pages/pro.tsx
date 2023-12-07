@@ -1,7 +1,7 @@
 import React from 'react';
-import MainBg from '../assets/bg/ATLETAS-3.png';
+import MainBg from '../assets/bg/ATLETAS-3-optimized.png';
 import { Typography } from '@material-tailwind/react';
-import { CustomNavbar } from '../components/Navbar_nostick';
+import { CustomNavbar } from '../components/Navbar_nostick_absolute';
 
 function Pro(): JSX.Element {
     const [showNav, setShowNav] = React.useState<boolean>(false);
@@ -15,7 +15,8 @@ function Pro(): JSX.Element {
                 <CustomNavbar />
             )}
 
-            <div className={`relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden overflow-hidden animate-fade-in-down bg-center transition-padding duration-300 ${showNav ? 'mt-[4rem]' : ''}`} style={{ backgroundImage: `url(${MainBg})` }}>
+            <div className={`relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden overflow-hidden animate-fade-in-down bg-center transition-padding duration-300 ${showNav ? 'mt-[4rem]' : ''}`} style={{ backgroundImage: `url(${MainBg})` }} 
+            >
                 <div className="absolute inset-0 h-full w-full backdrop-blur-[2px] flex flex-col px-6 xl:px-40 gap-4 pt-24 bg-[#000]/80 " data-aos="zoom-out-down" data-aos-delay="1000">
                     <div data-aos="slide-right" data-aos-delay="2200">
                         <Typography
