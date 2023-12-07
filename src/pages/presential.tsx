@@ -23,7 +23,7 @@ function Presential(): JSX.Element {
 
     return (
         <>
-            <div className='w-full flex flex-col items-center justify-center px-6 lg:px-20 gap-4'>
+            <div className='w-screen flex flex-col items-center justify-center px-6 lg:px-20 gap-4'>
                 <Typography variant='lead' className='font-bold text-[#7ED956]'>ATENDIMENTO PRESENCIAL</Typography>
 
                 <Tabs value="monthly" className="mx-auto w-72">

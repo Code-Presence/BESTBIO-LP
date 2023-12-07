@@ -31,24 +31,28 @@ function Main(): JSX.Element {
 
     return (
         <> 
-            {showPreloader && (
-                <div className='h-screen w-screen flex-col fixed z-[99999] bottom-0 top-0 left-0 right-0 overflow-hidden bg-[#1b1b1b] flex items-center justify-center gap-6 animate-fadeOut'
-                >
-                    <div className=' overflow-hidden mb-4'>
-                        <div data-aos={'fade-down'}>
-                            <img src={logo} alt={'logo'} width={300}/>
+            {showPreloader ? (
+                <>
+                    <div className='h-screen w-screen flex-col fixed z-[99999] bottom-0 top-0 left-0 right-0 overflow-hidden bg-[#1b1b1b] flex items-center justify-center gap-6 animate-fadeOut'
+                    >
+                        <div className=' overflow-hidden mb-4'>
+                            <div data-aos={'fade-down'}>
+                                <img src={logo} alt={'logo'} width={300}/>
+                            </div>
+                        </div>
+                        <div className=' flex gap-4 items-center h-[2rem] overflow-hidden texts-container'>
+                            <span className='text-xl lg:text-2xl text-white font-bold' data-aos={'fade-up'} data-aos-delay={500}>Saúde,</span>
+                            <span className='text-xl lg:text-2xl text-white font-bold' data-aos={'fade-up'} data-aos-delay={1000}>Performance,</span>
+                            <span className='text-xl lg:text-2xl text-white font-bold' data-aos={'fade-up'} data-aos-delay={1500}>Estido de vida</span>
                         </div>
                     </div>
-                    <div className=' flex gap-4 items-center h-[2rem] overflow-hidden texts-container'>
-                        <span className='text-xl lg:text-2xl text-white font-bold' data-aos={'fade-up'} data-aos-delay={500}>Saúde,</span>
-                        <span className='text-xl lg:text-2xl text-white font-bold' data-aos={'fade-up'} data-aos-delay={1000}>Performance,</span>
-                        <span className='text-xl lg:text-2xl text-white font-bold' data-aos={'fade-up'} data-aos-delay={1500}>Estido de vida</span>
-                    </div>
-                </div>
+                    <div className='w-screen h-screen bg-[#1b1b1b]'/>
+                </>
+            ) : (
+                <>
+                    <FirstSec />
+                </>
             )}
-            
-
-            <FirstSec />
 
             <SecondSec />
 

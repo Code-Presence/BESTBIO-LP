@@ -8,7 +8,7 @@ function FirstSection() {
 
     return (
         <>
-            <div className="relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden overflow-hidden" style={{ backgroundImage: `url(${MainBg})` }}>
+            <div className="relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden overflow-hidden animate-fade-in-down" style={{ backgroundImage: `url(${MainBg})` }}>
                 <video autoPlay loop muted id="videoBackground" className='absolute object-cover min-h-full min-w-full right-0 bottom-0 hidden lg:flex '>
                     <source src={video} type="video/mp4" className='hidden lg:flex'/>
                 </video>
@@ -20,7 +20,7 @@ function FirstSection() {
                         >Oportunidade de mundança</Typography>
                         <Typography 
                             variant="h1" 
-                            className="  font-racing text-customMedium xl:text-customBig leading-none" 
+                            className="  font-racing text-customMedium xl:text-customBig leading-none overflow-hidden" 
                             style={{ fontWeight: '400', color: '#7ED956'}}>
                         Consultoria <br/> Fitness
                         </Typography>

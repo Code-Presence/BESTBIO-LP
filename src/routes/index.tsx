@@ -11,7 +11,7 @@ import { PlansWrapper } from '../components/PlansWrapper';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { PreLoader } from '../components/PreLoader';
+import { Pro } from '../pages/pro';
 
 function AppRoutes(): JSX.Element {
 
@@ -25,8 +25,7 @@ function AppRoutes(): JSX.Element {
             <Routes>
                 <Route path='/' element={ 
                     <>
-                        {/* <PreLoader /> */}
-                        <CustomNavbar/>
+                        <CustomNavbar />
                         <Main /> 
                     </>
                 }/>
@@ -44,6 +43,12 @@ function AppRoutes(): JSX.Element {
                         <PlansWrapper>
                             <Online />
                         </PlansWrapper>
+                    </>
+                     
+                }/>
+                <Route path='/pro' element={
+                    <>
+                        <Pro />
                     </>
                      
                 }/>
