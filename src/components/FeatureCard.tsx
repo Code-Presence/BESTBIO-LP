@@ -21,7 +21,7 @@ const FeatureCard = React.memo(({ img, title, content }: IFeatureCardProps): JSX
         <section className={'grid h-fit place-items-center p-4'}>
             <Card className="w-auto lg:max-w-[24rem] shadow-2xl">
                 <CardHeader color="gray" className="relative h-56">
-                    <img
+                    <img loading="lazy" 
                         src={img}
                         alt="img-blur-shadow"
                         className="h-full w-full object-cover"

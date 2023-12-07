@@ -32,7 +32,7 @@ function Main(): JSX.Element {
                     >
                         <div className=' overflow-hidden mb-4'>
                             <div data-aos={'fade-down'}>
-                                <img src={logo} alt={'logo'} width={300}/>
+                                <img loading="lazy"  src={logo} alt={'logo'} width={300}/>
                             </div>
                         </div>
                         <div className=' flex gap-4 items-center h-[2rem] overflow-hidden texts-container'>

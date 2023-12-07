@@ -48,7 +48,7 @@ function FifthSection() {
 
 
                 <div className='flex flex-col items-center justify-center mt-6 overflow-hidden' data-aos={'fade-left'}>
-                    <img src={homiLindo} className='rounded-md shadow-lg' alt='chikão freitas'/>
+                    <img loading="lazy"  src={homiLindo} className='rounded-md shadow-lg' alt='chikão freitas'/>
                 </div>
             </div>
         </div>

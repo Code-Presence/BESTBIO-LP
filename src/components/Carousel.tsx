@@ -31,42 +31,42 @@ function CarouselCustomNavigation(): JSX.Element {
                 </div>
             )}
         >
-            <img
+            <img loading="lazy" 
                 src={photo1}
                 alt="image 1"
                 className="h-full w-full object-cover"
             />
-            <img
+            <img loading="lazy" 
                 src={photo2}
                 alt="image 1"
                 className="h-full w-full object-cover"
             />
-            <img
+            <img loading="lazy" 
                 src={photo3}
                 alt="image 1"
                 className="h-full w-full object-cover"
             />
-            <img
+            <img loading="lazy" 
                 src={photo4}
                 alt="image 1"
                 className="h-full w-full object-cover"
             />
-            <img
+            <img loading="lazy" 
                 src={photo5}
                 alt="image 1"
                 className="h-full w-full object-cover"
             />
-            <img
+            <img loading="lazy" 
                 src={photo6}
                 alt="image 1"
                 className="h-full w-full object-cover"
             />
-            <img
+            <img loading="lazy" 
                 src={photo7}
                 alt="image 1"
                 className="h-full w-full object-cover"
             />
-            <img
+            <img loading="lazy" 
                 src={photo8}
                 alt="image 1"
                 className="h-full w-full object-cover"

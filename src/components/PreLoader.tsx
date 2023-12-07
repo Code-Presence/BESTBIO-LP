@@ -17,7 +17,7 @@ function PreLoader(): JSX.Element {
             
             <div className='h-[6rem] overflow-hidden'>
                 <div data-aos={'fade-down'}>
-                    <img src={logo} alt={'logo'} width={300}/>
+                    <img loading="lazy"  src={logo} alt={'logo'} width={300}/>
                 </div>
             </div>
             <div className=' flex gap-4 items-center h-[2rem] overflow-hidden texts-container'>
