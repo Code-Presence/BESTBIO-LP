@@ -15,7 +15,12 @@ import { useNavigate } from 'react-router-dom';
 
 import Whats from '../assets/icons/whatsapp.svg';
 
-function CustomNavbar() {
+interface ICustomNavbarProp {
+    isSticky?: boolean;
+    isAbsolute?: boolean;
+}
+
+function CustomNavbar({ isSticky, isAbsolute }: ICustomNavbarProp) {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen((cur) => !cur);
 
@@ -30,10 +35,10 @@ function CustomNavbar() {
 
     return (
         <>
-            <Navbar className={' sticky top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 bg-[#1b1b1b]'} >
+            <Navbar className={`${isSticky && 'sticky'} ${isAbsolute && 'absolute'} top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 animate-fade-in-down bg-[#1b1b1b]`} >
                 <div className="container mx-auto flex items-center justify-between">
                   
-                    <img loading="lazy"  src={Logo} alt='logo' className='w-20 lg:w-20 cursor-pointer hover:scale-110 transition-all' onClick={() => navigate('/')}/>
+                    <img loading="lazy"  src={Logo} alt='logo' className='w-20 lg:w-20 cursor-pointer hover:scale-110 transition-all' onClick={() => navigate('/')} style={{ width: '5rem'}}/>
                     <ul className="ml-10 hidden items-center gap-8 lg:flex">
                         <Typography
                             onClick={() => navigate('/')} 

@@ -2,7 +2,6 @@ import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Main } from '../pages/home';
 import { CustomNavbar } from '../components/Navbar';
-import { CustomNavbar as Nosticky } from '../components/Navbar_nostick';
 import { Presential } from '../pages/presential';
 
 import { Footer } from '../components/Footer';
@@ -29,13 +28,13 @@ function AppRoutes(): JSX.Element {
                 <Routes>
                     <Route path='/' element={ 
                         <>
-                            <CustomNavbar />
+                            <CustomNavbar isSticky={true} />
                             <Main /> 
                         </>
                     }/>
                     <Route path='/presencial' element={ 
                         <>
-                            <Nosticky />
+                            <CustomNavbar />
                             <PlansWrapper>
                                 <Presential /> 
                             </PlansWrapper>
@@ -43,7 +42,7 @@ function AppRoutes(): JSX.Element {
                     }/>
                     <Route path='/online' element={
                         <>
-                            <Nosticky />
+                            <CustomNavbar />
                             <PlansWrapper>
                                 <Online />
                             </PlansWrapper>
