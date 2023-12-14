@@ -2,11 +2,10 @@ import React from 'react';
 import { Card } from '@material-tailwind/react';
 
 interface IVideoCardProps {
-    title: string;
     videoID: string;
 }
 
-function VideoCardMobile({title, videoID}: IVideoCardProps): JSX.Element {
+function VideoCardMobile({videoID}: IVideoCardProps): JSX.Element {
     const openInNewTab = (url) => {
         window.open(url, '_blank', 'noreferrer');
     };

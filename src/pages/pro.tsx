@@ -127,7 +127,7 @@ function Pro(): JSX.Element {
                     {videos.slice(0, 5).map((video, index) => (
                         <>
                             <li data-aos="fade-down" data-aos-delay={100 * video.id}>
-                                <VideoCardMobile title={video.title} videoID={video.videoId} key={index}/>
+                                <VideoCardMobile videoID={video.videoId} key={index}/>
                             </li>
                         </>
                     ))}
