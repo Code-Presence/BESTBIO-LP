@@ -10,6 +10,26 @@ import mozart from '../assets/photos/patients/mozart.jpg';
 import maria from '../assets/photos/patients/naria_cle.jpg';
 import vitor from '../assets/photos/patients/vitor.png';
 
+import athl_1 from '../assets/athletes/athlete_1.jpg';
+import athl_2 from '../assets/athletes/athlete_2.jpg';
+import athl_3 from '../assets/athletes/athlete_3.jpg';
+import athl_4 from '../assets/athletes/athlete_4.jpg';
+import athl_5 from '../assets/athletes/athlete_5.jpg';
+import athl_6 from '../assets/athletes/athlete_6.jpg';
+import athl_7 from '../assets/athletes/athlete_7.jpg';
+import athl_8 from '../assets/athletes/athlete_8.jpg';
+import athl_9 from '../assets/athletes/athlete_9.jpg';
+import athl_10 from '../assets/athletes/athlete_10.jpg';
+import athl_12 from '../assets/athletes/athlete_12.jpg';
+import athl_13 from '../assets/athletes/athlete_13.jpg';
+import athl_14 from '../assets/athletes/athlete_14.jpg';
+import athl_15 from '../assets/athletes/athlete_15.jpg';
+import athl_16 from '../assets/athletes/athlete_16.jpg';
+import athl_17 from '../assets/athletes/athlete_17.jpg';
+import athl_18 from '../assets/athletes/athlete_18.jpg';
+import athl_19 from '../assets/athletes/athlete_19.jpg';
+import athl_20 from '../assets/athletes/athlete_20.jpg';
+
 export const services = [
     {
         photo: photo1,
@@ -28,6 +48,29 @@ export const services = [
     },
 
 ];
+
+export const athletes = [
+    {id: 1,  photo: athl_1},
+    {id: 2,  photo: athl_2},
+    {id: 3,  photo: athl_3},
+    {id: 4,  photo: athl_4},
+    {id: 5,  photo: athl_5},
+    {id: 6,  photo: athl_6},
+    {id: 7,  photo: athl_7},
+    {id: 8,  photo: athl_8},
+    {id: 9,  photo: athl_9},
+    {id: 10, photo: athl_10},
+    {id: 12, photo: athl_12},
+    {id: 13, photo: athl_13},
+    {id: 14, photo: athl_14},
+    {id: 15, photo: athl_15},
+    {id: 16, photo: athl_16},
+    {id: 17, photo: athl_17},
+    {id: 18, photo: athl_18},
+    {id: 19, photo: athl_19},
+    {id: 20, photo: athl_20},
+];
+
 
 export const testimonials = [
     {
@@ -315,5 +358,53 @@ export const plans = [
             'Treino individualizado para seu objetivo',
         
         ]
+    },
+];
+
+export const videos = [
+    { 
+        id: 1,
+        videoId: 'nPMM8I1feAU',
+        title: 'Quantas horas um atleta deve dormir?'
+    },
+    { 
+        id: 2,
+        videoId: 'Y9MjD7SCbus',
+        title: 'Suco de beterraba, o pré treino mais poderoso.'
+    },
+    { 
+        id: 3,
+        videoId: 'A6ONbY25moQ',
+        title: 'Como o sono pode afetar a sua performance.'
+    },
+    { 
+        id: 4,
+        videoId: 'OQBqjV6DBew',
+        title: 'Tudo sobre corte de peso, desidratação de atletas. Pod Cast Além da Luta, "Parte 2"'
+    },
+    { 
+        id: 5,
+        videoId: 'GLypqI1WbL4',
+        title: 'Tudo sobre corte de peso, desidratação de atletas. Pod Cast Além da Luta, "Parte 1"'
+    },
+    { 
+        id: 6,
+        videoId: 'dc4zp6Gv1kQ',
+        title: 'Resistência a Insulina X Hipertensão'
+    },
+    { 
+        id: 7,
+        videoId: 'CWEnT6HUrEE',
+        title: 'Não use antioxidantes antes de ver esse vídeo.'
+    },
+    { 
+        id: 8,
+        videoId: 'eWhjHqwxC-E',
+        title: 'Visita ao templo mais antigo de Tokyo, o que fazemos nas horas de folga antes das lutas.'
+    },
+    { 
+        id: 9,
+        videoId: 'VebrIZeNYWU',
+        title: 'QUAL O MELHOR TIPO DE WHEY?'
     },
 ];

@@ -35,7 +35,7 @@ function CustomNavbar({ isSticky, isAbsolute }: ICustomNavbarProp) {
 
     return (
         <>
-            <Navbar className={`${isSticky && 'sticky'} ${isAbsolute && 'absolute'} top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 animate-fade-in-down bg-[#1b1b1b]`} >
+            <Navbar className={`${isSticky && 'sticky'} ${isAbsolute && 'absolute animate-fade-in-down'} top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 border-0 bg-[#1b1b1b]`} >
                 <div className="container mx-auto flex items-center justify-between">
                   
                     <img loading="lazy"  src={Logo} alt='logo' className='w-20 lg:w-20 cursor-pointer hover:scale-110 transition-all' onClick={() => navigate('/')} style={{ width: '5rem'}}/>

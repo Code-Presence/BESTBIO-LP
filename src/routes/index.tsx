@@ -51,7 +51,9 @@ function AppRoutes(): JSX.Element {
                     }/>
                     <Route path='/pro' element={
                         <>
-                            <Pro />
+                            <section className='sections'>
+                                <Pro />
+                            </section>
                         </>
                      
                     }/>
