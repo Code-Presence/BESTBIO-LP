@@ -240,6 +240,7 @@ export const plans = [
         period: 'Consulta Única',
         kind: 'Nutricional',
         price:  'R$ 400',
+        checkout: 'https://cielolink.com.br/3GKDTbI',
         text: 'NO PIX OU EM ATÉ 12X DE R$43,00',
         diferentials: [
             '1 consulta presencial',
@@ -259,6 +260,7 @@ export const plans = [
         period: 'Trimestral',
         kind: 'Nutricional',
         price:  'R$ 1000',
+        checkout: 'https://cielolink.com.br/3RmrvDx',
         text: 'NO PIX OU EM ATÉ12X DE R$108,00',
         diferentials: [
             '3 consultas presenciais',
@@ -279,6 +281,7 @@ export const plans = [
         period: 'Semestral',
         kind: 'Nutricional',
         price:  'R$ 1800',
+        checkout: 'https://cielolink.com.br/48g7jtP',
         text: 'NO PIX OU EM ATÉ 12X DE R$194,00',
         diferentials: [
             '6 consultas presenciais',
@@ -299,6 +302,7 @@ export const plans = [
         period: 'Consulta Única',
         kind: 'Nutricional',
         price:  'R$ 500',
+        checkout: 'https://cielolink.com.br/47VHOys',
         text: 'NO PIX OU EM ATÉ 12X DE R$54,00',
         diferentials: [
             '1 consulta presencial',
@@ -321,6 +325,7 @@ export const plans = [
         period: 'Trimestral',
         kind: 'Nutricional',
         price:  'R$ 1300',
+        checkout: 'https://cielolink.com.br/3Ts9c2I',
         text: 'NO PIX OU EM ATÉ12X DE R$140,00',
         diferentials: [
             '3 consultas presenciais',
@@ -344,6 +349,7 @@ export const plans = [
         period: 'Semestral',
         kind: 'Nutricional',
         price:  'R$ 2400',
+        checkout: 'https://cielolink.com.br/3RHipCH',
         text: 'NO PIX OU EM ATÉ 12X DE R$200,00',
         diferentials: [
             '6 consultas presenciais',

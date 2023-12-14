@@ -22,6 +22,7 @@ interface IPricingCardProps {
     text: string,
     diferentials: Array<string>,
     colorType: number,
+    checkout: string,
 }
 
 interface IIconProps {
@@ -52,7 +53,12 @@ export function PricingCard({
     text,
     diferentials,
     colorType,
+    checkout,
 }: IPricingCardProps) {
+
+    const openInNewTab = (url) => {
+        window.open(url, '_blank', 'noreferrer');
+    };
 
     const [open, setOpen] = React.useState(0);
  
@@ -138,7 +144,7 @@ export function PricingCard({
                   
           
 
-                <Button variant="filled" className='bg-[#7ED956] text-black' id='fale conosco'>
+                <Button variant="filled" className='bg-[#7ED956] text-black' id='fale conosco' onClick={() => openInNewTab(checkout)}>
                     Contrate agora
                 </Button>
             </CardBody>

@@ -38,7 +38,7 @@ function Main(): JSX.Element {
                         <div className=' flex gap-4 items-center h-[2rem] overflow-hidden texts-container'>
                             <span className='text-xl lg:text-2xl text-white font-bold' data-aos={'fade-up'} data-aos-delay={500}>Saúde,</span>
                             <span className='text-xl lg:text-2xl text-white font-bold' data-aos={'fade-up'} data-aos-delay={1000}>Performance,</span>
-                            <span className='text-xl lg:text-2xl text-white font-bold' data-aos={'fade-up'} data-aos-delay={1500}>Estido de vida</span>
+                            <span className='text-xl lg:text-2xl text-white font-bold' data-aos={'fade-up'} data-aos-delay={1500}>Longevidade</span>
                         </div>
                     </section>
                     <div className='w-screen h-screen bg-[#1b1b1b]'/>

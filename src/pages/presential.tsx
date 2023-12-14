@@ -90,6 +90,7 @@ function Presential(): JSX.Element {
                                         price={plan.price}
                                         text={plan.text}
                                         diferentials={plan.diferentials}
+                                        checkout={plan.checkout}
                                     />
                                 </div>
                             </>
@@ -109,6 +110,7 @@ function Presential(): JSX.Element {
                                         price={plan.price}
                                         text={plan.text}
                                         diferentials={plan.diferentials}
+                                        checkout={plan.checkout}
                                     />
                                 </div>
                             </>
