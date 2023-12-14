@@ -89,6 +89,7 @@ function Online(): JSX.Element {
                                         price={plan.price}
                                         text={plan.text}
                                         diferentials={plan.diferentials}
+                                        checkout={plan.checkout}
                                     />
                                 </div>
                             </>
@@ -108,6 +109,7 @@ function Online(): JSX.Element {
                                         price={plan.price}
                                         text={plan.text}
                                         diferentials={plan.diferentials}
+                                        checkout={plan.checkout}
                                     />
                                 </div>
                             </>
