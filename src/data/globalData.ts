@@ -29,6 +29,11 @@ import athl_17 from '../assets/athletes/athlete_17.jpg';
 import athl_18 from '../assets/athletes/athlete_18.jpg';
 import athl_19 from '../assets/athletes/athlete_19.jpg';
 import athl_20 from '../assets/athletes/athlete_20.jpg';
+import athl_21 from '../assets/athletes/athlete_21.jpg';
+import athl_22 from '../assets/athletes/athlete_22.jpg';
+import athl_23 from '../assets/athletes/athlete_23.jpg';
+import athl_24 from '../assets/athletes/athlete_24.jpg';
+import athl_25 from '../assets/athletes/athlete_25.jpg';
 
 export const services = [
     {
@@ -69,6 +74,11 @@ export const athletes = [
     {id: 18, photo: athl_18},
     {id: 19, photo: athl_19},
     {id: 20, photo: athl_20},
+    {id: 21, photo: athl_21},
+    {id: 22, photo: athl_22},
+    {id: 23, photo: athl_23},
+    {id: 24, photo: athl_24},
+    {id: 25, photo: athl_25},
 ];
 
 

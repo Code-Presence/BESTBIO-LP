@@ -1,6 +1,6 @@
 import React from 'react';
 import MainBg from '../assets/bg/ATLETAS-3-optimized.png';
-import { Button, Typography } from '@material-tailwind/react';
+import { Button, Carousel, IconButton, Typography } from '@material-tailwind/react';
 import { CustomNavbar } from '../components/Navbar';
 import { DialogWithImage } from '../components/TestComponents/ImageModal';
 
@@ -80,44 +80,154 @@ function Pro(): JSX.Element {
                     <Typography variant="lead" className='mt-6 lg:text-center text-justify' style={{ color: '#1b1b1b'}}>Na jornada rumo à excelência atlética, a escolha do acompanhamento nutricional e preparação física é crucial. Nossa galeria de atletas de alta performance é um testemunho vivo do sucesso que alcançamos em parceria com esses verdadeiros campeões.</Typography>
                 </div>
                 <div className='h-fit w-full flex flex-col items-center justify-center'>
-                    <ul className='grid grid-cols-2 md:grid-cols-4 gap-4 w-full'>
-                        <div className='grid gap-4'>
-                            {athletes.slice(0, 4).map((item, index) => (
-                                <>
-                                    <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                        <DialogWithImage image={item.photo} />
-                                    </li>
-                                </>
-                            ))}
-                        </div>
-                        <div className='grid gap-4'>
-                            {athletes.slice(4, 7).map((item, index) => (
-                                <>
-                                    <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                        <DialogWithImage image={item.photo} />
-                                    </li>
-                                </>
-                            ))}
-                        </div>
-                        <div className='grid gap-4'>
-                            {athletes.slice(7, 10).map((item, index) => (
-                                <>
-                                    <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                        <DialogWithImage image={item.photo} />
-                                    </li>
-                                </>
-                            ))}
-                        </div>
-                        <div className='grid gap-4'>
-                            {athletes.slice(10, 13).map((item, index) => (
-                                <>
-                                    <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                        <DialogWithImage image={item.photo} />
-                                    </li>
-                                </>
-                            ))}
-                        </div>
-                    </ul>
+                    <Carousel
+                        autoplay
+                        autoplayDelay={5000}
+                        loop={true}
+                        className="py-6"
+                        prevArrow={({ handlePrev }) => (
+                            <IconButton
+                                id='voltar'
+                                variant="filled"
+                                size="lg"
+                                color='green'
+                                onClick={handlePrev}
+                                className="!absolute top-2/4 left-4 -translate-y-2/4"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth={2}
+                                    stroke="currentColor"
+                                    className="h-6 w-6"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                                    />
+                                </svg>
+                            </IconButton>
+                        )}
+                        nextArrow={({ handleNext }) => (
+                            <IconButton
+                                id='avançar'
+                                variant="filled"
+                                size="lg"
+                                color='green'
+                                onClick={handleNext}
+                                className="!absolute top-2/4 !right-4 -translate-y-2/4"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth={2}
+                                    stroke="currentColor"
+                                    className="h-6 w-6"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                                    />
+                                </svg>
+                            </IconButton>
+                        )}
+                        navigation={({ setActiveIndex, activeIndex, length }) => (
+                            <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+                                {new Array(length).fill('').map((_, i) => (
+                                    <span
+                                        key={i}
+                                        className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                                            activeIndex === i ? 'w-8 bg-white' : 'w-4 bg-white/50'
+                                        }`}
+                                        onClick={() => setActiveIndex(i)}
+                                    />
+                                ))}
+                            </div>
+                        )}
+                    >
+                        <ul className='grid grid-cols-2 md:grid-cols-4 gap-4 w-full'>
+                            <div className='grid gap-4'>
+                                {athletes.slice(0, 4).map((item, index) => (
+                                    <>
+                                        <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
+                                            <DialogWithImage image={item.photo} />
+                                        </li>
+                                    </>
+                                ))}
+                            </div>
+                            <div className='grid gap-4'>
+                                {athletes.slice(4, 7).map((item, index) => (
+                                    <>
+                                        <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
+                                            <DialogWithImage image={item.photo} />
+                                        </li>
+                                    </>
+                                ))}
+                            </div>
+                            <div className='grid gap-4'>
+                                {athletes.slice(7, 10).map((item, index) => (
+                                    <>
+                                        <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
+                                            <DialogWithImage image={item.photo} />
+                                        </li>
+                                    </>
+                                ))}
+                            </div>
+                            <div className='grid gap-4'>
+                                {athletes.slice(10, 13).map((item, index) => (
+                                    <>
+                                        <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
+                                            <DialogWithImage image={item.photo} />
+                                        </li>
+                                    </>
+                                ))}
+                            </div>
+                        </ul>
+
+                        <ul className='grid grid-cols-2 md:grid-cols-4 gap-4 w-full'>
+                            <div className='grid gap-4'>
+                                {athletes.slice(13, 16).map((item, index) => (
+                                    <>
+                                        <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
+                                            <DialogWithImage image={item.photo} />
+                                        </li>
+                                    </>
+                                ))}
+                            </div>
+                            <div className='grid gap-4'>
+                                {athletes.slice(16, 19).map((item, index) => (
+                                    <>
+                                        <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
+                                            <DialogWithImage image={item.photo} />
+                                        </li>
+                                    </>
+                                ))}
+                            </div>
+                            <div className='grid gap-4'>
+                                {athletes.slice(19, 21).map((item, index) => (
+                                    <>
+                                        <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
+                                            <DialogWithImage image={item.photo} />
+                                        </li>
+                                    </>
+                                ))}
+                            </div>
+                            <div className='grid gap-4'>
+                                {athletes.slice(21, 24).map((item, index) => (
+                                    <>
+                                        <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
+                                            <DialogWithImage image={item.photo} />
+                                        </li>
+                                    </>
+                                ))}
+                            </div>
+                        </ul>
+                    </Carousel>
+                    
                 </div>
             </div>
             <div className='w-screnn h-fit p-6 lg:px-40 flex flex-col gap-6 py-12'>
