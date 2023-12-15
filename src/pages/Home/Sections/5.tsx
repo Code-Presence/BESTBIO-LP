@@ -5,7 +5,7 @@ import photo5 from '../../../assets/photos/photo-5.webp';
 
 function FifthSection() {
     return (
-        <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat overflow-x-hidden" style={{ backgroundImage: `url(${photo5})` }}>
+        <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat overflow-x-hidden" style={{ backgroundImage: `url(${photo5})` }} id='who-we-are'>
             <div className="h-full w-[100%] bg-[#1b1b1b]/95 backdrop-blur-[4px] lg:px-40 lg:py-24 py-12 grid grid-cols-1 lg:grid-cols-2 p-6 sm:gap-8">
                 <div className='pr-4' data-aos={'fade-right'}>
                     <Typography variant='h1' color="white" className='mt-6'>Quem Somos</Typography>

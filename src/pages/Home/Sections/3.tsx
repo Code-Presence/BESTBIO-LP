@@ -7,7 +7,7 @@ import photo7 from '../../../assets/photos/photo-7.webp';
 
 function ThirdSection() {
     return (
-        <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat overflow-y-hidden" style={{ backgroundImage: `url(${photo7})` }}>
+        <div className="w-full h-fit bg-[#fefefe] bg-cover bg-no-repeat overflow-y-hidden" style={{ backgroundImage: `url(${photo7})` }} id='our-services'>
             <div className="h-fit w-[100%] bg-[#1b1b1b]/90 backdrop-blur-[4px] lg:px-40 lg:py-12 py-12 overflow-hidden">
                 <div className='w-full flex flex-col items-center justify-center px-6'>
                     <Typography variant="lead" style={{ fontWeight: '600', color: '#7ED956'}}>PRESENCIAL E ONLINE</Typography>

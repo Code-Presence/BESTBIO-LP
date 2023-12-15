@@ -1,12 +1,35 @@
 import React from 'react';
 import { Typography, IconButton } from '@material-tailwind/react';
-import { Instagram, Mail, MessageCircle, Youtube } from 'lucide-react';
+import { Instagram, Mail, Youtube } from 'lucide-react';
 
-const links = ['Quem somos', 'Depoimentos', 'Serviços', 'Presencial', 'Online'];
+import { Link } from 'react-scroll';
+
+import Whats from '../assets/icons/whatsapp.svg';
+
+import { useNavigate } from 'react-router-dom';
+
+const links = [
+    {hasScroll: true, label: 'Quem somos', path: 'who-we-are'},
+    {hasScroll: true, label: 'Depoimentos', path: 'testimonials'},
+    {hasScroll: true, label: 'Serviços', path: 'our-services'},
+    {hasScroll: false, label: 'Presencial', path: '/presencial'},
+    {hasScroll: false, label: 'Online', path: '/online'},
+];
 const links2 = ['Claim', 'Privacy', 'Terms'];
 const currentYear = new Date().getFullYear();
 
+
 function Footer() {
+    const navigate = useNavigate();
+
+    const handleNavigate = (path: string) => {
+        navigate(path);
+    };
+
+    const openInNewTab = (url) => {
+        window.open(url, '_blank', 'noreferrer');
+    };
+
     return (
         <footer className="px-4 pt-10 bg-white lg:px-8">
             <div className="container mx-auto">
@@ -16,32 +39,40 @@ function Footer() {
                             BestBio
                         </Typography>
                         <ul className="flex flex-wrap items-center justify-center md:justify-start">
-                            {links.map((link, idx) => (
-                                <li key={link}>
-                                    <Typography
-                                        as="a"
-                                        href="#"
-                                        className={`py-1 font-medium !text-gray-700 transition-colors hover:!text-gray-900 ${
-                                            idx === 0 ? 'pr-3' : 'px-3'
-                                        }`}
+                            {links.map((link, index) => (
+                                <li key={index}>
+                                    <Link 
+                                        to={link.hasScroll && `${link.path}`}
+                                        smooth={true} 
+                                        offset={-50} 
+                                        duration={500} 
                                     >
-                                        {link}
-                                    </Typography>
+                                        <Typography
+                                            className={`py-1 font-medium !text-gray-700 transition-colors hover:!text-gray-900 cursor-pointer ${
+                                                index === 0 ? 'pr-3' : 'px-3'
+                                            }`}
+                                            onClick={() => {
+                                                !link.hasScroll && handleNavigate(link.path);
+                                            }}
+                                        >
+                                            {link.label}
+                                        </Typography>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
 
                         <div className="flex w-full gap-2 sm:w-fit mt-6">
-                            <IconButton variant="text" size="sm" color="gray" id='whatsapp'>
-                                <MessageCircle />
+                            <IconButton variant="text" size="lg" color="gray" id='whatsapp'>
+                                <img loading="lazy"  src={Whats} className='' alt='ínoce do whatsapp'/>
                             </IconButton>
-                            <IconButton variant="text" size="sm" color="gray" id='youtube'>
+                            <IconButton variant="text" size="lg" color="gray" id='youtube' onClick={() => openInNewTab('https://www.youtube.com/@BestBioBrasil')}>
                                 <Youtube />
                             </IconButton>
-                            <IconButton variant="text" size="sm" color="gray" id='instagram'>
+                            <IconButton variant="text" size="lg" color="gray" id='instagram' onClick={() => openInNewTab('https://www.instagram.com/chikaofreitas/')}>
                                 <Instagram />
                             </IconButton>
-                            <IconButton variant="text" size="sm" color="gray" id='email'>
+                            <IconButton variant="text" size="lg" color="gray" id='email'>
                                 <Mail/>
                             </IconButton>
                         </div>
@@ -60,8 +91,8 @@ function Footer() {
                     </div>
                 </div>
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-blue-gray-50 py-6 md:justify-between">
-                    <Typography className="text-center font-normal !text-gray-700">
-            &copy; {currentYear} Code Presence™. Todos os direitos reservados.
+                    <Typography className="text-center font-normal !text-gray-700 hover:scale-110 transition-all cursor-pointer" onClick={() => openInNewTab('hhtps://codepresence.com')}>
+            &copy; {currentYear} <strong className=''>Code Presence™</strong>. Todos os direitos reservados.
                     </Typography>
 
                     <ul className="flex items-center">

@@ -3,6 +3,8 @@ import { CheckCircle } from 'lucide-react';
 import React from 'react';
 import { CarouselCustomNavigation } from '../../../components/Carousel';
 
+import { Link } from 'react-scroll';
+
 function SecondSection() {
     return (
         <div className='w-full min-h-[40rem] h-fit bg-[#fefefe] flex flex-col lg:grid lg:grid-cols-2 px-6 py-12 lg:px-40 gap-6 overflow-x-hidden'>
@@ -28,7 +30,14 @@ function SecondSection() {
                     </Typography>
                 </div>
 
-                <Button id='saiba mais' className='w-fit bg-[#7ED956] text-gray-900' size='lg'>Saiba mais</Button>
+                <Link
+                    to='our-services'
+                    smooth={true} 
+                    offset={-50} 
+                    duration={500} 
+                >
+                    <Button id='saiba mais' className='w-fit bg-[#7ED956] text-gray-900' size='lg'>Saiba mais</Button>
+                </Link>
             </div>
 
             <div className={' w-full justify-center flex flex-col items-center lg:items-end'} data-aos={'fade-left'}>

@@ -11,6 +11,7 @@ import { PlansWrapper } from '../components/PlansWrapper';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { Pro } from '../pages/pro';
+import { Checkout } from '../pages/checkout';
 
 function AppRoutes(): JSX.Element {
 
@@ -56,6 +57,10 @@ function AppRoutes(): JSX.Element {
                             </section>
                         </>
                      
+                    }/>
+                    <Route path='/checkout' element={
+
+                        <Checkout />
                     }/>
                 </Routes>
                 <Footer />
