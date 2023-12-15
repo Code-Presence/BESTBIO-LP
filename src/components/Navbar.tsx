@@ -11,7 +11,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import Logo from '../assets/logo.png';
 
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import Whats from '../assets/icons/whatsapp.svg';
 
@@ -24,14 +24,17 @@ function CustomNavbar({ isSticky, isAbsolute }: ICustomNavbarProp) {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen((cur) => !cur);
 
+    const location = useLocation();
+
     const navigate = useNavigate();
 
     React.useEffect(() => {
+        console.log(location.pathname);
         window.addEventListener(
             'resize',
             () => window.innerWidth >= 960 && setOpen(false)
         );
-    }, []);
+    }, [location]);
 
     return (
         <>
@@ -43,6 +46,7 @@ function CustomNavbar({ isSticky, isAbsolute }: ICustomNavbarProp) {
                         <Typography
                             onClick={() => navigate('/')} 
                             className='hover:cursor-pointer hover:scale-110 transition-all z-10 relative  hover:text-[#7ED956]'
+                            style={{ color: location.pathname == '/' && '#7ED956'}}
                         >
                             Home
                         </Typography>
@@ -52,18 +56,21 @@ function CustomNavbar({ isSticky, isAbsolute }: ICustomNavbarProp) {
                                 window.scrollTo(0, 0);
                             }} 
                             className='hover:cursor-pointer hover:scale-110 transition-all z-20 relative  hover:text-[#7ED956]'
+                            style={{ color: location.pathname == '/presencial' && '#7ED956'}}
                         >
                           Planos presenciais
                         </Typography>
                         <Typography
                             onClick={() => {navigate('/online'), window.scrollTo(0, 0);}} 
                             className='hover:cursor-pointer hover:scale-110 transition-all z-30 relative hover:text-[#7ED956]'
+                            style={{ color: location.pathname == '/online' && '#7ED956'}}
                         >
                           Planos online
                         </Typography>
                         <Typography
                             onClick={() => {navigate('/pro'), window.scrollTo(0, 0);}} 
                             className='hover:cursor-pointer hover:scale-110 transition-all z-30 relative hover:text-[#7ED956]'
+                            style={{ color: location.pathname == '/pro' && '#7ED956'}}
                         >
                             Pro
                         </Typography>
@@ -94,24 +101,28 @@ function CustomNavbar({ isSticky, isAbsolute }: ICustomNavbarProp) {
                             <Typography 
                                 onClick={() => navigate('/')} 
                                 className="flex items-center gap-2 font-medium text-gray-100"
+                                style={{ color: location.pathname == '/' && '#7ED956'}}
                             >
                             Home
                             </Typography>
                             <Typography
                                 onClick={() => {navigate('/presencial'), window.scrollTo(0, 0);}} 
                                 className="flex items-center gap-2 font-medium text-gray-100"
+                                style={{ color: location.pathname == '/presencial' && '#7ED956'}}
                             >
                           Planos presenciais
                             </Typography>
                             <Typography
                                 onClick={() => {navigate('/online'), window.scrollTo(0, 0);}} 
                                 className="flex items-center gap-2 font-medium text-gray-100"
+                                style={{ color: location.pathname == '/online' && '#7ED956'}}
                             >
                           Planos online
                             </Typography>
                             <Typography
                                 onClick={() => navigate('/pro')} 
                                 className="flex items-center gap-2 font-medium text-gray-100"
+                                style={{ color: location.pathname == '/pro' && '#7ED956'}}
                             >
                           Pro
                             </Typography>

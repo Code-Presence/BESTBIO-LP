@@ -181,6 +181,7 @@ export const onlinePlans = [
         period: 'Consulta Única',
         kind: 'Nutricional',
         price:  'R$ 450',
+        checkout: 'https://cielolink.com.br/3Nr7VVH',
         text: 'NO PIX OU EM ATÉ 12X DE R$ 49,00',
         diferentials: [
             '1 video-call para consulta nutricional',
@@ -201,6 +202,7 @@ export const onlinePlans = [
         period: 'Trimestral',
         kind: 'Nutricional',
         price:  'R$ 1150',
+        checkout: 'https://cielolink.com.br/3RIbhpO',
         text: 'NO PIX OU EM ATÉ12X DE R$ 124,00',
         diferentials: [
             '3 video-calls para consulta nutricional',
@@ -221,6 +223,7 @@ export const onlinePlans = [
         period: 'Semestral',
         kind: 'Nutricional',
         price:  'R$ 2100',
+        checkout: 'https://cielolink.com.br/48hz0Cz',
         text: 'NO PIX OU EM ATÉ 12X DE R$225,50',
         diferentials: [
             '6 video-calls para consulta nutricional',

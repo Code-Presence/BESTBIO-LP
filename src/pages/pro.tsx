@@ -1,6 +1,6 @@
 import React from 'react';
 import MainBg from '../assets/bg/ATLETAS-3-optimized.png';
-import { Typography } from '@material-tailwind/react';
+import { Button, Typography } from '@material-tailwind/react';
 import { CustomNavbar } from '../components/Navbar';
 import { DialogWithImage } from '../components/TestComponents/ImageModal';
 
@@ -9,6 +9,8 @@ import 'aos/dist/aos.css';
 import { athletes, videos } from '../data/globalData';
 import { VideoCard } from '../components/VideoCard';
 import { VideoCardMobile } from '../components/VIdeoCardMobile';
+
+import Whats from '../assets/icons/whatsapp.svg';
 
 function Pro(): JSX.Element {
     const [showNav, setShowNav] = React.useState<boolean>(false);
@@ -21,6 +23,11 @@ function Pro(): JSX.Element {
     React.useEffect(() => {
         Aos.init({duration: 500});
     }, []);
+
+    const sendToWhatsapp = () => {
+        const url = 'https://wa.me/5584994301633?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho!';
+        window.open(url, '_blank', 'noreferrer');
+    };
 
     return (
         <>
@@ -58,6 +65,11 @@ function Pro(): JSX.Element {
                                  transformaram atletas comuns em lendas do esporte brasileiro.
                             <hr  className='w-[20%] border-[#7ED956] mt-4'/>
                         </Typography>
+
+                        <Button size='lg' className='bg-[#7ED956] mt-6 text-gray flex items-center gap-2' onClick={() => sendToWhatsapp()}>
+                            Transforme sua Vida Agora 
+                            <img loading="lazy"  src={Whats} className='w-4' alt='ínoce do whatsapp'/>
+                        </Button>
                     </div>
                 </div>
             </div>
@@ -132,6 +144,20 @@ function Pro(): JSX.Element {
                         </>
                     ))}
                 </ul>
+            </div>
+            <div 
+                data-aos="zoom-out-down" data-aos-delay="1000"
+                className={'relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden overflow-hidden bg-center '} 
+                style={{ backgroundImage: `url(${MainBg})` }} 
+            >
+                <div className="absolute inset-0 h-full w-full backdrop-blur-[1px] flex flex-col px-4 lg:px-40 gap-4 pt-24 bg-[#fff]/90 backdrop-grayscale" >
+                    {/* <Typography variant='h2'>Desperte o Campeão em Você!</Typography>
+                    <Typography variant='h5'>Treinamento de elite, experiência comprovada e orientação personalizada</Typography>
+                    <Button size='lg' className='bg-[#7ED956] mt-6 text-gray flex items-center gap-2 text-gray' onClick={() => sendToWhatsapp()}>
+                            Transforme sua Vida Agora 
+                        <img loading="lazy"  src={Whats} className='w-4' alt='ínoce do whatsapp'/>
+                    </Button> */}
+                </div>
             </div>
         </>
     );
