@@ -1,27 +1,34 @@
 import React from 'react';
 import MainBg from '../assets/bg/ATLETAS-3-optimized.png';
 import MainBgBlurry from '../assets/bg/atletas-blurry.webp';
-import { Button, Carousel, IconButton, Typography } from '@material-tailwind/react';
+import { Button, Card, CardBody, CardHeader, Carousel, Collapse, IconButton, Typography } from '@material-tailwind/react';
 import { CustomNavbar } from '../components/Navbar';
 import { DialogWithImage } from '../components/TestComponents/ImageModal';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { athletes, videos } from '../data/globalData';
+import { athletes, news, videos } from '../data/globalData';
 import { VideoCard } from '../components/VideoCard';
 import { VideoCardMobile } from '../components/VIdeoCardMobile';
 
 import Whats from '../assets/icons/whatsapp.svg';
+import { ExternalLink } from 'lucide-react';
 
 function Pro(): JSX.Element {
     const [showNav, setShowNav] = React.useState<boolean>(false);
     const [imageLoaded, setImageLoaded] = React.useState(false);
+
+    const [open, setOpen] = React.useState(false);
+ 
+    const toggleOpen = () => setOpen((cur) => !cur);
 
     setTimeout(() => {
         setShowNav(true);
     }, 1900);
 
     React.useEffect(() => {
+        // window.scrollTo(0, 0);
+
         Aos.init({duration: 500});
     }, []);
 
@@ -37,6 +44,10 @@ function Pro(): JSX.Element {
 
     const sendToWhatsapp = () => {
         const url = 'https://wa.me/5584994301633?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho!';
+        window.open(url, '_blank', 'noreferrer');
+    };
+
+    const openInNewTab = (url) => {
         window.open(url, '_blank', 'noreferrer');
     };
 
@@ -84,9 +95,9 @@ function Pro(): JSX.Element {
                     </div>
                 </div>
             </div>
-            <div className='w-screnn h-fit bg-white p-6 lg:px-40 flex flex-col gap-6 py-12 transition-all animate-fade-in-down'>
+            <div className='w-screnn h-fit min-h-screen bg-white p-6 lg:px-40 flex flex-col gap-6 py-12 transition-all animate-fade-in-down'>
                 <div className='w-full flex flex-col items-center justify-center'>
-                    <Typography variant="lead" style={{ fontWeight: '600', color: '#7ED956'}}>EM BOAS MÃOS</Typography>
+                    <Typography variant="lead" style={{ fontWeight: '600' }} color='green'>EM BOAS MÃOS</Typography>
                     <Typography variant="h1"  className="text-4xl" style={{ color: '#1b1b1b'}}>Conheça Nossos Atletas de Elite</Typography>
                     <Typography variant="lead" className='mt-6 lg:text-center text-justify' style={{ color: '#1b1b1b'}}>Na jornada rumo à excelência atlética, a escolha do acompanhamento nutricional e preparação física é crucial. Nossa galeria de atletas de alta performance é um testemunho vivo do sucesso que alcançamos em parceria com esses verdadeiros campeões.</Typography>
                 </div>
@@ -241,14 +252,14 @@ function Pro(): JSX.Element {
                     
                 </div>
             </div>
-            <div className='w-screnn h-fit p-6 lg:px-40 flex flex-col gap-6 py-12'>
+            <div className='w-screnn h-fit min-h-screen p-6 lg:px-40 flex flex-col gap-6 py-12'>
                 <div className='w-full flex flex-col items-center justify-center mb-6'>
                     <Typography variant="lead" style={{ fontWeight: '600', color: '#7ED956'}}>O Conhecimento que Transforma</Typography>
                     <Typography variant="h1"  className="text-4xl" style={{ color: '#fff'}}>Explore Nossa Galeria de Vídeos</Typography>
                 </div>
                 
                 <ul className='lg:grid grid-cols-2 lg:grid-cols-3 gap-4 hidden'>
-                    {videos.map((video, index) => (
+                    {videos.slice(0,6).map((video, index) => (
                         <>
                             <li data-aos="fade-down" data-aos-delay={100 * video.id}>
                                 <VideoCard title={video.title} videoID={video.videoId} key={index}/>
@@ -257,7 +268,7 @@ function Pro(): JSX.Element {
                     ))}
                 </ul>
                 <ul className='grid grid-cols-1 lg:grid-cols-3 gap-4 lg:hidden'>
-                    {videos.slice(0, 5).map((video, index) => (
+                    {videos.slice(0, 3).map((video, index) => (
                         <>
                             <li data-aos="fade-down" data-aos-delay={100 * video.id}>
                                 <VideoCardMobile videoID={video.videoId} key={index}/>
@@ -265,14 +276,75 @@ function Pro(): JSX.Element {
                         </>
                     ))}
                 </ul>
+                <div className='w-full gap-6 mt-2'>
+                    <div className='w-full flex items-center justify-center'>
+                        <Button onClick={toggleOpen} color='green' size='lg'>{open ? 'Ver menos' : 'Ver mais'}</Button>
+                    </div>
+                    <Collapse open={open}>
+                        <div>
+                            <ul className='lg:grid grid-cols-2 lg:grid-cols-3 gap-4 hidden pt-6'>
+                                {videos.slice(6, 12).map((video, index) => (
+                                    <>
+                                        <li data-aos="fade-down" data-aos-delay={100 * video.id}>
+                                            <VideoCard title={video.title} videoID={video.videoId} key={index}/>
+                                        </li>
+                                    </>
+                                ))}
+                            </ul>
+
+                            <ul className='grid grid-cols-1 lg:grid-cols-3 gap-4 lg:hidden pt-6'>
+                                {videos.slice(3, 9).map((video, index) => (
+                                    <>
+                                        <li data-aos="fade-down" data-aos-delay={100 * video.id}>
+                                            <VideoCardMobile videoID={video.videoId} key={index}/>
+                                        </li>
+                                    </>
+                                ))}
+                            </ul>
+                        </div>
+
+
+                    </Collapse>
+                </div>
+                
+
             </div>
-            <div 
-                data-aos="zoom-out-down" data-aos-delay="1000"
-                className={'relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden overflow-hidden bg-center '} 
-                style={{ backgroundImage: `url(${MainBg})` }} 
+
+            <div  className='relative w-full bg-red-50 h-fit items-center flex'
+                style={{ backgroundImage: `url(${MainBg})`}} 
             >
-                <div className="absolute inset-0 h-full w-full backdrop-blur-[1px] flex flex-col px-4 lg:px-40 gap-4 pt-24 bg-[#fff]/90 backdrop-grayscale" >
-    
+                <div className="px-4 lg:px-40 py-16 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-[#fff]/95 backdrop-blur-[1px] backdrop-grayscale h-full w-full">
+                    <div className=' flex flex-col justify-center h-fit '>
+                        <Typography variant="lead" style={{ fontWeight: '600'}} color='green'>Estamos na mídia</Typography>
+
+                        <Typography variant="h1"  className="text-4xl" style={{ color: '#1b1b1b'}}>Bestbio em Todos os Lugares</Typography>
+
+                        <div className='w-full pr-16 flex flex-col gap-6 mt-6'>
+                            <Typography variant="paragraph"  className="text-lg" style={{ color: '#1b1b1b'}}>As notícias estão repletas de relatos sobre a eficácia dos nossos métodos. De pequenos blogs a grandes portais de notícias, todos estão falando sobre como estamos transformando o setor.</Typography>
+                            <Typography variant="paragraph"  className="text-lg" style={{ color: '#1b1b1b'}}>Não fique de fora dessa revolução em alta performance e longevidade. Explore as notícias e veja como a Bestbio está estabelecendo novos padrões para saúde e desempenho humano.</Typography>
+                        </div>
+
+                        <Button size='lg' className='w-fit mt-12' color='green'>Entre em contato</Button>
+                    </div>
+                    <div className='grid grid-cols-1 gap-4'>
+                        {news.map((news, index) => (
+                            <div className='flex flex-row rounded-lg bg-white overflow-hidden border justify-between shadow-lg' data-aos={'fade-left'} key={index} data-aos-delay={100 * index}>
+                                <aside className='w-[12rem] h-[100%] bg-cover bg-no-repeat bg-center hidden lg:inline' style={{ backgroundImage: `url(${news.imageUrl})` }}/>
+
+                                <div className='w-full gap-4 lg:w-[70%] p-4 flex flex-col justify-between items-end'>
+                                    <span className=''>
+                                        <Typography variant='h5' className=''>{news.headline}</Typography>
+                                    </span>
+
+                                    <Button 
+                                        size='sm' 
+                                        color='green' 
+                                        className='flex items-center justify-center gap-2 lg:w-fit w-full'
+                                        onClick={() => openInNewTab(news.url)}>Ver notícia <ExternalLink size={18}/> </Button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </>

@@ -177,7 +177,6 @@ export const athletes = [
     },
 ];
 
-
 export const testimonials = [
     {
         feedback: 'Excelente profissional, muito competente e se adequa as necessidades do paciente sem fazer propostas de dieta irreal.',
@@ -343,6 +342,7 @@ export const onlinePlans = [
         ]
     },
 ];
+
 export const plans = [
     { 
         id: 1,
@@ -497,32 +497,87 @@ export const videos = [
     },
     { 
         id: 4,
-        videoId: 'OQBqjV6DBew',
-        title: 'Tudo sobre corte de peso, desidratação de atletas. Pod Cast Além da Luta, "Parte 2"'
+        videoId: 'ApgSqNTlPpI',
+        title: 'Como Usar O Glicerol Para Otimizar A Performance.'
     },
     { 
         id: 5,
-        videoId: 'GLypqI1WbL4',
-        title: 'Tudo sobre corte de peso, desidratação de atletas. Pod Cast Além da Luta, "Parte 1"'
-    },
-    { 
-        id: 6,
-        videoId: 'dc4zp6Gv1kQ',
-        title: 'Resistência a Insulina X Hipertensão'
-    },
-    { 
-        id: 7,
         videoId: 'CWEnT6HUrEE',
         title: 'Não use antioxidantes antes de ver esse vídeo.'
     },
     { 
+        id: 6,
+        videoId: 'sUPj6CIzU8M',
+        title: 'Tudo sobre creatina para esportes de combate'
+    },
+    { 
+        id: 7,
+        videoId: 'wNRrwf7tOLg',
+        title: 'Suplemento que vale a pena investir.'
+    },
+    { 
         id: 8,
-        videoId: 'eWhjHqwxC-E',
-        title: 'Visita ao templo mais antigo de Tokyo, o que fazemos nas horas de folga antes das lutas.'
+        videoId: 'TGJqlKQezn4',
+        title: 'Veja como fazer uma avaliação física em atletas.'
     },
     { 
         id: 9,
-        videoId: 'VebrIZeNYWU',
-        title: 'QUAL O MELHOR TIPO DE WHEY?'
+        videoId: 'O0vFE-uTtVU',
+        title: 'ANALISE METABÓLICA CROSSFIT'
     },
+    { 
+        id: 10,
+        videoId: 'qqFOzqpSx4A',
+        title: 'Veja como fazer uma avaliação de cardio em atletas - MÉTODO BESTBIO BRASIL'
+    },
+    { 
+        id: 11,
+        videoId: 'Llz1nqp-s60',
+        title: 'Cuidado, suplementos podem causar DOPPING.'
+    },
+    { 
+        id: 12,
+        videoId: 'S5EPmMd-yoQ',
+        title: 'Borrachinha na Pitbull Brothers'
+    },
+   
+];
+
+export const news =[
+    {
+        id: 1,
+        url: 'https://www.lance.com.br/lutas/preparador-fisico-nutricionista-e-fisiologista-de-patricio-pitbull-garante-brasileiro-forte-potente-e-veloz-para-revanche-pelo-cinturao-do-bellator.html',
+        headline: 'Preparador físico, nutricionista e fisiologista de Patrício Pitbull garante brasileiro “forte, potente e veloz” para revanche pelo cinturão do Bellator',
+        imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=850,height=530,fit=crop,quality=75,format=webp/uploads/2022/04/12/62557fb746e2a.jpeg',
+    },
+    {
+        id: 2,
+        url: 'https://www.espn.com.br/mma/bellator/artigo/_/id/11912001/bellator-como-ate-ciencia-ajuda-astro-brasileiro-perder-peso-buscar-feito-historico-mma',
+        headline: 'Como até ciência está ajudando astro brasileiro a perder peso para buscar feito histórico no MMA',
+        imageUrl: 'https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2021%2F0802%2Fr889990_2_1296x729_16%2D9.jpg&w=920&h=518&scale=crop&cquality=80&location=origin&format=jpg',
+    },
+    {
+        id: 3,
+        url: 'https://www.sportskeeda.com/mma/news-cramping-just-looking-him-fans-fear-worst-patricio-pitbull-shares-drained-cut-bantamweight-ahead-bellator-297',
+        headline: '"Cramping up just looking at him" - Fans fear for the worst as Patricio Pitbull shares drained cut down to bantamweight ahead of Bellator 297',
+        imageUrl: 'https://staticg.sportskeeda.com/editor/2023/06/fd503-16868328710155-1920.jpg',
+    },
+    {
+        id: 4,
+        url: 'https://www.bbc.com/sport/mixed-martial-arts/65869103',
+        headline: 'Bellator 297: Patricio \'Pitbull\' Freire\'s weight transformation',
+        imageUrl: 'https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/3FA2/production/_130109261_bbc-sport-index-imagery-2-split-images-gradient-7848a40b-fa3b-42e5-9a40-d45b36cce063.png',
+    },
+    // {
+    //     id: 5,
+    //     url: '',
+    //     headline: '',
+    //     imageUrl: '',
+    // },
+    // {
+    //     id: 6,
+    //     url: '',
+    //     headline: '',
+    //     imageUrl: '',
+    // }
 ];
