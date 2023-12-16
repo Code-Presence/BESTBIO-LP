@@ -81,16 +81,16 @@ function Main(): JSX.Element {
                                 
                                 <DialogBody>
                                     <div className='flex flex-col gap-4'>
-                                        <Input type="text" name="FNAME" className="required text" id="mce-FNAME" required label='Nome' size='lg'/>
+                                        <Input type="text" name="FNAME" className="required text" id="mce-FNAME" required label='Nome' crossOrigin={undefined}/>
 
-                                        <Input type='email' name='EMAIL' className='required email' id='mce-EMAIL' required label='Email' size='lg'/>
+                                        <Input type='email' name='EMAIL' className='required email' id='mce-EMAIL' required label='Email' crossOrigin={undefined}/>
 
-                                        <Input type="text" name="PHONE" className="REQ_CSS" id="mce-PHONE" label='Número telefônico' size='lg'/>
+                                        <Input type="number" name="PHONE" className="REQ_CSS" id="mce-PHONE" label='Número telefônico' crossOrigin={undefined}/>
                                     </div>
                                 </DialogBody>
 
                                 <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-                                    <input type="text" name="b_7e8546111a38d0ac19f5b678a_bd20b31ace" tabIndex="-1" />
+                                    <input type="text" name="b_7e8546111a38d0ac19f5b678a_bd20b31ace" tabIndex={-1} />
                                 </div>
                                 <DialogFooter>
 
