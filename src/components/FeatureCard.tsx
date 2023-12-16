@@ -67,6 +67,7 @@ const FeatureCard = React.memo(({ image, title, content }: IFeatureCardProps): J
 
                             <Button  
                                 id='plano presencial'
+                                aria-label='plano presencial'
                                 variant="outlined" 
                                 size="sm" 
                                 onClick={() => navigate('/presencial')} 
@@ -74,7 +75,8 @@ const FeatureCard = React.memo(({ image, title, content }: IFeatureCardProps): J
                             Presencial
                             </Button>
                             <Button 
-                                id='plano presencial'
+                                id='plano online'
+                                aria-label='plano online'
                                 variant="filled" 
                                 size="sm" 
                                 className='bg-[#7ED956] text-[#2f5121]'

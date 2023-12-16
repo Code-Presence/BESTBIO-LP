@@ -36,7 +36,7 @@ function SecondSection() {
                     offset={-50} 
                     duration={500} 
                 >
-                    <Button id='saiba mais' className='w-fit bg-[#7ED956] text-gray-900' size='lg'>Saiba mais</Button>
+                    <Button id='saiba mais' aria-label='saiba mais' className='w-fit bg-[#7ED956] text-gray-900' size='lg'>Saiba mais</Button>
                 </Link>
             </div>
 

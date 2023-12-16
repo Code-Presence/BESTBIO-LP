@@ -76,7 +76,7 @@ function CustomNavbar({ isSticky, isAbsolute }: ICustomNavbarProp) {
                         </Typography>
                     </ul>
                     <div className="hidden items-center gap-4 lg:flex">
-                        <Button className='flex items-center gap-2 bg-[#7ED956] text-blue-gray-900' id='fale conosco'>
+                        <Button className='flex items-center gap-2 bg-[#7ED956] text-blue-gray-900' id='fale conosco' aria-label='fale conosco'>
                             Fale conosco
                             <img loading="lazy"  src={Whats} className='w-4' alt='ínoce do whatsapp'/>
                         </Button>
@@ -128,7 +128,7 @@ function CustomNavbar({ isSticky, isAbsolute }: ICustomNavbarProp) {
                             </Typography>
                         </ul>
                         <div className="mt-6 mb-4 flex items-center gap-4">
-                            <Button className='bg-[#7ED956] text-blue-gray-900' id='fale conosco'>Fale conosco</Button>
+                            <Button className='bg-[#7ED956] text-blue-gray-900' id='fale conosco menor' aria-label='fale conosco menor'>Fale conosco</Button>
                         </div>
                     </div>
                 </Collapse>

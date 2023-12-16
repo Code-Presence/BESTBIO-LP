@@ -59,6 +59,8 @@ export function DialogWithImage({ image, hash }: IDialogWithImageProps) {
                 <DialogHeader className='flex items-end justify-end -mb-4 w-full'>
                     <Button
                         size="sm"
+                        id='fechar'
+                        aria-label='fechar'
                         variant="outlined"
                         color="blue-gray"
                         className="flex items-center"

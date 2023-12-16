@@ -58,7 +58,7 @@ function FirstSection() {
                         offset={-50} 
                         duration={500} 
                     >
-                        <Button id='comece hoje' className=' w-fit bg-[#7ED956] text-blue-gray-900 mt-10 text-[16px]' data-aos="fade-up" data-aos-delay={500}>Comece hoje a sua mudança</Button>
+                        <Button id='comece hoje' aria-label='comece hoje' className=' w-fit bg-[#7ED956] text-blue-gray-900 mt-10 text-[16px]' data-aos="fade-up" data-aos-delay={500}>Comece hoje a sua mudança</Button>
                     </Link>
                 </div>
         

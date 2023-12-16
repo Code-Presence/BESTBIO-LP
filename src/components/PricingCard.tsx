@@ -144,7 +144,7 @@ export function PricingCard({
                   
           
 
-                <Button variant="filled" className='bg-[#7ED956] text-black' id='fale conosco' onClick={() => openInNewTab(checkout)}>
+                <Button variant="filled" className='bg-[#7ED956] text-black' id='contrate' aria-label='contrate' onClick={() => openInNewTab(checkout)}>
                     Contrate agora
                 </Button>
             </CardBody>

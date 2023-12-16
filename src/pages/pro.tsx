@@ -272,12 +272,7 @@ function Pro(): JSX.Element {
                 style={{ backgroundImage: `url(${MainBg})` }} 
             >
                 <div className="absolute inset-0 h-full w-full backdrop-blur-[1px] flex flex-col px-4 lg:px-40 gap-4 pt-24 bg-[#fff]/90 backdrop-grayscale" >
-                    {/* <Typography variant='h2'>Desperte o Campeão em Você!</Typography>
-                    <Typography variant='h5'>Treinamento de elite, experiência comprovada e orientação personalizada</Typography>
-                    <Button size='lg' className='bg-[#7ED956] mt-6 text-gray flex items-center gap-2 text-gray' onClick={() => sendToWhatsapp()}>
-                            Transforme sua Vida Agora 
-                        <img loading="lazy"  src={Whats} className='w-4' alt='ínoce do whatsapp'/>
-                    </Button> */}
+    
                 </div>
             </div>
         </>
