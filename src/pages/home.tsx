@@ -1,6 +1,6 @@
 import React from 'react';
 import '../index.css';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.webp';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';

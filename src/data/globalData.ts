@@ -2,13 +2,13 @@ import photo1 from '../assets/photos/photo-1.webp';
 import photo2 from '../assets/photos/photo-2.webp';
 import photo3 from '../assets/photos/photo-3.webp';
 
-import enzo from '../assets/photos/patients/enzo.jpg';
-import diogo from '../assets/photos/patients/diogo.jpg';
-import jose from '../assets/photos/patients/jose-litierio.jpg';
-import matheus from '../assets/photos/patients/matheus.jpg';
-import mozart from '../assets/photos/patients/mozart.jpg';
-import maria from '../assets/photos/patients/naria_cle.jpg';
-import vitor from '../assets/photos/patients/vitor.png';
+import enzo from '../assets/photos/patients/enzo.webp';
+import diogo from '../assets/photos/patients/diogo.webp';
+import jose from '../assets/photos/patients/jose-litierio.webp';
+import matheus from '../assets/photos/patients/matheus.webp';
+import mozart from '../assets/photos/patients/mozart.webp';
+import maria from '../assets/photos/patients/naria_cle.webp';
+import vitor from '../assets/photos/patients/vitor.webp';
 
 import athl_1 from '../assets/athletes/athlete_1.jpg';
 import athl_2 from '../assets/athletes/athlete_2.jpg';
