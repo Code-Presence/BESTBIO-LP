@@ -35,7 +35,7 @@ function FirstSection() {
                         >Oportunidade de mundança</Typography>
                         <Typography 
                             variant="h1" 
-                            className="  font-racing text-customMedium xl:text-customBig leading-none overflow-hidden" 
+                            className="font-racing text-customMedium xl:text-customBig leading-none overflow-hidden" 
                             style={{ fontWeight: '400', color: '#7ED956'}}>
                         Consultoria <br/> Fitness
                         </Typography>

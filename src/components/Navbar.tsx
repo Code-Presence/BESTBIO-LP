@@ -9,7 +9,7 @@ import {
 
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
-import Logo from '../assets/logo.png';
+import Logo from '../assets/logo.webp';
 
 import { useLocation, useNavigate } from 'react-router-dom';
 

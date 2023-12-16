@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Racing Sans One';
+  src: url('/src/assets/fonts/Racing_Sans_One/RacingSansOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

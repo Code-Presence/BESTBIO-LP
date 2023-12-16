@@ -1,6 +1,6 @@
 // import { Typography } from '@material-tailwind/react';
 import { preLoaderAnim  } from './Animations/animation';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.webp';
 import React from 'react';
 
 import Aos from 'aos';
