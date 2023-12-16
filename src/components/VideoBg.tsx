@@ -1,6 +1,9 @@
 import React from 'react';
 
-const YouTubeBackground = ({ videoId }) => {
+interface IYouTubeBackgroundProps {
+    videoId: string
+}
+const YouTubeBackground = ({ videoId }: IYouTubeBackgroundProps) => {
     const src = `https://www.youtube.com/embed/${videoId}?controls=0&rel=0&playsinline=1&enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=${videoId}`;
 
     return (
