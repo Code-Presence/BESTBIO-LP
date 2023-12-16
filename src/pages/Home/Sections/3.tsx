@@ -23,7 +23,7 @@ function ThirdSection() {
                                 <div key={index} data-aos={'fade-up'} data-aos-delay={200 * index}>
                                     <FeatureCard
                                         key={index}
-                                        img={item.photo}
+                                        image={item.photo}
                                         title={item.title}
                                         content={item.content}
                                     />

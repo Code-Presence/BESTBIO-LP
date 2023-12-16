@@ -49,6 +49,7 @@ export function DialogWithImage({ image, hash }: IDialogWithImageProps) {
                 </>
                 <img
                     alt="nature"
+                    loading="lazy" 
                     className="h-full w-full object-cover object-center"
                     src={image}
                     style={{ display: !imageLoaded ? 'none' : 'inline'}}

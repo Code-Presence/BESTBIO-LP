@@ -3,14 +3,27 @@ import { Button, Typography } from '@material-tailwind/react';
 
 import video from '../../../assets/bg/1128.mp4';
 import MainBg from '../../../assets/bg/main_bg.webp';
+import MainBgBlurry from '../../../assets/bg/main_bg_blurry.webp';
 
 import { Link } from 'react-scroll';
 
 function FirstSection() {
+    const [imageLoaded, setImageLoaded] = React.useState(false);
+
+    React.useEffect(() => {
+        const img = new Image();
+
+        img.onload = () => {
+            setImageLoaded(true);
+        };
+        img.src = MainBg;
+    }, [MainBg]);
 
     return (
         <>
-            <div className="relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden overflow-hidden animate-fade-in-down" style={{ backgroundImage: `url(${MainBg})` }}>
+            <div className="relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden overflow-hidden animate-fade-in-down"
+                style={{ backgroundImage: imageLoaded ? `url(${MainBg})` : `url(${MainBgBlurry})`}} 
+            >
                 <video autoPlay loop muted id="videoBackground" className='absolute object-cover min-h-full min-w-full right-0 bottom-0 hidden lg:flex '>
                     <source src={video} type="video/mp4" className='hidden lg:flex'/>
                 </video>
