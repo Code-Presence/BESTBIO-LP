@@ -46,17 +46,17 @@ function Main(): JSX.Element {
             ) : (
                 <>
                     <FirstSec />
+           
+                    <SecondSec />
+
+                    <ThirdSec />
+
+                    <FourthSec />
+
+                    <FifthSec />
                 </>
             )}
 
-            <SecondSec />
-
-            <ThirdSec />
-
-            <FourthSec />
-
-            <FifthSec />
-          
         </>
     );
 }
