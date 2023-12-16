@@ -1,7 +1,7 @@
 import React from 'react';
 import MainBg from '../assets/bg/ATLETAS-3-optimized.png';
 import MainBgBlurry from '../assets/bg/atletas-blurry.webp';
-import { Button, Card, CardBody, CardHeader, Carousel, Collapse, IconButton, Typography } from '@material-tailwind/react';
+import { Button, Carousel, Collapse, IconButton, Typography } from '@material-tailwind/react';
 import { CustomNavbar } from '../components/Navbar';
 import { DialogWithImage } from '../components/TestComponents/ImageModal';
 
