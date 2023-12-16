@@ -31,7 +31,7 @@ import athl_19 from '../assets/athletes/athlete_19.jpg';
 import athl_20 from '../assets/athletes/athlete_20.jpg';
 import athl_21 from '../assets/athletes/athlete_21.jpg';
 import athl_22 from '../assets/athletes/athlete_22.jpg';
-import athl_23 from '../assets/athletes/athlete_23.jpg';
+import athl_23 from '../assets/athletes/athlete_23.png';
 import athl_24 from '../assets/athletes/athlete_24.jpg';
 import athl_25 from '../assets/athletes/athlete_25.jpg';
 
@@ -55,30 +55,126 @@ export const services = [
 ];
 
 export const athletes = [
-    {id: 1,  photo: athl_1},
-    {id: 2,  photo: athl_2},
-    {id: 3,  photo: athl_3},
-    {id: 4,  photo: athl_4},
-    {id: 5,  photo: athl_5},
-    {id: 6,  photo: athl_6},
-    {id: 7,  photo: athl_7},
-    {id: 8,  photo: athl_8},
-    {id: 9,  photo: athl_9},
-    {id: 10, photo: athl_10},
-    {id: 12, photo: athl_12},
-    {id: 13, photo: athl_13},
-    {id: 14, photo: athl_14},
-    {id: 15, photo: athl_15},
-    {id: 16, photo: athl_16},
-    {id: 17, photo: athl_17},
-    {id: 18, photo: athl_18},
-    {id: 19, photo: athl_19},
-    {id: 20, photo: athl_20},
-    {id: 21, photo: athl_21},
-    {id: 22, photo: athl_22},
-    {id: 23, photo: athl_23},
-    {id: 24, photo: athl_24},
-    {id: 25, photo: athl_25},
+    {
+        id: 1, 
+        photo: athl_1, 
+        imgHash: 'LME3R^oM9H%I~UjbR%oc03WX%JRR'
+    },
+    {
+        id: 2, 
+        photo: athl_2, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 3, 
+        photo: athl_3, 
+        imgHash: 'LGE2wt?IM|x]00IUE1D%~XS#xaxu'
+    },
+    {
+        id: 4, 
+        photo: athl_4, 
+        imgHash: 'L7CZU^vy00YR_NxuS4Di0q9t,-~C'
+    },
+    {
+        id: 5, 
+        photo: athl_5, 
+        imgHash: 'LJB{}gbu9KRQ~TRjIuRkIdi{%dk9'
+    },
+    {
+        id: 6, 
+        photo: athl_6, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 7, 
+        photo: athl_7, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 8, 
+        photo: athl_8, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 9, 
+        photo: athl_9, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 10, 
+        photo: athl_10, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 12, 
+        photo: athl_12, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 13, 
+        photo: athl_13, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 14, 
+        photo: athl_14, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 15, 
+        photo: athl_15, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 16, 
+        photo: athl_16, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 17, 
+        photo: athl_17, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 18, 
+        photo: athl_18, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 19, 
+        photo: athl_19, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 20, 
+        photo: athl_20, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 21, 
+        photo: athl_21, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 22, 
+        photo: athl_22, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 23, 
+        photo: athl_23, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 24, 
+        photo: athl_24, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
+    {
+        id: 25, 
+        photo: athl_25, 
+        imgHash: 'LCDlf{_3K5S$00D%D%a~.ToexCRP'
+    },
 ];
 
 

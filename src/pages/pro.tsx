@@ -1,5 +1,6 @@
 import React from 'react';
 import MainBg from '../assets/bg/ATLETAS-3-optimized.png';
+import MainBgBlurry from '../assets/bg/atletas-blurry.webp';
 import { Button, Carousel, IconButton, Typography } from '@material-tailwind/react';
 import { CustomNavbar } from '../components/Navbar';
 import { DialogWithImage } from '../components/TestComponents/ImageModal';
@@ -14,7 +15,7 @@ import Whats from '../assets/icons/whatsapp.svg';
 
 function Pro(): JSX.Element {
     const [showNav, setShowNav] = React.useState<boolean>(false);
-
+    const [imageLoaded, setImageLoaded] = React.useState(false);
 
     setTimeout(() => {
         setShowNav(true);
@@ -23,6 +24,16 @@ function Pro(): JSX.Element {
     React.useEffect(() => {
         Aos.init({duration: 500});
     }, []);
+
+    React.useEffect(() => {
+        const img = new Image();
+
+        img.onload = () => {
+            setImageLoaded(true);
+        };
+        img.src = MainBg;
+    }, [MainBg]);
+
 
     const sendToWhatsapp = () => {
         const url = 'https://wa.me/5584994301633?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho!';
@@ -37,7 +48,7 @@ function Pro(): JSX.Element {
 
             <div 
                 className={`relative h-screen w-full bg-cover bg-no-repeat overflow-x-hidden overflow-hidden animate-fade-in-down bg-center transition-padding duration-300 ${showNav ? 'mt-[4rem]' : ''}`} 
-                style={{ backgroundImage: `url(${MainBg})` }} 
+                style={{ backgroundImage: imageLoaded ? `url(${MainBg})` : `url(${MainBgBlurry})`}} 
             >
                 <div className="absolute inset-0 h-full w-full backdrop-blur-[2px] flex flex-col px-4 lg:px-40 gap-4 pt-24 bg-[#000]/80 " data-aos="zoom-out-down" data-aos-delay="1000">
                     <div data-aos="fade-right" data-aos-delay="2200">
@@ -82,7 +93,7 @@ function Pro(): JSX.Element {
                 <div className='h-fit w-full flex flex-col items-center justify-center'>
                     <Carousel
                         autoplay
-                        autoplayDelay={5000}
+                        autoplayDelay={10000}
                         loop={true}
                         className="py-6"
                         prevArrow={({ handlePrev }) => (
@@ -92,7 +103,7 @@ function Pro(): JSX.Element {
                                 size="lg"
                                 color='green'
                                 onClick={handlePrev}
-                                className="!absolute top-2/4 left-4 -translate-y-2/4"
+                                className="!absolute top-2/4 left-4 -translate-y-2/4 "
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +165,7 @@ function Pro(): JSX.Element {
                                 {athletes.slice(0, 4).map((item, index) => (
                                     <>
                                         <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                            <DialogWithImage image={item.photo} />
+                                            <DialogWithImage image={item.photo} hash={item.imgHash}/>
                                         </li>
                                     </>
                                 ))}
@@ -163,7 +174,7 @@ function Pro(): JSX.Element {
                                 {athletes.slice(4, 7).map((item, index) => (
                                     <>
                                         <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                            <DialogWithImage image={item.photo} />
+                                            <DialogWithImage image={item.photo}hash={item.imgHash} />
                                         </li>
                                     </>
                                 ))}
@@ -172,7 +183,7 @@ function Pro(): JSX.Element {
                                 {athletes.slice(7, 10).map((item, index) => (
                                     <>
                                         <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                            <DialogWithImage image={item.photo} />
+                                            <DialogWithImage image={item.photo} hash={item.imgHash}/>
                                         </li>
                                     </>
                                 ))}
@@ -181,7 +192,7 @@ function Pro(): JSX.Element {
                                 {athletes.slice(10, 13).map((item, index) => (
                                     <>
                                         <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                            <DialogWithImage image={item.photo} />
+                                            <DialogWithImage image={item.photo} hash={item.imgHash}/>
                                         </li>
                                     </>
                                 ))}
@@ -193,7 +204,7 @@ function Pro(): JSX.Element {
                                 {athletes.slice(13, 16).map((item, index) => (
                                     <>
                                         <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                            <DialogWithImage image={item.photo} />
+                                            <DialogWithImage image={item.photo} hash={item.imgHash}/>
                                         </li>
                                     </>
                                 ))}
@@ -202,7 +213,7 @@ function Pro(): JSX.Element {
                                 {athletes.slice(16, 19).map((item, index) => (
                                     <>
                                         <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                            <DialogWithImage image={item.photo} />
+                                            <DialogWithImage image={item.photo} hash={item.imgHash}/>
                                         </li>
                                     </>
                                 ))}
@@ -211,7 +222,7 @@ function Pro(): JSX.Element {
                                 {athletes.slice(19, 21).map((item, index) => (
                                     <>
                                         <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                            <DialogWithImage image={item.photo} />
+                                            <DialogWithImage image={item.photo} hash={item.imgHash}/>
                                         </li>
                                     </>
                                 ))}
@@ -220,7 +231,7 @@ function Pro(): JSX.Element {
                                 {athletes.slice(21, 24).map((item, index) => (
                                     <>
                                         <li data-aos="fade-down" data-aos-delay={100 * item.id} key={index} className='hover:translate-y-2'>
-                                            <DialogWithImage image={item.photo} />
+                                            <DialogWithImage image={item.photo} hash={item.imgHash} />
                                         </li>
                                     </>
                                 ))}
