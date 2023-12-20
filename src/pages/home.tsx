@@ -27,13 +27,11 @@ function Main(): JSX.Element {
     }, []);
 
     React.useEffect(() => {
-        const local = localStorage.getItem('formSubmitted');
-        console.log(local);
-        if (local === 'false') {
+        if (!localStorage.getItem('formSubmitted')){
             setTimeout(() => {
                 handleOpen();
-            }, 5500);
-        }
+            }, 5000);
+        } 
     }, []);
 
     React.useEffect(() => {
@@ -53,8 +51,6 @@ function Main(): JSX.Element {
         localStorage.setItem('formSubmitted', 'true');    
 
         handleOpen();
-
-        console.log('completed');
     };
 
     return (
@@ -76,7 +72,6 @@ function Main(): JSX.Element {
                                 <DialogHeader className='flex flex-col items-start'>
                                     <Typography variant='h4'>Bem vindo</Typography>
                                     <Typography variant='paragraph' className='text-xl mt-2'>Cadastre-se na minha lista VIP e receba ofertas e materiais exclusivos</Typography>
-                                    {/* <Typography>aa {isSubmitted}</Typography> */}
                                 </DialogHeader>
                                 
                                 <DialogBody>
@@ -105,6 +100,19 @@ function Main(): JSX.Element {
                 </div>
             </Dialog>
 
+            {/* <Dialog 
+                open={open} 
+                handler={handleOpen} 
+                className='overflow-hidden'
+                animate={{
+                    mount: { scale: 1, y: 0 },
+                    unmount: { scale: 0.9, y: -100 },
+                }}>
+                <div>
+                        huee
+                </div>
+
+            </Dialog> */}
             {showPreloader ? (
                 <>
                     <section className='h-screen w-screen flex-col fixed z-[99999] bottom-0 top-0 left-0 right-0 overflow-hidden bg-[#1b1b1b] flex items-center justify-center gap-6 animate-fadeOut'

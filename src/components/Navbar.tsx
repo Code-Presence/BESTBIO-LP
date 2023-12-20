@@ -29,7 +29,6 @@ function CustomNavbar({ isSticky, isAbsolute }: ICustomNavbarProp) {
     const navigate = useNavigate();
 
     React.useEffect(() => {
-        console.log(location.pathname);
         window.addEventListener(
             'resize',
             () => window.innerWidth >= 960 && setOpen(false)
