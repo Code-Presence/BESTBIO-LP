@@ -59,7 +59,7 @@ function Main(): JSX.Element {
         <> 
             
             <Dialog 
-                open={true} 
+                open={open} 
                 handler={handleOpen} 
                 className='overflow-hidden'
                 animate={{
