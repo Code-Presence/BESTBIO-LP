@@ -232,7 +232,7 @@ export const onlinePlans = [
         period: 'Consulta Única',
         kind: 'Nutricional',
         price:  'R$ 350',
-        checkout: 'https://cielolink.com.br/48cBJxP',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20a%20consulta%20única%20nutricional%20online%20basico%20!',
         text: 'NO PIX OU EM ATÉ 12X DE R$ 38,00',
         diferentials: [
             '1 video-call para consulta nutricional',
@@ -250,7 +250,7 @@ export const onlinePlans = [
         period: 'Trimestral',
         kind: 'Nutricional',
         price:  'R$ 850',
-        checkout: 'https://cielolink.com.br/3v0kmBq',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20trimestral%20nutricional%20online%20basico%20!',
         text: 'NO PIX OU EM ATÉ12X DE R$ 92,00',
         diferentials: [
             '3 video-calls para consulta nutricional',
@@ -268,7 +268,7 @@ export const onlinePlans = [
         period: 'Semestral',
         kind: 'Nutricional',
         price:  'R$ 1500',
-        checkout: 'https://cielolink.com.br/46ZFxkc',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20semestral%20nutricional%20online%20basico%20!',
         text: 'NO PIX OU EM ATÉ 12X DE R$ 162,00',
         diferentials: [
             '6 video-calls para consulta nutricional',
@@ -286,7 +286,7 @@ export const onlinePlans = [
         period: 'Consulta Única',
         kind: 'Nutricional',
         price:  'R$ 450',
-        checkout: 'https://cielolink.com.br/3Nr7VVH',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20a%20consulta%20única%20nutricional%20online%20vip%20!',
         text: 'NO PIX OU EM ATÉ 12X DE R$ 49,00',
         diferentials: [
             '1 video-call para consulta nutricional',
@@ -307,7 +307,7 @@ export const onlinePlans = [
         period: 'Trimestral',
         kind: 'Nutricional',
         price:  'R$ 1150',
-        checkout: 'https://cielolink.com.br/3RIbhpO',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20trimestral%20nutricional%20online%20vip%20!',
         text: 'NO PIX OU EM ATÉ12X DE R$ 124,00',
         diferentials: [
             '3 video-calls para consulta nutricional',
@@ -328,7 +328,7 @@ export const onlinePlans = [
         period: 'Semestral',
         kind: 'Nutricional',
         price:  'R$ 2100',
-        checkout: 'https://cielolink.com.br/48hz0Cz',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20semestral%20nutricional%20online%20vip%20!',
         text: 'NO PIX OU EM ATÉ 12X DE R$225,50',
         diferentials: [
             '6 video-calls para consulta nutricional',
@@ -352,7 +352,7 @@ export const plans = [
         period: 'Consulta Única',
         kind: 'Nutricional',
         price:  'R$ 400',
-        checkout: 'https://cielolink.com.br/3GKDTbI',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20a%20consulta%20única%20nutricional%20presencial%20basico%20!',
         text: 'NO PIX OU EM ATÉ 12X DE R$43,00',
         diferentials: [
             '1 consulta presencial',
@@ -372,7 +372,7 @@ export const plans = [
         period: 'Trimestral',
         kind: 'Nutricional',
         price:  'R$ 1000',
-        checkout: 'https://cielolink.com.br/3RmrvDx',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20a%20trimestral%20nutricional%20presencial%20basico%20!',
         text: 'NO PIX OU EM ATÉ12X DE R$108,00',
         diferentials: [
             '3 consultas presenciais',
@@ -393,7 +393,7 @@ export const plans = [
         period: 'Semestral',
         kind: 'Nutricional',
         price:  'R$ 1800',
-        checkout: 'https://cielolink.com.br/48g7jtP',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20a%semestral%20nutricional%20presencial%20basico%20!',
         text: 'NO PIX OU EM ATÉ 12X DE R$194,00',
         diferentials: [
             '6 consultas presenciais',
@@ -414,7 +414,7 @@ export const plans = [
         period: 'Consulta Única',
         kind: 'Nutricional',
         price:  'R$ 500',
-        checkout: 'https://cielolink.com.br/47VHOys',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20a%20consulta%20unica%20nutricional%20presencial%20vip%20!',
         text: 'NO PIX OU EM ATÉ 12X DE R$54,00',
         diferentials: [
             '1 consulta presencial',
@@ -437,7 +437,7 @@ export const plans = [
         period: 'Trimestral',
         kind: 'Nutricional',
         price:  'R$ 1300',
-        checkout: 'https://cielolink.com.br/3Ts9c2I',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20a%20trimestral%20nutricional%20presencial%20vip%20!',
         text: 'NO PIX OU EM ATÉ12X DE R$140,00',
         diferentials: [
             '3 consultas presenciais',
@@ -461,7 +461,7 @@ export const plans = [
         period: 'Semestral',
         kind: 'Nutricional',
         price:  'R$ 2400',
-        checkout: 'https://cielolink.com.br/3RHipCH',
+        checkout: 'https://wa.me/5584996152620?text=Olá,%20quero%20alcançar%20novos%20patamares%20no%20meu%20desempenho%20com%20a%20semestral%20nutricional%20presencial%20vip%20!',
         text: 'NO PIX OU EM ATÉ 12X DE R$200,00',
         diferentials: [
             '6 consultas presenciais',
