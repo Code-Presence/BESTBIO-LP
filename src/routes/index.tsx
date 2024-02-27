@@ -12,6 +12,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { Pro } from '../pages/pro';
 import { Checkout } from '../pages/checkout';
+import { Ebook } from '../pages/Ebook/ComoManterOPesoPerdido';
 
 function AppRoutes(): JSX.Element {
 
@@ -58,6 +59,7 @@ function AppRoutes(): JSX.Element {
                         </>
                      
                     }/>
+                    <Route path='/ebook/como-perder-o-peso-perdido' element={<Ebook />}/>
                     <Route path='/checkout' element={
 
                         <Checkout />
