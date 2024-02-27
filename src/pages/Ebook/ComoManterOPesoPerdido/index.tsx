@@ -73,9 +73,9 @@ function Ebook() {
             </section>
 
             <section className='w-screen h-fit lg:h-screen bg-no-repeat bg-center bg-cover relative' style={{ backgroundImage: `url(${GenteNoCampo})`}}>
-                <div className='w-full h-full backdrop-blur-[3px] pb-12 pt-32 lg:pt-64 p-8 bg-gradient-to-r relative from-[rgba(125,217,86,0.98)] to-[rgba(186,206,74,.98)] items-center justify-center flex flex-col'>
-                    <div  className='w-full absolute top-0 flex rotate-180 -mt-1'>
-                        <svg className="w-full h-[14vh] min-h-[100px] max-h-[250px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 200 40" preserveAspectRatio="none" shapeRendering="auto">
+                <div className='w-full h-full backdrop-blur-[3px] pb-12 pt-32 lg:pt-64 p-8 relative bg-[rgba(125,217,86)] items-center justify-center flex flex-col'>
+                    <div data-aos="fade-down" className='w-full absolute top-0 flex -mt-1'>
+                        <svg className="w-full h-[14vh] min-h-[100px] max-h-[250px]  rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 200 40" preserveAspectRatio="none" shapeRendering="auto">
                             <defs>
                                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                             </defs>
@@ -112,8 +112,20 @@ function Ebook() {
                 </div>
             </section>
 
-            <section className='w-screen h-fit lg:h-screen bg-white -mt-1 grid grid-cols-1 lg:grid-cols-2 gap-6 px-8 lg:px-64 py-12' >
-
+            <section className='w-screen h-fit lg:h-screen relative bg-red-100 -mt-1 grid grid-cols-1 lg:grid-cols-2 gap-6 px-8 lg:px-64 py-12' >
+                <div data-aos="fade-down" className='w-full absolute top-0 flex -mt-1'>
+                    <svg className="w-full h-[14vh] min-h-[100px] max-h-[250px] rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 200 40" preserveAspectRatio="none" shapeRendering="auto">
+                        <defs>
+                            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g className="parallax">
+                            <use href="#gentle-wave" x="10" y="-6" fill="rgba(125,217,86,0.8)" />
+                            <use href="#gentle-wave" x="55" y="1" fill="rgba(125,217,86,0.6)" />
+                            <use href="#gentle-wave" x="42" y="4" fill="rgba(125,217,86,0.2)" />
+                            <use href="#gentle-wave" x="12" y="10" fill="rgba(125,217,86)" />
+                        </g>
+                    </svg>
+                </div>
             </section>
         </>
     );
