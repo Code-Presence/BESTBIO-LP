@@ -1,6 +1,7 @@
-import { Typography, Button, Card } from '@material-tailwind/react';
+import { Typography, Button, Card, CardHeader } from '@material-tailwind/react';
 
 import GenteMalhando  from '../../../assets/bg/gente-se-exercitando.webp';
+import GenteNoCampo  from '../../../assets/bg/gentee-no-campo.webp';
 import MulherComendo from '../../../assets/PESSOA-SAUDAVEL.png';
 
 import Ebook1  from '../../../assets/Mocks/BookMockup-1.png';
@@ -9,6 +10,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import React from 'react';
 import { ebook_features } from './features';
+import { Brain, Lightbulb, Lock, Search } from 'lucide-react';
 
 function Ebook() {
 
@@ -68,11 +70,11 @@ function Ebook() {
 
         
                 <div className='w-full h-full flex flex-col items-center justify-center'>
-                    <img src={MulherComendo}/>
+                    <img src={MulherComendo} className='rounded-lg'/>
                 </div>
             </section>
 
-            <section className='w-screen h-fit lg:h-screen '>
+            <section className='w-screen h-screen lg:h-[85vh]'>
                 <div className='w-full h-full backdrop-blur-[3px] pb-12 pt-32 lg:pt-64 p-8 relative bg-[rgba(125,217,86)] items-center justify-center flex flex-col'>
                     <div className='w-full absolute top-0 flex -mt-1'>
                         <svg className="w-full h-[14vh] min-h-[100px] max-h-[250px]  rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 200 40" preserveAspectRatio="none" shapeRendering="auto">
@@ -80,10 +82,10 @@ function Ebook() {
                                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                             </defs>
                             <g className="parallax">
-                                <use data-aos="fade-up" data-aos-delay={100} href="#gentle-wave" x="10" y="-6" fill="rgba(255,255,255,0.8)" />
-                                <use data-aos="fade-up" data-aos-delay={300} href="#gentle-wave" x="55" y="1" fill="rgba(255,255,255,0.6)" />
-                                <use data-aos="fade-up" data-aos-delay={500} href="#gentle-wave" x="42" y="4" fill="rgba(255,255,255,0.2)" />
-                                <use data-aos="fade-up" data-aos-delay={700} href="#gentle-wave" x="12" y="10" fill="#fff" />
+                                <use href="#gentle-wave" x="10" y="-6" fill="rgba(255,255,255,0.8)" />
+                                <use href="#gentle-wave" x="55" y="1" fill="rgba(255,255,255,0.6)" />
+                                <use href="#gentle-wave" x="42" y="4" fill="rgba(255,255,255,0.2)" />
+                                <use href="#gentle-wave" x="12" y="10" fill="#fff" />
                             </g>
                         </svg>
                     </div>
@@ -112,34 +114,53 @@ function Ebook() {
                 </div>
             </section>
 
-            <section className='w-screen h-fit lg:h-screen relative bg-white -mt-1 grid grid-cols-1 gap-6 px-8 lg:px-64 pt-32' >
-                <div className='w-full absolute top-0 flex -mt-1'>
+            <section className='w-screen h-fit relative bg-white -mt-1 ' style={{ backgroundImage: `url(${GenteNoCampo})`}}>
+                <div className='w-full absolute top-0 flex -mt-1 z-50'>
                     <svg className="w-full h-[14vh] min-h-[100px] max-h-[250px] rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 200 40" preserveAspectRatio="none" shapeRendering="auto">
                         <defs>
                             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                         </defs>
                         <g className="parallax">
-                            <use data-aos="fade-up" data-aos-delay={100} href="#gentle-wave" x="10" y="-6" fill="rgba(125,217,86,0.8)" />
-                            <use data-aos="fade-up" data-aos-delay={300} href="#gentle-wave" x="55" y="1" fill="rgba(125,217,86,0.6)" />
-                            <use data-aos="fade-up" data-aos-delay={500} href="#gentle-wave" x="42" y="4" fill="rgba(125,217,86,0.2)" />
-                            <use data-aos="fade-up" data-aos-delay={700} href="#gentle-wave" x="12" y="10" fill="rgba(125,217,86)" />
+                            <use href="#gentle-wave" x="10" y="-6" fill="rgba(125,217,86,0.8)" />
+                            <use href="#gentle-wave" x="55" y="1" fill="rgba(125,217,86,0.6)" />
+                            <use href="#gentle-wave" x="42" y="4" fill="rgba(125,217,86,0.2)" />
+                            <use href="#gentle-wave" x="12" y="10" fill="rgba(125,217,86)" />
                         </g>
                     </svg>
                 </div>
 
-                <div>
-                    <Typography>Por que este ebook é essencial?</Typography>
+                <div className='w-full h-full flex flex-col items-center justify-center gap-12 px-8 lg:px-52 pt-56 pb-40  bg-white/80 backdrop-blur-[10px]'>
+                    <div>
+                        <Typography variant='h2' className='text-blue-gray-900'>Por que este ebook é essencial?</Typography>
+                    </div>
+                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 h-fit'>
+                        {ebook_features.map((item, index) => (
+                            <>
+                                <Card className='p-4 gap-2 flex flex-col items-center' key={index} data-aos="fade-up" data-aos-delay={100 * index}>
+                                    <div className=' w-full items-center justify-center flex'>
+                                        <div className="h-14 w-14 grid items-center justify-center !rounded-lg bg-[rgba(125,217,86)] text-white">
+                                            {item.title == 'Conhecimento especializado ao seu alcance:' && <Brain size={30}/>}
+                                            {item.title == 'Abordagem abrangente e prática:' && <Search size={30}/>}
+                                            {item.title == 'Acompanhamento contínuo:' && <Lightbulb size={30}/>}
+                                        </div>
+                                    </div>
+                                    <div className='flex flex-col h-full items-center justify-center gap-4'>
+                                        <Typography variant='h4' color='black' className='text-center text-blue-gray-800'>{item.title}</Typography>
+                                        <Typography variant='lead' className='text-center text-blue-gray-900'>{item.content}</Typography>
+                                    </div>
+                                </Card>
+                            </>
+                        ))}
+                    </div>
                 </div>
-                <div className='grid grid-cols-3 gap-4 h-fit'>
-                    {ebook_features.map((item, index) => (
-                        <>
-                            <Card className='p-4 gap-2' key={index} data-aos="fade-up" data-aos-delay={100 * index}>
-                                <Typography variant='h5'>{item.title}</Typography>
-                                <Typography variant='lead'>{item.content}</Typography>
-                            </Card>
-                        </>
-                    ))}
+
+                <div className='absolute bottom-0 -mb-1 bg-gradient-to-b bg- w-full h-[5rem] from-[rgba(255,255,255,0)] to-[rgb(255,255,255)]'>
+
                 </div>
+            </section>
+
+            <section className='w-screen h-screen bg-white'>
+
             </section>
         </>
     );
