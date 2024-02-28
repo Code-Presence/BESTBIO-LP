@@ -72,3 +72,21 @@
     transition: box-shadow 0.1s ease-in-out;
     box-shadow: 0 0 10px #7ED956, 0 0 20px #7ED956, 0 0 40px #7ED956, 0 0 80px #7ED956;
 }
+
+@keyframes moveAndRotate {
+  from {
+    transform: translateX(0) rotate(0deg);
+  }
+  to {
+    transform: translateX(100%) rotate(12deg);
+  }
+}
+
+@keyframes rotateTo12deg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(12deg);
+  }
+}

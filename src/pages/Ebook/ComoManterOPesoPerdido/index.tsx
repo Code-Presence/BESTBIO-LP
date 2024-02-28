@@ -5,17 +5,46 @@ import GenteNoCampo  from '../../../assets/bg/gentee-no-campo.webp';
 import MulherComendo from '../../../assets/PESSOA-SAUDAVEL.png';
 
 import Ebook1  from '../../../assets/Mocks/BookMockup-1.png';
+import Ebook2  from '../../../assets/Mocks/BookMockup-2.png';
+
+import Noise from '../../../assets/Textures/nnnoise.svg';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import React from 'react';
 import { ebook_features } from './features';
-import { Brain, Lightbulb, Lock, Search } from 'lucide-react';
+import { Brain, ChevronDown, Lightbulb, Lock, Search } from 'lucide-react';
 
 function Ebook() {
 
     React.useEffect(() => {
         Aos.init({duration: 1000});
+    }, []);
+
+    const [isVisible, setIsVisible] = React.useState(false);
+    const ref = React.useRef();
+  
+    React.useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect();
+                }
+            },
+            {
+                rootMargin: '0px',
+                threshold: 0.1,
+            }
+        );
+  
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+  
+        return () => {
+            observer.disconnect();
+        };
     }, []);
 
 
@@ -154,13 +183,36 @@ function Ebook() {
                     </div>
                 </div>
 
-                <div className='absolute bottom-0 -mb-1 bg-gradient-to-b bg- w-full h-[5rem] from-[rgba(255,255,255,0)] to-[rgb(255,255,255)]'>
-
+                <div className='absolute bottom-0 -mb-1 bg-gradient-to-b bg- w-full h-[5rem] from-[rgba(255,255,255,0)] to-[rgb(255,255,255)] flex items-center justify-center'>
+                    <div className='border-[rgba(125,217,86)] border-4 h-[3rem] w-[3rem] rounded-full flex'>
+                        <ChevronDown size={40} className='text-[rgba(125,217,86)] animate-bounce'/>
+                    </div>
                 </div>
             </section>
 
-            <section className='w-screen h-screen bg-white'>
+            <section className='w-screen h-screen bg-white relative flex flex-col items-center justify-center'>
+                <div
+                    ref={ref}
+                    className={`w-[40rem] lg:flex hidden h-[40rem] from-[rgba(125,217,86)] to-[#b9fa9e] right-96 bg-gradient-to-t absolute rounded-md shadow-xl ${
+                        isVisible ? 'animate-moveAndRotate' : ''
+                    }`}
+                >
+                    <img src={Noise} className=''/>
+                </div>
 
+                <div
+                    ref={ref}
+                    className={'w-[30rem] lg:hidden flex h-[30rem] from-[rgba(125,217,86)] to-[#b9fa9e] bg-gradient-to-t absolute rounded-md shadow-xl -right-80 rotate-12'}
+                >
+                    <img src={Noise} className=''/>
+                </div>
+
+                <img 
+                    className='lg:h-[45rem] h-[25rem] absolute right-12' src={Ebook2} 
+                    data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="500"
+                />
             </section>
         </>
     );
