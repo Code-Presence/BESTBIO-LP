@@ -1,11 +1,11 @@
-import { Typography, Button, Card } from '@material-tailwind/react';
+import { Typography, Button, Card, CardHeader, CardFooter, CardBody } from '@material-tailwind/react';
 
 import GenteMalhando  from '../../../assets/bg/gente-se-exercitando.webp';
 import GenteNoCampo  from '../../../assets/bg/gentee-no-campo.webp';
 import MulherComendo from '../../../assets/PESSOA-SAUDAVEL.webp';
 
 import Ebook1  from '../../../assets/Mocks/BookMockup-1.webp';
-// import Ebook2  from '../../../assets/Mocks/BookMockup-2.webp';
+import Ebook2  from '../../../assets/Mocks/BookMockup-2.webp';
 import BonusEbook1  from '../../../assets/Mocks/BonusBook-1.webp';
 import BonusEbook2  from '../../../assets/Mocks/BonusBook-2.webp';
 
@@ -15,7 +15,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import React from 'react';
 import { ebook_features } from './features';
-import { Brain, ChevronDown, Lightbulb, Search } from 'lucide-react';
+import { Brain, CakeSlice, ChevronDown, Lightbulb, Salad, Search } from 'lucide-react';
 
 function Ebook() {
 
@@ -120,22 +120,22 @@ function Ebook() {
                     </div>
 
                     <div className='w-full grid grid-cols-1 lg:grid-cols-2 gap-12'>
-                        <div className='w-full h-full flex items-end justify-end'>
+                        <div className='w-full h-full flex lg:items-end lg:justify-end'>
                             <img src={Ebook1} alt='Ebook como manter o peso perdido' className='lg:h-[40rem] h-[20rem] object-cover object-center ml-2' data-aos="fade-up"/>
                         </div>
                     
-                        <div className=' w-full h-full flex flex-col gap-6 overflow-hidden justify-center pr-24 pb-12' data-aos="fade-up" data-aos-delay={200}>
+                        <div className=' w-full h-full flex flex-col gap-6 overflow-hidden justify-center lg:pr-24 lg:pb-12' data-aos="fade-up" data-aos-delay={200}>
                             <span>
-                                <Typography className='font-bold text-white' variant='lead' placeholder={''} color='black'>
+                                <Typography className='font-bold text-white text-center lg:text-start' variant='lead' placeholder={''} color='black'>
                                   Encontre a chave para uma vida saudável com nosso ebook exclusivo
                                 </Typography>
 
-                                <Typography className="text-white" variant='h2' placeholder={''}>
+                                <Typography className="text-white " variant='h2' placeholder={''}>
                                 Como Manter o Peso Perdido
                                 </Typography>
                             </span>
                         
-                            <Typography placeholder={''} variant='paragraph' className=' text-2xl text-justify' color='white'>
+                            <Typography placeholder={''} variant='paragraph' className=' text-2xl text-justify text-center lg:text-start' color='white'>
                             Enquanto você embarca nesta jornada emocionante de manter o peso perdido, nada é mais valioso do que ter as ferramentas certas ao seu alcance.
                             </Typography>
                         </div>
@@ -184,18 +184,54 @@ function Ebook() {
                     </div>
                 </div>
 
-                <div className='absolute bottom-0 -mb-1 bg-gradient-to-b bg- w-full h-[5rem] from-[rgba(255,255,255,0)] to-[rgb(255,255,255)] flex items-center justify-center'>
+                <div className='absolute bottom-0 -mb-1 bg-gradient-to-b bg- w-full h-[5rem] from-[rgba(255,255,255,0)] to-[#fafafa] flex items-center justify-center'>
                     <div className='border-[rgba(125,217,86)] border-4 h-[3rem] w-[3rem] rounded-full flex'>
                         <ChevronDown size={40} className='text-[rgba(125,217,86)] animate-bounce'/>
                     </div>
                 </div>
             </section>
 
-            <section className='w-screen h-screen bg-white relative hidden lg:grid grid-cols-2 items-center justify-center gap-4 px-64 py-12'>
-                <div className='w-full h-full justify-center flex flex-col'>
+            <section className='w-screen h-screen bg-[#fafafa] relative hidden lg:grid grid-cols-2 items-center justify-center gap-4 px-64 py-12'>
+                <div className='w-full h-full justify-center flex flex-col  gap-4'>
                     <Typography className='' variant='h2'>Bônus exclusivo</Typography>
 
-                    <Typography>asdas</Typography>
+                    <Typography className='text-blue-gray-600'>Na compra do ebook <b className='font-bold'>Como Manter O Peso Perdido</b> você garante dois ebook que irão de ajudar na jornada para um vida saudável</Typography>
+
+                    <Card className='bg-white'>
+                        <div className='flex gap-2 p-4 flex-col'>
+                            <span className='flex gap-2'>
+                                <div className='h-[3rem] w-[3rem] bg-green-300 rounded-lg flex items-center justify-center text-white'>
+                                    <Salad />
+                                </div>
+                                <div>
+                                    <Typography variant='lead' className='font-bold'>Receitas Criativas de Saladas e Molhos</Typography>
+                                    <Typography variant='small' className='-mt-1'>mais cor e sabor nas suas refeições</Typography>
+                                </div>
+                            </span>
+                            <Typography className='leading-5' variant='paragraph'>
+                            Mergulhe em receitas deliciosas que combinam o prazer de comer doces com a manutenção de um estilo de vida saudável. Desfrute de sobremesas que satisfazem seu paladar sem comprometer seus objetivos de saúde.
+                            </Typography>
+                        </div>
+                    </Card>
+
+                    <Card className='bg-white'>
+                        <div className='flex gap-2 p-4 flex-col'>
+                            <span className='flex gap-2'>
+                                <div className='h-[3rem] w-[3rem] bg-red-300 rounded-lg flex items-center justify-center text-white'>
+                                    <CakeSlice />
+                                </div>
+                                <div>
+                                    <Typography variant='lead' className='font-bold'>Sobremesas Saudáveis</Typography>
+                                    <Typography variant='small' className='-mt-1'>Emagrecendo com prazer</Typography>
+                                </div>
+                            </span>
+                            <Typography className='leading-5' variant='paragraph'>
+                            Mergulhe em receitas deliciosas que combinam o prazer de comer doces com a manutenção de um estilo de vida saudável. Desfrute de sobremesas que satisfazem seu paladar sem comprometer seus objetivos de saúde.
+                            </Typography>
+                        </div>
+                    </Card>
+
+                    <Button className='' color='green' size='lg'>Garantir Bônus</Button>
                 </div>
 
                 <div className='w-full h-full flex flex-col items-center justify-center'>
@@ -231,13 +267,13 @@ function Ebook() {
                 </div> */}
             </section>
 
-            <section className='w-scrren h-screen bg-white lg:hidden flex flex-col grid-rows-3 py-12'>
+            <section className='w-scrren h-screen bg-[#fafafa] lg:hidden flex flex-col grid-rows-3 py-12'>
                 <Typography className='ml-4' variant='h2'>Bônus exclusivo</Typography>
 
-                <div className='h-[25rem] w-full pl-4 relative overflow-hidden flex flex-col'>
-                    <div className='w-full bg-white h-[25rem] flex items-center'>
+                <div className='h-[25rem] w-full pl-4 relative overflow-hidden flex flex-col -mt-12'>
+                    <div className='w-full h-[25rem] flex items-center'>
                         <div className='w-[55%]' data-aos="fade-left" data-aos-delay={200}>
-                            <Typography variant='lead' className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, numquam ipsum? Perspiciatis provident error repudiandae magnam corporis animi.</Typography>
+                            <Typography variant='lead' className=''>Desfrute de sobremesas que satisfazem seu paladar sem comprometer seus objetivos de saúde.</Typography>
                         </div>
                         <img 
                             src={BonusEbook2}
@@ -250,7 +286,7 @@ function Ebook() {
                     </div>
                 </div>
 
-                <div className='h-[25rem] w-full relative overflow-hidden flex flex-col pr-4 -mt-20'>
+                <div className='h-[25rem] w-full relative overflow-hidden flex flex-col pr-4 -mt-28'>
                     <div className='w-full h-[25rem] flex items-center justify-end'>
                         <img 
                             src={BonusEbook1}
@@ -266,7 +302,7 @@ function Ebook() {
                             data-aos="fade-right"
                             data-aos-delay={600}
                         >
-                            <Typography variant='lead' className='text-justify'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, numquam ipsum? Perspiciatis provident error repudiandae magnam corporis animi.</Typography>
+                            <Typography variant='lead' className='text-right'>Cada receita é projetada para trazer novos sabores e cores à sua mesa, mantendo você no caminho certo para um estilo de vida saudável e vibrante.</Typography>
                         </div>
                     </div>
                 </div>
@@ -276,19 +312,68 @@ function Ebook() {
 
             </section>
 
-            <section className='w-screen h-screen relative bg-[rgba(125,217,86)] -mt-1 grid grid-cols-1 lg:grid-cols-2 gap-6 px-8 lg:px-64 py-12' >
+            <section className='w-screen h-fit lg:h-screen relative bg-[rgba(125,217,86)] -mt-16 lg:-mt-1 grid grid-cols-1 lg:grid-cols-2 gap-6 px-4 lg:px-64 lg:pt-44 pt-32 pb-12' >
                 <div className='w-full absolute top-0 flex -mt-1'>
                     <svg className="w-full h-[14vh] min-h-[100px] max-h-[250px]  rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 20 200 40" preserveAspectRatio="none" shapeRendering="auto">
                         <defs>
                             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                         </defs>
                         <g className="parallax">
-                            <use href="#gentle-wave" x="10" y="-6" fill="rgba(255,255,255,0.8)" />
-                            <use href="#gentle-wave" x="55" y="1" fill="rgba(255,255,255,0.6)" />
-                            <use href="#gentle-wave" x="42" y="4" fill="rgba(255,255,255,0.2)" />
-                            <use href="#gentle-wave" x="12" y="10" fill="#fff" />
+                            <use href="#gentle-wave" x="10" y="-6" fill="rgba(250,250,250,0.8)" />
+                            <use href="#gentle-wave" x="55" y="1" fill="rgba(250,250,250,0.6)" />
+                            <use href="#gentle-wave" x="42" y="4" fill="rgba(250,250,250,0.2)" />
+                            <use href="#gentle-wave" x="12" y="10" fill="#fafafa" />
                         </g>
                     </svg>
+                </div>
+
+                <div className='flex lg:col-span-2 lg:flex-row flex-col-reverse gap-12 '>
+                    <div className='w-full h-full flex items-center justify-end '>
+                        <Card className='bg-white/90 lg:max-w-[85%]' >
+                            <CardHeader className='p-8 flex flex-col items-center text-white' color="green" variant='gradient' data-aos="fade-down">
+                                <Typography variant='lead' className='text-2xl text-white/80'>De R$ <b className='text-3xl line-through'>189,99</b></Typography>
+                                <span className='w-full justify-center flex flex-col items-center'>
+                                    <Typography className='text-xl'>Por apenas 12x de</Typography>
+                                    <span className='flex items-end gap-2'>
+                                        <Typography className='' variant='lead'>R$</Typography>
+                                        <Typography className='' variant='h1'>9,91</Typography>
+                                    </span>
+                                    <Typography className='text-xl'>OU À VISTA POR<b className='font-bold text-2xl'> R$ 97,00</b></Typography>
+                                </span>
+                                {/* <Typography variant='lead'>12x de R$<b className='text-4xl line-through'> 9,91</b></Typography> */}
+                            </CardHeader>
+                            <CardBody>
+                                <Typography className='' variant='lead'>Levando agora, você garante os dois ebooks que te ajudação na jornada de <b className='font-bold'>manter o peso perdido</b>:</Typography>
+                                <div className='flex flex-col gap-4 mt-4 overflow-hidden'>
+                                    <span className='flex items-center gap-4' data-aos="slide-right">
+                                        <div className='h-[3rem] w-[3rem] bg-green-300 rounded-lg flex items-center justify-center text-white'>
+                                            <Salad />
+                                        </div>
+                                        <div className='w-[80%]'>
+                                            <Typography variant='lead' className=''>Receitas Criativas de Saladas e Molhos</Typography>
+                                            <Typography variant='small'>mais cor e sabor nas suas refeições</Typography>
+                                        </div>
+                                    </span>
+                                    <span className='flex items-center gap-4 ' data-aos="slide-right" data-aos-delay={400}>
+                                        <div className='h-[3rem] w-[3rem] bg-red-300 rounded-lg flex items-center justify-center text-white'>
+
+                                            <CakeSlice />
+                                        </div>
+                                        <div>
+                                            <Typography variant='lead'>Sobremesas Saudáveis</Typography>
+                                            <Typography variant='small'>Emagrecendo com prazer</Typography>
+                                        </div>
+                                    </span>
+                                </div>
+                            </CardBody>
+                            <CardFooter>
+                                <Button className='' fullWidth size='lg' color='green' variant='gradient'>Garanta agora</Button>
+                            </CardFooter>
+                        </Card>
+                    </div>
+                    <div className='w-full h-full'>
+                        <img src={Ebook2} alt='Ebook como manter o peso perdido' className='lg:h-[40rem] h-[22rem] object-cover object-center -ml-4' data-aos="fade-up"/>
+                    </div>
                 </div>
             </section>
         </>
