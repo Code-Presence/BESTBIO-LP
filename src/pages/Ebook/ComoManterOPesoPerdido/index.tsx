@@ -59,8 +59,8 @@ function Ebook() {
                         <Typography variant='h2' className='text-center' placeholder={''}>Descubra o segredo para <br className='lg:flex hidden'/> manter o peso e viver com saúde!</Typography>
                     </span>
 
-                    <div data-aos="fade-down" data-aos-delay={200} className='lg:w-[50rem] lg:h-[25rem] w-full h-[25%] bg-white rounded-md shadow-lg'>
-
+                    <div data-aos="fade-down" data-aos-delay={200} className='lg:w-[45rem] lg:h-[25rem] h-[25%] w-full rounded-md shadow-lg'>
+                        <iframe width="" height="" className='h-full w-full rounded-md' src="https://www.youtube.com/embed/5fqQT2rx440?si=xGQFNAw0B1wjwBKG?autoplay=1&mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
 
                     <Button data-aos="fade-down" data-aos-delay={400} placeholder={''} className='lg:text-xl shadow-md' color='green' size='lg'>Estou cansada(o) de viver voltando para meu peso antigo</Button>
