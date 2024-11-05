@@ -107,14 +107,12 @@ export function PricingCard({
 				>
 					{price}
 				</Typography>
-				<Tooltip
-					content="Com repasse da taxa do cartão"
-					className="cursor-pointer"
-				>
-					<Typography className="font-normal text-[#538f39] cursor-pointer">
-						<strong>{text}</strong>
-					</Typography>
-				</Tooltip>
+				<Typography className="font-normal text-[#538f39] cursor-pointer">
+					<strong>{text}</strong>
+				</Typography>
+				<Typography variant="small" color={colorType == 1 ? "white" : "black"}>
+					* Taxa do cartão de crédito repassada para o cliente
+				</Typography>
 				<div className="lg:flex justify-center pt-6 pb-6 hidden">
 					<ul className="flex flex-col gap-2">
 						{diferentials.map((option, key) => (
@@ -172,4 +170,3 @@ export function PricingCard({
 		</Card>
 	);
 }
-
