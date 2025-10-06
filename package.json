@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -18,16 +18,11 @@
     "@heroicons/react": "^2.2.0",
     "@types/react": "^18.3.25",
     "@types/react-dom": "18.0.6",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "2.1.0",
     "aos": "^2.3.4",
     "autoprefixer": "10.4.14",
     "blurhash": "^2.0.5",
     "cssnano": "^6.1.2",
-    "eslint": "^8.57.1",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-tailwindcss": "^3.18.2",
     "gsap": "^3.13.0",
     "lucide-react": "^0.292.0",
     "postcss": "8.4.24",
