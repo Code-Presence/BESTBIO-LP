@@ -68,7 +68,7 @@ function Ebook() {
 	return (
 		<>
 			<section
-				className="relative w-screen h-screen bg-center bg-no-repeat bg-cover"
+				className="relative w-full bg-center bg-no-repeat bg-cover h-[67.5rem]"
 				style={{ backgroundImage: `url(${GenteMalhando})` }}
 			>
 				<div className="flex relative flex-col gap-12 items-center p-8 pt-28 w-full h-full bg-gradient-to-r lg:px-64 backdrop-blur-[3px] from-[rgba(186,206,74,.9)] to-[rgba(126,217,86,.9)]">
