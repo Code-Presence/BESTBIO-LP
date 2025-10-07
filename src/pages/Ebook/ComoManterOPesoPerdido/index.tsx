@@ -91,7 +91,7 @@ function Ebook() {
 						<iframe
 							width=""
 							height=""
-							src="https://www.youtube.com/embed/5fqQT2rx440?si=a1ZoHWHv3XtFBB_Q"
+							src="https://www.youtube.com/embed/5fqQT2rx440?si=a1ZoHWHv3XtFBB_Q?autoplay"
 							title="YouTube video player"
 							frameborder="0"
 							className="w-full h-full rounded-md"
@@ -501,7 +501,17 @@ function Ebook() {
 						construir um estilo de vida que você ama!
 					</Typography>
 
-					<Button className="" color="green" size="lg">
+					<Button
+						className="w-full"
+						color="green"
+						size="lg"
+						onClick={() =>
+							window.open(
+								"https://pay.hotmart.com/A102190532E?checkoutMode=10",
+								"_blank",
+							)
+						}
+					>
 						Garantir Bônus
 					</Button>
 				</div>
@@ -653,6 +663,12 @@ function Ebook() {
 							</CardBody>
 							<CardFooter>
 								<Button
+									onClick={() =>
+										window.open(
+											"https://pay.hotmart.com/A102190532E?checkoutMode=10",
+											"_blank",
+										)
+									}
 									className=""
 									fullWidth
 									size="lg"
