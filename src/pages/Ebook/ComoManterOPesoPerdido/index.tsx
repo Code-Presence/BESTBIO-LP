@@ -631,7 +631,7 @@ function Ebook() {
 								</div>
 
 								<Typography variant="lead" className="text-2xl text-white/80">
-									De R$ <b className="text-3xl line-through">189,99</b>
+									De R$ <b className="text-3xl line-through">67,99</b>
 								</Typography>
 								<span className="flex flex-col justify-center items-center w-full">
 									<Typography className="mb-2 text-2xl font-bold">
