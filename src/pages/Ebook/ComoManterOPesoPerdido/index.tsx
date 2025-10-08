@@ -621,12 +621,12 @@ function Ebook() {
 					<div className="flex justify-end items-center w-full h-full">
 						<Card className="bg-white/90 lg:max-w-[85%] shadow-2xl">
 							<CardHeader
-								className="flex overflow-hidden relative flex-col items-center p-8 text-white"
+								className="flex overflow-hidden relative flex-col items-center text-white lg:pt-8 lg:pb-8 pt-[4rem] pb-[2rem]"
 								color="green"
 								variant="gradient"
 								data-aos="fade-down"
 							>
-								<div className="absolute top-4 right-4 py-2 px-4 text-sm font-bold bg-white rounded-full shadow-lg animate-pulse text-[#7ED956]">
+								<div className="absolute top-4 py-2 px-4 text-sm font-bold bg-white rounded-full shadow-lg animate-pulse lg:right-4 text-[#7ED956]">
 									OFERTA ESPECIAL
 								</div>
 
@@ -717,7 +717,7 @@ function Ebook() {
 						<img
 							src={Ebook1}
 							alt="Ebook como manter o peso perdido"
-							className="object-cover mx-auto -ml-4 lg:ml-0 h-[22rem] lg:h-[40rem]"
+							className="object-cover !mx-auto ml-0 lg:-ml-4 h-[22rem] lg:h-[40rem]"
 							data-aos="fade-up"
 						/>
 					</div>
