@@ -38,35 +38,35 @@ function Ebook() {
 	React.useEffect(() => {
 		Aos.init({ duration: 1000 });
 
-		(function(w: any,d: Document,s: string,l: string,i: string){
-			w[l]=w[l]||[];
-			w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-			const f=d.getElementsByTagName(s)[0];
-			const j=d.createElement(s) as HTMLScriptElement;
-			const dl=l!='dataLayer'?'&l='+l:'';
-			j.async=true;
-			j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-			f.parentNode?.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-M7FNJJJ2');
+		(function (w: any, d: Document, s: string, l: string, i: string) {
+			w[l] = w[l] || [];
+			w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+			const f = d.getElementsByTagName(s)[0];
+			const j = d.createElement(s) as HTMLScriptElement;
+			const dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode?.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-M7FNJJJ2");
 
-		const accountInput = document.getElementById('accountID');
-		const accountPageInput = document.getElementById('accountPageID');
-		
-		const accountValue = '3e138c52-9f98-11f0-bcec-b7a3e40d3b4f';
-		const accountPageValue = '9f3230cc-a319-11f0-8442-b7ce71388dea';
-		
+		const accountInput = document.getElementById("accountID");
+		const accountPageInput = document.getElementById("accountPageID");
+
+		const accountValue = "3e138c52-9f98-11f0-bcec-b7a3e40d3b4f";
+		const accountPageValue = "9f3230cc-a319-11f0-8442-b7ce71388dea";
+
 		if (!accountInput) {
-			const input1 = document.createElement('input');
-			input1.type = 'hidden';
-			input1.id = 'accountID';
+			const input1 = document.createElement("input");
+			input1.type = "hidden";
+			input1.id = "accountID";
 			input1.value = accountValue;
 			document.body.appendChild(input1);
 		}
-		
+
 		if (!accountPageInput) {
-			const input2 = document.createElement('input');
-			input2.type = 'hidden';
-			input2.id = 'accountPageID';
+			const input2 = document.createElement("input");
+			input2.type = "hidden";
+			input2.id = "accountPageID";
 			input2.value = accountPageValue;
 			document.body.appendChild(input2);
 		}
@@ -124,13 +124,13 @@ function Ebook() {
 						<iframe
 							width=""
 							height=""
-							src="https://www.youtube.com/embed/5fqQT2rx440?si=a1ZoHWHv3XtFBB_Q?autoplay"
+							src="https://www.youtube.com/embed/tUt0F3cTT2M?si=jxxkAinvBN14KIX0&autoplay=true"
 							title="YouTube video player"
 							frameborder="0"
-							className="w-full h-full rounded-md"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							referrerpolicy="strict-origin-when-cross-origin"
 							allowfullscreen
+							className="w-full h-full rounded-md"
 						></iframe>
 					</div>
 
